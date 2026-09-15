@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-blue: #0959e1;
+  --primary-orange: #ff7a00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-orange: var(--primary-orange);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes steps-float-y {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@keyframes steps-slide-top {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-28px); }
+}
+
+.steps-float-slow {
+  animation: steps-float-y 10s linear infinite alternate-reverse both;
+}
+
+.steps-float-fast {
+  animation: steps-float-y 5s linear infinite alternate-reverse both;
+}
+
+.steps-slide-balloon {
+  animation: steps-slide-top 20s linear infinite alternate-reverse;
+}
+
+@keyframes testimonialFade {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee-car {
+  0% { transform: translateX(-400px); }
+  100% { transform: translateX(100vw); }
+}
+
+.animate-marquee-car {
+  animation: marquee-car 30s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee-car {
+    animation: marquee-car 20s linear infinite;
+  }
+}

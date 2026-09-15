@@ -1,0 +1,1486 @@
+{
+  "common": {
+    "Header": {
+      "logo": "TourVista",
+      "links": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About",
+          "href": "/about",
+          "hasDropdown": true,
+          "dropdown": [
+            {
+              "label": "About Us",
+              "href": "/about"
+            },
+            {
+              "label": "Mission & Vision",
+              "href": "/mission-vision"
+            },
+            {
+              "label": "Awards & Recognition",
+              "href": "/awards"
+            },
+            {
+              "label": "Why Choose Us",
+              "href": "/why-choose-us"
+            },
+            {
+              "label": "Our Team",
+              "href": "/our-team"
+            }
+          ]
+        },
+        {
+          "label": "Our Service",
+          "href": "/services"
+        },
+        {
+          "label": "Tour Package",
+          "href": "/packages"
+        },
+        {
+          "label": "Destinations",
+          "href": "/destinations",
+          "hasDropdown": true
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "button": {
+        "label": "Enquiry Now",
+        "href": "/enquiry"
+      },
+      "logoImage": "https://placehold.co/200x50/transparent/0066ff?text=TourVista"
+    },
+    "Footer": {
+      "description": "Discover the world's most amazing destinations with Tour Vista. We provide the best travel experiences and packages tailored for you.",
+      "quickLinks": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Destinations",
+          "href": "/destinations"
+        },
+        {
+          "label": "Tour Packages",
+          "href": "/tours"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      ],
+      "categories": [
+        {
+          "label": "Adventure",
+          "href": "/category/adventure"
+        },
+        {
+          "label": "Beaches",
+          "href": "/category/beaches"
+        },
+        {
+          "label": "City Tours",
+          "href": "/category/city-tours"
+        },
+        {
+          "label": "Cruises",
+          "href": "/category/cruises"
+        },
+        {
+          "label": "Honeymoon",
+          "href": "/category/honeymoon"
+        }
+      ],
+      "contact": {
+        "phones": [
+          "+123 456 7890",
+          "+098 765 4321"
+        ],
+        "emails": [
+          "info@tourvista.com",
+          "support@tourvista.com"
+        ],
+        "address": [
+          "123 Travel Street, New York,",
+          "NY 10001, USA"
+        ]
+      }
+    },
+    "Topbar": {
+      "email": "info@tourvista.com",
+      "phone": "+2 123 654 7898",
+      "socials": [
+        {
+          "platform": "facebook",
+          "href": "#"
+        },
+        {
+          "platform": "twitter",
+          "href": "#"
+        },
+        {
+          "platform": "instagram",
+          "href": "#"
+        },
+        {
+          "platform": "linkedin",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "home": {
+      "components": [
+        {
+          "key": "Hero",
+          "component": "variant-1"
+        },
+        {
+          "key": "Destinations",
+          "component": "variant-1"
+        },
+        {
+          "key": "Recommendation",
+          "component": "variant-1"
+        },
+        {
+          "key": "Packages",
+          "component": "variant-1"
+        },
+        {
+          "key": "VideoBanner",
+          "component": "variant-1"
+        },
+        {
+          "key": "Stats",
+          "component": "variant-1"
+        },
+        {
+          "key": "Steps",
+          "component": "variant-1"
+        },
+        {
+          "key": "WhyChooseUs",
+          "component": "variant-1"
+        },
+        {
+          "key": "Testimonials",
+          "component": "variant-1"
+        },
+        {
+          "key": "TravelExperience",
+          "component": "variant-1"
+        },
+        {
+          "key": "CTABanner",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "about": {
+      "components": [
+        {
+          "key": "AboutHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "Recommendation",
+          "component": "variant-1"
+        },
+        {
+          "key": "Steps",
+          "component": "variant-1"
+        },
+        {
+          "key": "WhyChooseUs",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "mission-vision": {
+      "components": [
+        {
+          "key": "MissionVisionHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "MissionVision",
+          "component": "variant-1"
+        },
+        {
+          "key": "VideoBanner",
+          "component": "variant-1"
+        },
+        {
+          "key": "Stats",
+          "component": "variant-1"
+        },
+        {
+          "key": "CarAnimation",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "awards": {
+      "components": [
+        {
+          "key": "AwardsHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "AwardsRecognition",
+          "component": "variant-1"
+        },
+        {
+          "key": "VideoBanner",
+          "component": "variant-1"
+        },
+        {
+          "key": "Stats",
+          "component": "variant-1"
+        },
+        {
+          "key": "CarAnimation",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "why_choose_us": {
+      "components": [
+        {
+          "key": "WhyChooseUsHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "WhyChooseUsV2",
+          "component": "variant-1"
+        },
+        {
+          "key": "ExploreBanner",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "ourTeam": {
+      "components": [
+        {
+          "key": "OurTeamHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "OurTeam",
+          "component": "variant-1"
+        },
+        {
+          "key": "CTABanner",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "team_detail": {
+      "components": [
+        {
+          "key": "TeamDetailHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "TeamDetail",
+          "component": "variant-1"
+        },
+        {
+          "key": "CTABanner",
+          "component": "variant-1"
+        },
+        {
+          "key": "CarAnimation",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "services": {
+      "components": [
+        {
+          "key": "ServicesHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "ServicesList",
+          "component": "variant-1"
+        },
+        {
+          "key": "CarAnimation",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "service_detail": {
+      "components": [
+        {
+          "key": "ServiceDetailHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "ServiceDetail",
+          "component": "variant-1"
+        },
+        {
+          "key": "CTABanner",
+          "component": "variant-1"
+        },
+        {
+          "key": "CarAnimation",
+          "component": "variant-1"
+        }
+      ]
+    }
+  },
+  "sections": {
+    "Hero": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Welcome To TourVista!",
+          "titleLine1": "Explore The",
+          "titleLine2": "Whole",
+          "titleLine3": "World",
+          "description": "Discover breathtaking destinations, unforgettable experiences, and the joy of travel with TourVista.",
+          "backgroundImage": "/hero/hero.png",
+          "button1": "Discover More",
+          "button2": "View Packages"
+        }
+      }
+    },
+    "AboutHero": {
+      "variants": {
+        "variant-1": {
+          "title": "About Us",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "WhyChooseUs": {
+      "variants": {
+        "variant-1": {
+          "title": "Why Choose Us!",
+          "reasons": [
+            "Perfect Detailing",
+            "Save Your Budget",
+            "Free Consultations",
+            "Completed Certification"
+          ],
+          "button": "Discover More",
+          "buttonHref": "/about",
+          "callLabel": "Call Us",
+          "contactNumber": "206-242-1112"
+        }
+      }
+    },
+    "CTABanner": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Book Your First Trip",
+          "titleLine1": "With Us Your Journey",
+          "titleLine2": "Secured And",
+          "titleHighlight": "Seamless",
+          "buttonText": "Contact Us",
+          "buttonHref": "/contact",
+          "backgroundImage": "/cta/banner.jpg"
+        }
+      }
+    },
+    "Destinations": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Destination",
+          "title": "Most Popular Destinations",
+          "description": "Handpicked places that promise unforgettable experiences. Start your journey to explore the world's best destinations.",
+          "items": [
+            {
+              "id": 1,
+              "title": "Phuket Paradise",
+              "image": "/Destinations/phuket.jpg",
+              "flag": "🇹🇭",
+              "country": "THAILAND",
+              "rating": "4.8",
+              "reviews": "1.2K Reviews",
+              "description": "Stunning beaches, crystal clear waters and vibrant culture."
+            },
+            {
+              "id": 2,
+              "title": "Swiss Majesty",
+              "image": "/Destinations/swiss.jpg",
+              "flag": "🇨🇭",
+              "country": "SWITZERLAND",
+              "rating": "4.9",
+              "reviews": "2.4K Reviews",
+              "description": "Breathtaking mountains, serene lakes and charming villages."
+            },
+            {
+              "id": 3,
+              "title": "Cappadocia Wonders",
+              "image": "/Destinations/cappadocia.jpg",
+              "flag": "🇹🇷",
+              "country": "TURKEY",
+              "rating": "4.7",
+              "reviews": "980 Reviews",
+              "description": "Unique landscapes, ancient history and magical hot air balloon rides."
+            },
+            {
+              "id": 4,
+              "title": "New York Vibes",
+              "image": "/Destinations/newyork.jpg",
+              "flag": "🇺🇸",
+              "country": "USA",
+              "rating": "4.6",
+              "reviews": "3.1K Reviews",
+              "description": "The city that never sleeps with iconic sights and endless energy."
+            }
+          ]
+        }
+      }
+    },
+    "Packages": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Top Package",
+          "title": "Explore Our Best Tour Packages",
+          "description": "Find out more about our most popular tour options and get your journey started right away with us.",
+          "buttonText": "View All Packages",
+          "buttonLink": "#",
+          "items": [
+            {
+              "id": 1,
+              "title": "MALDIVES BEACH ESCAPE",
+              "location": "Maldives",
+              "image": "/Package/maldives.jpg",
+              "price": 750,
+              "rating": 5,
+              "reviews": "25",
+              "days": "7D / 6N",
+              "people": "2 Adults",
+              "description": "Relax on pristine beaches, stay in overwater villas, and enjoy the beauty of the crystal-clear ocean."
+            },
+            {
+              "id": 2,
+              "title": "SWISS ALPINE ADVENTURE",
+              "location": "Switzerland",
+              "image": "/Package/swiss.jpg",
+              "price": 620,
+              "rating": 5,
+              "reviews": "25",
+              "days": "5D / 4N",
+              "people": "2 Adults",
+              "description": "Experience the breathtaking Alps, charming villages, and scenic landscapes that Switzerland is famous for."
+            },
+            {
+              "id": 3,
+              "title": "CAPPADOCIA WONDERS",
+              "location": "Turkey",
+              "image": "/Package/cappadocia.jpg",
+              "price": 580,
+              "rating": 5,
+              "reviews": "22",
+              "days": "6D / 5N",
+              "people": "2 Adults",
+              "description": "Unique landscapes, ancient history and magical hot air balloon rides."
+            },
+            {
+              "id": 4,
+              "title": "GREECE ISLAND HOPPING",
+              "location": "Greece",
+              "image": "/Package/greece.jpg",
+              "price": 680,
+              "rating": 5,
+              "reviews": "32",
+              "days": "6D / 5N",
+              "people": "2 Adults",
+              "description": "Discover the beauty of Santorini and Mykonos with stunning views, delicious food, and rich culture."
+            }
+          ]
+        }
+      }
+    },
+    "Recommendation": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "WHY TRAVEL WITH US",
+          "titlePrefix": "We",
+          "titleHighlight": "Recommend",
+          "titleSuffix": "Beautiful Destinations Every Month",
+          "description": "We bring you handpicked destinations, expert travel tips and unforgettable experiences to make your every journey special. Let's explore the world together!",
+          "aboutDescriptions": [
+            "Travel opens the door to new experiences and unforgettable memories. Every month, we carefully handpick beautiful destinations that offer the perfect blend of adventure, culture, relaxation, and natural beauty.",
+            "Our travel experts explore, evaluate, and select places that promise exceptional experiences for every kind of traveler. Whether you're looking for peaceful beaches, exciting city escapes, or breathtaking landscapes, we have something special for you.",
+            "We go beyond just recommending places—we ensure that your journey is smooth, comfortable, and truly memorable. From the moment you plan your trip to the time you return home, we're with you every step of the way.",
+            "With our carefully chosen monthly destinations, you can discover new cultures, enjoy authentic experiences, and create memories that last a lifetime. Let us help you explore the world in the most beautiful way possible."
+          ],
+          "yearsOfExperience": "25",
+          "happyCustomers": "3.5k+",
+          "features": [
+            {
+              "title": "Trusted Travel Guide",
+              "description": "We provide reliable information and expert advice to help you plan your trips confidently and safely.",
+              "icon": "UserCircle"
+            },
+            {
+              "title": "Our Mission & Vision",
+              "description": "Our mission is to inspire and connect people through travel and create positive experiences that open minds and enrich lives.",
+              "icon": "Mountain"
+            }
+          ],
+          "images": [
+            "/Recommend/left.png",
+            "/Recommend/center.png",
+            "/Recommend/right.png"
+          ]
+        }
+      }
+    },
+    "Steps": {
+      "variants": {
+        "variant-1": {
+          "titlePrefix": "3 Easy Steps",
+          "titleSuffix": "for Book\nYour Next Trip",
+          "discount": "48",
+          "mainImage": "/step/nextbg.png",
+          "smallImage": "/step/left1.png",
+          "items": [
+            {
+              "step": "01",
+              "title": "Choose Destination",
+              "description": "First, select your preferred destination and proceed further",
+              "icon": "Search"
+            },
+            {
+              "step": "02",
+              "title": "Make Payment",
+              "description": "We pay attention to every quality in the service we provide to you",
+              "icon": "CreditCard"
+            },
+            {
+              "step": "03",
+              "title": "Ready For Travelling",
+              "description": "We pay attention to every quality in the service we provide to you",
+              "icon": "PlaneTakeoff"
+            }
+          ]
+        }
+      }
+    },
+    "Testimonials": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Testimonials",
+          "title": "Real feedback from our happy travelers worldwide",
+          "items": [
+            {
+              "title": "Japan Discovery Tour",
+              "text": "Our trip to Japan was beyond amazing! From the beautiful cherry blossoms to the rich culture and delicious food, every moment was magical. Highly recommended!",
+              "image": "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=900&auto=format&fit=crop",
+              "travelersCount": "3+",
+              "avatars": [
+                "https://i.pravatar.cc/100?img=5",
+                "https://i.pravatar.cc/100?img=12"
+              ]
+            },
+            {
+              "title": "Maldives Paradise Escape",
+              "text": "This tour was a memorable experience. The turquoise waters, white sands and shared moments were incredible.",
+              "image": "https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=900&auto=format&fit=crop",
+              "travelersCount": "3+",
+              "avatars": [
+                "https://i.pravatar.cc/100?img=32",
+                "https://i.pravatar.cc/100?img=47"
+              ]
+            },
+            {
+              "title": "Cappadocia Tour",
+              "text": "This tour was a memorable experience. Cappadocia's scenery and shared moments were magical.",
+              "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=900&auto=format&fit=crop",
+              "travelersCount": "3+",
+              "avatars": [
+                "https://i.pravatar.cc/100?img=15",
+                "https://i.pravatar.cc/100?img=23"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "TravelExperience": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Travel Blog",
+          "title": "Travel experience",
+          "blogs": [
+            {
+              "title": "Resources for your first trip to overseas vacation",
+              "author": "Aidan Butler",
+              "image": "/blog/sm1.jpg",
+              "date": "14 June",
+              "type": "small"
+            },
+            {
+              "title": "How to get acquainted with natives in a strange land",
+              "author": "Ricardo Bell",
+              "image": "/blog/sm2.jpg",
+              "date": "26 June",
+              "type": "small"
+            },
+            {
+              "title": "Resources for your first trip to overseas vacation",
+              "author": "Martin Hicks",
+              "image": "/blog/sm3.jpg",
+              "date": "20 June",
+              "type": "small"
+            },
+            {
+              "title": "Step by step guide to planning your ideal holiday",
+              "author": "Poul Ward",
+              "image": "/blog/sm4.jpg",
+              "date": "28 June",
+              "type": "small"
+            },
+            {
+              "title": "Step by step guide to planning your ideal holiday",
+              "author": "Poul Ward",
+              "image": "/blog/md1.jpg",
+              "date": "28 June",
+              "type": "medium"
+            },
+            {
+              "title": "The Top Travel Destinations for Photography Enthusiasts",
+              "author": "Joey Peterson",
+              "image": "/blog/lg1.jpg",
+              "date": "08 June",
+              "type": "large"
+            }
+          ]
+        }
+      }
+    },
+    "VideoBanner": {
+      "variants": {
+        "variant-1": {
+          "titleLine1": "Say",
+          "titleHighlight": "Yes!",
+          "titleLine2": "To New Adventures",
+          "backgroundImage": "/videobanner/videobanner.png"
+        }
+      }
+    },
+    "Stats": {
+      "variants": {
+        "variant-1": {
+          "items": [
+            {
+              "value": "3600+",
+              "label": "Awards Winning",
+              "icon": "Award"
+            },
+            {
+              "value": "3600+",
+              "label": "Happy Traveler",
+              "icon": "Plane"
+            },
+            {
+              "value": "2.5K",
+              "label": "Tours success",
+              "icon": "CalendarCheck"
+            },
+            {
+              "value": "25+",
+              "label": "Our Experience",
+              "icon": "Smile"
+            }
+          ]
+        }
+      }
+    },
+    "MissionVisionHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Mission & Vision",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "MissionVision": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Tour Guide",
+          "titlePrefix": "Mission &",
+          "titleSuffix": "Vision",
+          "description": "At TourVista, our mission defines our purpose and our vision inspires us to shape the future of travel with passion and excellence.",
+          "mission": {
+            "title": "Our Mission",
+            "description": "Our mission is to deliver exceptional travel experiences by providing personalized services, expert guidance, and reliable support. We strive to create memorable journeys that connect people to the world, enrich lives, and build lasting relationships based on trust and satisfaction.",
+            "image": "/mission-vision/mission.png"
+          },
+          "vision": {
+            "title": "Our Vision",
+            "description": "Our vision is to be a globally recognized travel brand known for innovation, integrity, and inspiring experiences. We aim to lead the travel industry by embracing sustainable practices and empowering people to explore the world with confidence and curiosity.",
+            "image": "/mission-vision/vision.png"
+          }
+        }
+      }
+    },
+    "AwardsHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Awards & Recognition",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "AwardsRecognition": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Awards & Recognition",
+          "title": "Celebrating Excellence & Achievements in Every Journey",
+          "trophyImage": "/img/awards.png",
+          "awardsList": [
+            {
+              "title": "Best Travel Agency of the Year 2024",
+              "description": "Recognized for outstanding service excellence and customer satisfaction.",
+              "icon": "Trophy"
+            },
+            {
+              "title": "Excellence in Customer Service 2023",
+              "description": "Honored for delivering exceptional support and personalized travel experiences.",
+              "icon": "Award"
+            },
+            {
+              "title": "Trusted Travel Partner Award 2023",
+              "description": "Awarded for reliability, integrity, and building lasting customer relationships.",
+              "icon": "ShieldCheck"
+            },
+            {
+              "title": "Top Performer in International Travel 2022",
+              "description": "Recognized for excellence in international tour planning and operations.",
+              "icon": "Globe"
+            },
+            {
+              "title": "Outstanding Tour Operator 2022",
+              "description": "Honored for innovative tour packages and memorable travel experiences.",
+              "icon": "Medal"
+            },
+            {
+              "title": "Customer Choice Award 2021",
+              "description": "Voted by customers for providing the best travel experiences.",
+              "icon": "Users"
+            }
+          ]
+        }
+      }
+    },
+    "WhyChooseUsHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Why Choose Us",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "WhyChooseUsV2": {
+      "variants": {
+        "variant-1": {
+          "tagline": "Why Choose Us",
+          "title": "Lifelong memories every\nmoment now <span class=\"text-[#ff7a00]\">feels special.</span>",
+          "description": "Travel is more than just visiting new places - It's about creating moments that stay with you forever. We ensure every journey is smooth, meaningful, and truly unforgettable.",
+          "features": [
+            {
+              "id": "01",
+              "title": "Experts Local Guide",
+              "description": "Our local travel experts know the hidden gems and best experiences of every destination to make your trip truly special.",
+              "icon": "UserCheck"
+            },
+            {
+              "id": "02",
+              "title": "Special Event Trips",
+              "description": "From festivals to concerts and exclusive events, we design trips that let you experience moments beyond the ordinary.",
+              "icon": "CalendarCheck"
+            }
+          ],
+          "buttonText": "Book Now",
+          "buttonLink": "/tour-package",
+          "happyTravelers": {
+            "count": "25K+",
+            "text": "Happy Travelers",
+            "avatars": [
+              "/blog/sm1.jpg",
+              "/blog/sm2.jpg",
+              "/blog/sm3.jpg",
+              "/blog/sm4.jpg"
+            ]
+          },
+          "images": {
+            "main": "/whychoose/1.png",
+            "topRight": "/whychoose/2.png",
+            "bottomLeft": "/whychoose/3.png",
+            "bottomRight": "/whychoose/4.png"
+          }
+        }
+      }
+    },
+    "ExploreBanner": {
+      "variants": {
+        "variant-1": {
+          "backgroundImage": "/whychoose/btwc.png",
+          "title": "Get ready to explore and\ndiscover your world.",
+          "sealText": "NATURE ESCAPE . CULTURAL PATHS . ",
+          "cards": [
+            {
+              "title": "Hidden Places",
+              "icon": "Globe2"
+            },
+            {
+              "title": "Travel Adventures",
+              "icon": "Plane"
+            },
+            {
+              "title": "Nature Culture",
+              "icon": "Mountain"
+            },
+            {
+              "title": "Travel Stories",
+              "icon": "Camera"
+            }
+          ]
+        }
+      }
+    },
+    "OurTeamHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Our Teams",
+          "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=2070"
+        }
+      }
+    },
+    "OurTeam": {
+      "variants": {
+        "variant-1": {
+          "tagline": "Our Team",
+          "title": "Meet The Experts Behind Your Perfect Journey",
+          "members": [
+            {
+              "name": "Rodrigues Christy",
+              "role": "Tour Expert",
+              "image": "/ourteam/1.png",
+              "id": "member-1"
+            },
+            {
+              "name": "Matthew Hong",
+              "role": "Tour Expert",
+              "image": "/ourteam/2.png",
+              "id": "member-2"
+            },
+            {
+              "name": "Anita Bentley",
+              "role": "CEO & Founder",
+              "image": "/ourteam/3.png",
+              "id": "member-3"
+            },
+            {
+              "name": "Beverly Dyer",
+              "role": "Marketing Manager",
+              "image": "/ourteam/4.png",
+              "id": "member-4"
+            },
+            {
+              "name": "Rodrigues Christy",
+              "role": "Tour Expert",
+              "image": "/ourteam/1.png",
+              "id": "member-5"
+            },
+            {
+              "name": "Matthew Hong",
+              "role": "Tour Expert",
+              "image": "/ourteam/2.png",
+              "id": "member-6"
+            },
+            {
+              "name": "Anita Bentley",
+              "role": "CEO & Founder",
+              "image": "/ourteam/3.png",
+              "id": "member-7"
+            },
+            {
+              "name": "Beverly Dyer",
+              "role": "Marketing Manager",
+              "image": "/ourteam/4.png",
+              "id": "member-8"
+            }
+          ]
+        }
+      }
+    },
+    "TeamDetailHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Team Detail",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "TeamDetail": {
+      "variants": {
+        "variant-1": {
+          "members": [
+            {
+              "id": "member-1",
+              "name": "Rodrigues Christy",
+              "role": "Tour Expert",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/1.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-2",
+              "name": "Matthew Hong",
+              "role": "Tour Expert",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/2.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-3",
+              "name": "Anita Bentley",
+              "role": "CEO & Founder",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/3.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-4",
+              "name": "Beverly Dyer",
+              "role": "Marketing Manager",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/4.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-5",
+              "name": "Rodrigues Christy",
+              "role": "Tour Expert",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/1.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-6",
+              "name": "Matthew Hong",
+              "role": "Tour Expert",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/2.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-7",
+              "name": "Anita Bentley",
+              "role": "CEO & Founder",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/3.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            },
+            {
+              "id": "member-8",
+              "name": "Beverly Dyer",
+              "role": "Marketing Manager",
+              "phone": "+2 123 654 7898",
+              "email": "info@example.com",
+              "speciality": "Tour Guide",
+              "experience": "15 Years",
+              "university": "Oxford University",
+              "image": "/ourteam/4.png",
+              "socials": [
+                {
+                  "platform": "facebook",
+                  "url": "#",
+                  "icon": "Facebook"
+                },
+                {
+                  "platform": "twitter",
+                  "url": "#",
+                  "icon": "Twitter"
+                },
+                {
+                  "platform": "instagram",
+                  "url": "#",
+                  "icon": "Instagram"
+                },
+                {
+                  "platform": "linkedin",
+                  "url": "#",
+                  "icon": "Linkedin"
+                },
+                {
+                  "platform": "youtube",
+                  "url": "#",
+                  "icon": "Youtube"
+                }
+              ],
+              "biography": {
+                "title": "Biography",
+                "paragraphs": [
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                  "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+                  "Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+                ],
+                "image": "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=900&q=80"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "ServicesHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Our Services",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
+        }
+      }
+    },
+    "ServicesList": {
+      "variants": {
+        "variant-1": {
+          "tagline": "Our Services",
+          "title": "Explore Our Wide Range of Travel Services",
+          "description": "From thrilling adventures to peaceful getaways, we provide carefully crafted travel experiences to make every journey unforgettable.",
+          "services": [
+            {
+              "tagline": "BEST HOTELS",
+              "title": "Comfortable Stays, Memorable Experiences",
+              "description": "We partner with the best hotels around the world to ensure you get comfortable, clean, and premium stays at the best prices.",
+              "icon": "Building2",
+              "image": "/service/1.png",
+              "link": "/service-detail/hotel",
+              "imagePosition": "right",
+              "id": "hotel"
+            },
+            {
+              "tagline": "TRAVEL INSURANCE",
+              "title": "Travel with Confidence & Peace of Mind",
+              "description": "Our comprehensive travel insurance plans protect you against unexpected events, so you can travel worry-free anywhere in the world.",
+              "icon": "ShieldCheck",
+              "image": "/service/2.png",
+              "link": "/service-detail/insurance",
+              "imagePosition": "left",
+              "id": "insurance"
+            },
+            {
+              "tagline": "TOUR PACKAGES",
+              "title": "Handpicked Packages for Every Traveler",
+              "description": "From romantic getaways to family vacations and adventure tours, we have the perfect packages suited to your style and budget.",
+              "icon": "PlaneTakeoff",
+              "image": "/service/3.png",
+              "link": "/service-detail/packages",
+              "imagePosition": "right",
+              "id": "packages"
+            },
+            {
+              "tagline": "AIRPORT TRANSFERS",
+              "title": "Smooth Transfers, Hassle-Free Journeys",
+              "description": "Enjoy comfortable and on-time airport pickups and drop-offs with our reliable transfer services available 24/7.",
+              "icon": "Car",
+              "image": "/service/4.png",
+              "link": "/service-detail/transfers",
+              "imagePosition": "left",
+              "id": "transfers"
+            }
+          ]
+        }
+      }
+    },
+    "ServiceDetail": {
+      "variants": {
+        "variant-1": {
+          "hero": {
+            "title": "Service Detail",
+            "backgroundImage": "/breadcrumb/inner-banner.jpg"
+          },
+          "tagline": "Our Services",
+          "title": "Best Hotels",
+          "subtitle": "Comfortable Stays, Memorable Experiences",
+          "description": "We partner with the best hotels around the world to ensure you get comfortable, clean, and premium stays at the best prices. From luxury resorts to budget-friendly options, we have something for every traveler.",
+          "enquireLink": "/contact",
+          "mainFeatures": [
+            {
+              "title": "Wide Range of Options",
+              "description": "Choose from 5-star luxury hotels to cozy budget stays.",
+              "icon": "Building2"
+            },
+            {
+              "title": "Best Price Guarantee",
+              "description": "We ensure you get the most competitive rates.",
+              "icon": "Percent"
+            },
+            {
+              "title": "Verified & Trusted",
+              "description": "All hotels are verified for quality, safety & comfort.",
+              "icon": "ShieldCheck"
+            },
+            {
+              "title": "24/7 Customer Support",
+              "description": "Our team is always here to assist you anytime.",
+              "icon": "UserRound"
+            }
+          ],
+          "whyChooseUs": {
+            "title": "Why Choose Our Hotel Booking Service?",
+            "description": "We go the extra mile to provide you with the best stay experience.",
+            "features": [
+              {
+                "title": "Handpicked Hotels",
+                "description": "We select only the best properties for our customers.",
+                "icon": "Building2"
+              },
+              {
+                "title": "Exclusive Deals",
+                "description": "Enjoy exclusive discounts and offers on top hotel bookings.",
+                "icon": "Ticket"
+              },
+              {
+                "title": "Safe & Secure",
+                "description": "Your data and payments are 100% secure with us.",
+                "icon": "ShieldCheck"
+              },
+              {
+                "title": "24/7 Assistance",
+                "description": "Round-the-clock support before, during & after your stay.",
+                "icon": "Headset"
+              }
+            ]
+          },
+          "experienceComfort": {
+            "title": "Experience Comfort Like Never Before",
+            "description": "From breathtaking city views to serene beachfront resorts, we offer hotel options that match your style and budget. Whether you're traveling for leisure, business, or a special occasion, we ensure your stay is nothing less than perfect.",
+            "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1200&auto=format&fit=crop",
+            "checklist": [
+              "Luxury, Premium & Budget Hotels",
+              "Beach Resorts, City Hotels, Boutique Stays & More",
+              "Flexible Cancellation Options",
+              "Easy Booking Process"
+            ]
+          },
+          "sidebar": {
+            "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1000&auto=format&fit=crop",
+            "highlights": [
+              "Global hotel partnerships",
+              "Exclusive deals & discounts",
+              "Instant booking confirmation",
+              "Secure & hassle-free booking",
+              "Customized stay options",
+              "Group & corporate bookings"
+            ],
+            "needHelp": {
+              "phone": "+91 98765 43210",
+              "email": "support@travelgo.com",
+              "liveChat": "Live Chat with Us"
+            }
+          },
+          "cta": {
+            "subtitle": "Book Your First Trip",
+            "titleLine1": "With Us Your Journey",
+            "titleLine2": "Secured And",
+            "titleHighlight": "Seamless",
+            "buttonHref": "/contact",
+            "backgroundImage": "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1400&auto=format&fit=crop"
+          }
+        }
+      }
+    }
+  }
+}
