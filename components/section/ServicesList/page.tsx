@@ -11,11 +11,14 @@ import { Building2, ShieldCheck, PlaneTakeoff, Car, ArrowRight, Backpack } from 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-const iconMap: Record<string, any> = {
+import type { LucideIcon } from "lucide-react";
+import type { ServiceItem, ServicesListData } from "../../types";
+
+const iconMap: Record<string, LucideIcon> = {
   Building2,
   ShieldCheck,
   PlaneTakeoff,
-  Car
+  Car,
 };
 
 const DotPattern = ({ className }: { className?: string }) => (
@@ -28,8 +31,6 @@ const DotPattern = ({ className }: { className?: string }) => (
     <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)"></rect>
   </svg>
 );
-
-import { ServicesListData } from "../../types";
 
 export default function ServicesList({ data }: { data: ServicesListData }) {
   if (!data) return null;
@@ -70,7 +71,7 @@ export default function ServicesList({ data }: { data: ServicesListData }) {
 
         {/* Services List */}
         <div className="flex flex-col">
-          {data.services?.map((service: any, index: number) => {
+          {data.services?.map((service: ServiceItem, index: number) => {
             const Icon = iconMap[service.icon];
             const isImageRight = service.imagePosition === 'right';
             

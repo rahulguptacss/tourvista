@@ -107,7 +107,9 @@ export default function Packages({ data }: { data: PackagesData }) {
                         )}
                       </div>
                       <h3 className="font-bold text-[#091f40] text-[1.15rem] leading-[1.25] uppercase mt-0.5 tracking-wide">
-                        {pkg.title}
+                        <Link href={`/package-detail/${pkg.id}`} className="hover:text-[#2563eb] transition-colors">
+                          {pkg.title}
+                        </Link>
                       </h3>
                     </div>
                     <p className="text-[#5a6473] text-[0.9rem] font-[500] mb-1 leading-[1.6] line-clamp-3 pr-2">
@@ -149,7 +151,7 @@ export default function Packages({ data }: { data: PackagesData }) {
                   <div className="font-bold text-[2.5rem] tracking-tight leading-none mb-1.5">${pkg.price}</div>
                   <div className="text-[0.9rem] font-[500] mb-6">/ per person</div>
                   
-                  <Link href="#" className="bg-white text-[#3474d4] font-bold text-[11px] px-4 py-[10px] rounded-full flex items-center justify-center gap-2 w-full hover:bg-gray-50 hover:-translate-y-1 hover:shadow-lg active:scale-95 transition-all duration-300 whitespace-nowrap cursor-pointer">
+                  <Link href={`/package-detail/${pkg.id}`} className="bg-white text-[#3474d4] font-bold text-[11px] px-4 py-[10px] rounded-full flex items-center justify-center gap-2 w-full hover:bg-gray-50 hover:-translate-y-1 hover:shadow-lg active:scale-95 transition-all duration-300 whitespace-nowrap cursor-pointer">
                     BOOK NOW
                     <svg className="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </Link>

@@ -10,11 +10,13 @@ import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 
-export default function CTABanner({ data }: { data: any }) {
+import type { CTABannerData } from "../../types";
+
+export default function CTABanner({ data, className = "" }: { data: CTABannerData; className?: string }) {
   const ctaBanner = data;
 
   return (
-    <section className={`bg-white py-4 md:py-6 ${poppins.className}`}>
+    <section className={`bg-white py-4 md:py-6 ${poppins.className} ${className}`}>
       <div className="mx-auto max-w-[1280px] px-5 md:px-8">
         <div className="relative isolate min-h-[340px] md:min-h-0 md:h-[300px] overflow-hidden rounded-[28px] md:rounded-[40px] py-10 md:py-0 flex flex-col justify-center">
           <Image

@@ -11,9 +11,10 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700
 export interface BreadcrumbBannerProps {
   title: string;
   backgroundImage: string;
+  showBreadcrumb?: boolean;
 }
 
-export default function BreadcrumbBanner({ title, backgroundImage }: BreadcrumbBannerProps) {
+export default function BreadcrumbBanner({ title, backgroundImage, showBreadcrumb = true }: BreadcrumbBannerProps) {
   return (
     <section className={`relative h-[320px] md:h-[450px] flex items-center justify-center -mb-4 md:-mb-8 z-20 ${poppins.className}`}>
       {/* Background Image */}
@@ -33,9 +34,10 @@ export default function BreadcrumbBanner({ title, backgroundImage }: BreadcrumbB
         viewport={{ once: true, amount: 0.2 }}
         className="relative z-10 text-center px-4 mt-4 md:mt-6"
       >
-        <motion.h1 variants={fadeInUp} className="text-4xl md:text-[64px] font-extrabold text-white tracking-wide mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+        <motion.h1 variants={fadeInUp} className={`text-4xl md:text-[64px] font-extrabold text-white tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] ${showBreadcrumb ? "mb-4" : ""}`}>
           {title}
         </motion.h1>
+        {showBreadcrumb && (
         <motion.nav variants={fadeInUp} aria-label="breadcrumb" className="flex justify-center">
           <ol className="flex items-center space-x-2 text-[15px] md:text-[16px] font-medium text-white">
             <li>
@@ -47,6 +49,7 @@ export default function BreadcrumbBanner({ title, backgroundImage }: BreadcrumbB
             <li className="text-white">{title}</li>
           </ol>
         </motion.nav>
+        )}
       </motion.div>
 
       {/* Torn Paper Edge Bottom */}

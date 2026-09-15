@@ -9,7 +9,9 @@ import { useRef, useState, useEffect } from "react";
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-export default function Destinations({ data }: { data: any }) {
+import type { DestinationItem, DestinationsData } from "../../types";
+
+export default function Destinations({ data }: { data: DestinationsData }) {
   const destinations = data;
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -128,7 +130,7 @@ export default function Destinations({ data }: { data: any }) {
           ref={scrollRef}
           className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-6 md:mb-8 pb-4 md:pb-0"
         >
-          {destinations.items.map((dest: any) => (
+          {destinations.items.map((dest: DestinationItem) => (
             <div key={dest.id} className="w-full min-w-[100%] md:w-auto md:min-w-0 snap-center shrink-0 bg-white rounded-[1.5rem] shadow-[0_4px_25px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-300 group flex flex-col border border-gray-100/50">
               
               <div className="relative h-[220px] w-full shrink-0">
@@ -198,7 +200,7 @@ export default function Destinations({ data }: { data: any }) {
           </button>
           
           <div className="flex gap-2">
-            {destinations.items.map((_: any, idx: number) => (
+            {destinations.items.map((_, idx: number) => (
               <div 
                 key={idx} 
                 onClick={() => scrollToIndex(idx)}

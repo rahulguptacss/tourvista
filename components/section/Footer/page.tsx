@@ -22,7 +22,9 @@ const Pinterest = ({ className }: { className?: string }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345l-.288 1.178c-.046.19-.152.232-.35.139-1.305-.615-2.122-2.545-2.122-4.103 0-3.342 2.428-6.406 6.996-6.406 3.67 0 6.529 2.617 6.529 6.108 0 3.65-2.298 6.589-5.491 6.589-1.073 0-2.083-.558-2.431-1.22l-.663 2.528c-.24 .913-.889 2.054-1.328 2.753 1.059.324 2.181.503 3.341.503 6.62 0 11.988-5.368 11.988-11.987C24.004 5.367 18.637 0 12.017 0z"/></svg>
 );
 
-export default function Footer({ data }: { data: any }) {
+import type { FooterLayoutData } from "../../types";
+
+export default function Footer({ data }: { data: FooterLayoutData }) {
   const exploreLinks = [
     { label: "About us", href: "/about" },
     { label: "FAQ's", href: "/faqs" },
@@ -64,12 +66,7 @@ export default function Footer({ data }: { data: any }) {
               <Image src="/logo/white-logo.png" alt="TourVista" width={260} height={75} className="h-auto w-[200px] md:w-[260px] object-contain" />
             </Link>
             <p className="text-white font-medium text-[14.5px] leading-[1.65] mb-8 max-w-[310px]">
-              Travlla is a multi-award-winning<br />
-              strategy and content creation<br />
-              Travlla is a multi-award-winning<br />
-              strategy and content creation<br />
-              agency that specializes in travel<br />
-              marketing.
+              {data.footer.description}
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">

@@ -7,7 +7,9 @@ import { Dancing_Script, Poppins } from "next/font/google";
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-export default function VideoBanner({ data }: { data: any }) {
+import type { VideoBannerData } from "../../types";
+
+export default function VideoBanner({ data }: { data: VideoBannerData }) {
   const videoBanner = data;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 

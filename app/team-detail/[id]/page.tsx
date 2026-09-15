@@ -1,38 +1,26 @@
-import fs from 'fs';
-import path from 'path';
+import TeamDetail from "@/components/section/TeamDetail/page";
+import CTABanner from "@/components/section/CTABanner/page";
+import { getAppData } from "@/components/lib/getAppData";
+import type { TeamDetailViewData } from "@/components/types";
+import { notFound } from "next/navigation";
 
-import TeamDetail from '@/components/section/TeamDetail/page';
-import CTABanner from '@/components/section/CTABanner/page';
-
-import { notFound } from 'next/navigation';
-
-const componentMap: Record<string, any> = {
-
-  "TeamDetail": TeamDetail,
-  "CTABanner": CTABanner
-};
-
-export default async function TeamDetailPage({ params }: { params: any }) {
-  const resolvedParams = await params;
-  const id = resolvedParams.id;
-  
-  const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  const fullData = JSON.parse(fileContents);
-
-  const components = fullData.pages.team_detail.components;
-  const sections = fullData.sections;
-
-  // Look up the specific member
-  const allMembers = sections.TeamDetail.variants["variant-1"].members;
-  const memberData = allMembers.find((m: any) => m.id === id);
+export default async function TeamDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const fullData = getAppData();
+  const components = fullData.pages.team_detail?.components ?? [];
+  const memberData = fullData.sections.TeamDetail.variants["variant-1"].members.find(
+    (m) => m.id === id
+  );
 
   if (!memberData) {
     notFound();
   }
 
-  // To preserve compatibility with the child component, we map memberData back to expected structure.
-  const teamDetailData = {
+  const teamDetailData: TeamDetailViewData = {
     member: {
       name: memberData.name,
       role: memberData.role,
@@ -42,26 +30,23 @@ export default async function TeamDetailPage({ params }: { params: any }) {
       experience: memberData.experience,
       university: memberData.university,
       image: memberData.image,
-      socials: memberData.socials
+      socials: memberData.socials,
     },
-    biography: memberData.biography
+    biography: memberData.biography,
   };
+
+  const ctaBannerData = fullData.sections.CTABanner.variants["variant-1"];
 
   return (
     <main className="min-h-screen bg-white">
-      {components.map((comp: any, index: number) => {
-        const Component = componentMap[comp.key];
-        if (!Component) return null;
-
-        const sectionData = sections[comp.key]?.variants[comp.component];
-        if (!sectionData) return null;
-
-
+      {components.map((comp, index) => {
         if (comp.key === "TeamDetail") {
-          return <Component key={index} data={teamDetailData} />;
+          return <TeamDetail key={index} data={teamDetailData} />;
         }
-
-        return <Component key={index} data={sectionData} />;
+        if (comp.key === "CTABanner") {
+          return <CTABanner key={index} data={ctaBannerData} />;
+        }
+        return null;
       })}
     </main>
   );

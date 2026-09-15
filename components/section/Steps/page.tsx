@@ -97,7 +97,7 @@ export default function Steps({ data }: { data: StepsData }) {
               </div>
 
               <div className="flex w-full max-w-[500px] flex-1 flex-col gap-2">
-                {steps.items.map((item: any, idx: number) => (
+                {steps.items.map((item, idx: number) => (
                   <div
                     key={idx}
                     className="flex items-center gap-3.5 rounded-[100px] bg-white py-2.5 pl-2.5 pr-3 shadow-[0_10px_28px_rgba(20,30,60,0.08)]"

@@ -10,7 +10,9 @@ import { Backpack, ArrowRight } from "lucide-react";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-export default function OurTeam({ data }: { data: any }) {
+import type { OurTeamData, OurTeamMember } from "../../types";
+
+export default function OurTeam({ data }: { data: OurTeamData }) {
   if (!data) return null;
 
   return (
@@ -49,7 +51,7 @@ export default function OurTeam({ data }: { data: any }) {
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5"
         >
-          {data.members?.map((member: any, index: number) => (
+          {data.members?.map((member: OurTeamMember, index: number) => (
             <motion.div 
               key={index} 
               variants={fadeInUp}

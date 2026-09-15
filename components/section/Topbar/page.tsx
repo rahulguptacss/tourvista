@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { Mail, Phone } from 'lucide-react';
 
-export default function Topbar({ data }: { data: any }) {
+import type { TopbarData } from "../../types";
+
+export default function Topbar({ data }: { data: TopbarData }) {
   if (!data) return null;
 
   return (

@@ -13,16 +13,19 @@ import { fadeInUp, staggerContainer } from "../../utils/animations";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const iconMap: any = {
-  Building2: Building2,
-  Percent: Percent,
-  ShieldCheck: ShieldCheck,
-  UserRound: UserRound,
-  Ticket: Ticket,
-  Headset: Headset,
+import type { LucideIcon } from "lucide-react";
+import type { ServiceDetailData, ServiceFeature } from "../../types";
+
+const iconMap: Record<string, LucideIcon> = {
+  Building2,
+  Percent,
+  ShieldCheck,
+  UserRound,
+  Ticket,
+  Headset,
 };
 
-export default function ServiceDetail({ data }: { data: any }) {
+export default function ServiceDetail({ data }: { data: ServiceDetailData }) {
   if (!data) return null;
 
   return (
@@ -60,7 +63,7 @@ export default function ServiceDetail({ data }: { data: any }) {
               </motion.p>
 
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-8 mb-8 pr-4">
-                {data.mainFeatures?.map((feature: any, index: number) => {
+                {data.mainFeatures?.map((feature: ServiceFeature, index: number) => {
                   const Icon = iconMap[feature.icon] || Building2;
                   return (
                     <motion.div variants={fadeInUp} key={index} className="flex gap-4 items-center">
@@ -102,7 +105,7 @@ export default function ServiceDetail({ data }: { data: any }) {
               </motion.p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-4 mb-0">
-                {data.whyChooseUs.features?.map((feature: any, index: number) => {
+                {data.whyChooseUs.features?.map((feature: ServiceFeature, index: number) => {
                   const Icon = iconMap[feature.icon] || Building2;
                   return (
                     <motion.div variants={fadeInUp} key={index} className="border border-slate-200 rounded-[12px] p-4 text-center hover:border-[#1d62f0]/30 transition-colors bg-white">

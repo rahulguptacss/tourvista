@@ -4,13 +4,28 @@ import Link from "next/link";
 import { ChevronDown, ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Header({ data }: { data: any }) {
+import type { HeaderData, NavLink } from "../../types";
+
+export default function Header({ data }: { data: HeaderData }) {
   const header = data;
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const isLinkActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href === "/packages") {
+      return pathname === "/packages" || pathname.startsWith("/package-detail");
+    }
+    if (href === "/blog") {
+      return pathname === "/blog" || pathname.startsWith("/blog-detail");
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,8 +53,8 @@ export default function Header({ data }: { data: any }) {
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-7">
-              {header.links?.map((link: any, index: number) => {
-                const isActive = link.label === "Home";
+              {header.links?.map((link: NavLink, index: number) => {
+                const isActive = isLinkActive(link.href);
                 return (
                   <div key={index} className="flex items-center gap-1.5 group cursor-pointer relative">
                     <Link 
@@ -53,7 +68,7 @@ export default function Header({ data }: { data: any }) {
                         <ChevronDown className="w-4 h-4 text-slate-800 group-hover:text-blue-600 mt-0.5 transition-transform group-hover:rotate-180 duration-300" strokeWidth={2.5} />
                         {link.dropdown && (
                           <div className="absolute top-full mt-6 left-0 w-48 bg-white shadow-xl rounded-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 flex flex-col py-2 before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[20px]">
-                            {link.dropdown.map((sublink: any, subIndex: number) => (
+                            {link.dropdown.map((sublink, subIndex) => (
                               <Link 
                                 key={subIndex} 
                                 href={sublink.href}
@@ -122,8 +137,8 @@ export default function Header({ data }: { data: any }) {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex flex-col gap-6 overflow-y-auto">
-                {header.links?.map((link: any, index: number) => {
-                  const isActive = link.label === "Home";
+                {header.links?.map((link: NavLink, index: number) => {
+                  const isActive = isLinkActive(link.href);
                   const isDropdownOpen = openDropdown === link.label;
                   return (
                     <motion.div 
@@ -161,7 +176,7 @@ export default function Header({ data }: { data: any }) {
                             className="overflow-hidden"
                           >
                             <div className="flex flex-col gap-3 mt-4 pl-4 border-l-2 border-gray-100">
-                              {link.dropdown.map((sublink: any, subIndex: number) => (
+                              {link.dropdown.map((sublink, subIndex) => (
                                 <Link 
                                   key={subIndex} 
                                   href={sublink.href}

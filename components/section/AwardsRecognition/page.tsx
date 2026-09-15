@@ -8,16 +8,19 @@ import { fadeInUp, staggerContainer } from "../../utils/animations";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const IconMap: { [key: string]: any } = {
+import type { LucideIcon } from "lucide-react";
+import type { AwardItem, AwardsRecognitionData } from "../../types";
+
+const IconMap: Record<string, LucideIcon> = {
   Award,
   Trophy,
   ShieldCheck,
   Globe,
   Medal,
-  Users
+  Users,
 };
 
-export default function AwardsRecognition({ data }: { data: any }) {
+export default function AwardsRecognition({ data }: { data: AwardsRecognitionData }) {
   if (!data) return null;
 
   return (
@@ -68,7 +71,7 @@ export default function AwardsRecognition({ data }: { data: any }) {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 h-full"
             >
-              {data.awardsList?.map((award: any, index: number) => {
+              {data.awardsList?.map((award: AwardItem, index: number) => {
                 const IconComponent = IconMap[award.icon] || Award;
                 
                 return (

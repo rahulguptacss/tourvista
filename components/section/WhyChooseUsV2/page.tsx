@@ -10,13 +10,16 @@ import Link from "next/link";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-const IconMap: any = {
-  UserCheck: UserCheck,
-  CalendarCheck: CalendarCheck,
-  Briefcase: Briefcase
+import type { LucideIcon } from "lucide-react";
+import type { WhyChooseUsV2Data, WhyChooseUsV2Feature } from "../../types";
+
+const IconMap: Record<string, LucideIcon> = {
+  UserCheck,
+  CalendarCheck,
+  Briefcase,
 };
 
-export default function WhyChooseUsV2({ data }: { data: any }) {
+export default function WhyChooseUsV2({ data }: { data: WhyChooseUsV2Data }) {
   if (!data) return null;
 
   return (
@@ -60,7 +63,7 @@ export default function WhyChooseUsV2({ data }: { data: any }) {
 
             {/* Features Grid */}
             <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-2">
-              {data.features?.map((feature: any, index: number) => {
+              {data.features?.map((feature: WhyChooseUsV2Feature, index: number) => {
                 const Icon = IconMap[feature.icon] || Check;
                 const isFirst = index === 0;
                 

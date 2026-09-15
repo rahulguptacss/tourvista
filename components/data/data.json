@@ -8,7 +8,7 @@
           "href": "/"
         },
         {
-          "label": "About",
+          "label": "Pages",
           "href": "/about",
           "hasDropdown": true,
           "dropdown": [
@@ -31,6 +31,18 @@
             {
               "label": "Our Team",
               "href": "/our-team"
+            },
+            {
+              "label": "Gallery",
+              "href": "/gallery"
+            },
+            {
+              "label": "Testimonials",
+              "href": "/testimonials"
+            },
+            {
+              "label": "FAQ's",
+              "href": "/faqs"
             }
           ]
         },
@@ -44,8 +56,7 @@
         },
         {
           "label": "Destinations",
-          "href": "/destinations",
-          "hasDropdown": true
+          "href": "/destinations"
         },
         {
           "label": "Blog",
@@ -79,7 +90,7 @@
         },
         {
           "label": "Tour Packages",
-          "href": "/tours"
+          "href": "/packages"
         },
         {
           "label": "Contact Us",
@@ -350,6 +361,22 @@
           "component": "variant-1"
         }
       ]
+    },
+    "packages": {
+      "components": [
+        {
+          "key": "PackagesHero",
+          "component": "variant-1"
+        },
+        {
+          "key": "PackagesList",
+          "component": "variant-1"
+        },
+        {
+          "key": "CTABanner",
+          "component": "variant-1"
+        }
+      ]
     }
   },
   "sections": {
@@ -402,6 +429,70 @@
           "buttonText": "Contact Us",
           "buttonHref": "/contact",
           "backgroundImage": "/cta/banner.jpg"
+        }
+      }
+    },
+    "GalleryHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Gallery",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "GalleryPage": {
+      "variants": {
+        "variant-1": {
+          "pageSize": 12,
+          "items": [
+            { "id": 1, "image": "/gallery/bangkok.jpg", "title": "Bangkok" },
+            { "id": 2, "image": "/gallery/california.png", "title": "California" },
+            { "id": 3, "image": "/gallery/cappadocia.jpg", "title": "Cappadocia" },
+            { "id": 4, "image": "/gallery/detail-hero.jpg", "title": "Travel" },
+            { "id": 5, "image": "/gallery/greece.jpg", "title": "Greece" },
+            { "id": 6, "image": "/gallery/hongkong.jpg", "title": "Hongkong" },
+            { "id": 7, "image": "/gallery/london.jpg", "title": "London" },
+            { "id": 8, "image": "/gallery/maldives.jpg", "title": "Maldives" },
+            { "id": 9, "image": "/gallery/swiss.jpg", "title": "Switzerland" },
+            { "id": 10, "image": "/gallery/thailand.jpg", "title": "Thailand" },
+            { "id": 11, "image": "/gallery/tokiyonew.png", "title": "Tokyo" },
+            { "id": 12, "image": "/gallery/tokyo.jpg", "title": "Tokyo City" },
+            { "id": 13, "image": "/gallery/paris.jpg", "title": "Paris" },
+            { "id": 14, "image": "/gallery/rome.jpg", "title": "Rome" },
+            { "id": 15, "image": "/gallery/spainnew.png", "title": "Spain" },
+            { "id": 16, "image": "/gallery/dubai.jpg", "title": "Dubai" }
+          ]
+        }
+      }
+    },
+    "DestinationsHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Destinations",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "DestinationsPage": {
+      "variants": {
+        "variant-1": {
+          "pageSize": 8,
+          "items": [
+            { "id": 1, "title": "Paris", "image": "/Destinations/paris.jpg" },
+            { "id": 2, "title": "Maldives", "image": "/Destinations/maldives.jpg" },
+            { "id": 3, "title": "Hongkong", "image": "/Destinations/hongkong.jpg" },
+            { "id": 4, "title": "Thailand", "image": "/Destinations/thailand.jpg" },
+            { "id": 5, "title": "Bangkok", "image": "/Destinations/bangkok.jpg" },
+            { "id": 6, "title": "Tokyo", "image": "/Destinations/tokiyonew.png" },
+            { "id": 7, "title": "Spain", "image": "/Destinations/spainnew.png" },
+            { "id": 8, "title": "California", "image": "/Destinations/california.png" },
+            { "id": 9, "title": "London", "image": "/Destinations/london.jpg" },
+            { "id": 10, "title": "Rome", "image": "/Destinations/rome.jpg" },
+            { "id": 11, "title": "Dubai", "image": "/Destinations/dubai.jpg" },
+            { "id": 12, "title": "Bali", "image": "/Destinations/bali.jpg" }
+          ]
         }
       }
     },
@@ -463,7 +554,7 @@
           "title": "Explore Our Best Tour Packages",
           "description": "Find out more about our most popular tour options and get your journey started right away with us.",
           "buttonText": "View All Packages",
-          "buttonLink": "#",
+          "buttonLink": "/packages",
           "items": [
             {
               "id": 1,
@@ -584,11 +675,156 @@
         }
       }
     },
+    "FaqHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Frequently Asked Questions",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "FaqPage": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "FAQS",
+          "titlePrefix": "Frequently Asked ",
+          "titleHighlight": "Questions",
+          "description": "Find answers to common questions about our services, bookings and policies.",
+          "image": "/Destinations/swiss.jpg",
+          "items": [
+            {
+              "question": "How long does a service take?",
+              "answer": "The duration of a service depends on the type of service you selected. Generally, most services are completed within a few hours to a full day. You will get exact time details while booking your service."
+            },
+            {
+              "question": "How can I become a member?",
+              "answer": "You can become a member by creating an account on our website. Fill in your details, verify your email, and start exploring exclusive member benefits and offers."
+            },
+            {
+              "question": "What payment methods do you support?",
+              "answer": "We support credit cards, debit cards, net banking, UPI, and approved digital wallets. All payments are processed through a secure checkout."
+            },
+            {
+              "question": "How can I cancel my request?",
+              "answer": "You can cancel your booking from your account dashboard or by contacting our support team. Cancellation charges depend on how close the travel date is."
+            },
+            {
+              "question": "Is my personal information secure?",
+              "answer": "Yes. We use secure encryption and never share your personal details with third parties except where required to complete your booking."
+            },
+            {
+              "question": "Do you provide support on weekends?",
+              "answer": "Yes, our support team is available on weekends to help with bookings, changes, and travel queries."
+            },
+            {
+              "question": "How can I track my booking?",
+              "answer": "After booking, you will receive a confirmation email with your booking ID. You can track status anytime from your account or by contacting support."
+            }
+          ],
+          "stats": [
+            { "value": "50K+", "label": "Local Guides", "icon": "Users" },
+            { "value": "120K+", "label": "Tours Completed", "icon": "Briefcase" }
+          ],
+          "helpTitle": "Still have questions?",
+          "helpText": "Our support team is here to help you with any questions you may have.",
+          "helpButton": "Contact Us",
+          "helpLink": "/contact"
+        }
+      }
+    },
+    "TestimonialsHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Testimonials",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "TestimonialsPage": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "TESTIMONIALS",
+          "titlePrefix": "What Our ",
+          "titleHighlight": "Travelers",
+          "titleSuffix": " Say",
+          "description": "Real experiences from travelers who explored the world with us and created memories to last a lifetime.",
+          "limit": 9,
+          "items": [
+            {
+              "title": "Japan Discovery Tour",
+              "text": "Our trip to Japan was beyond amazing! From the beautiful cherry blossoms to the rich culture and delicious food, every moment was magical. Highly recommended!",
+              "image": "/Destinations/tokyo.jpg",
+              "travelersCount": "3+",
+              "avatars": ["https://i.pravatar.cc/100?img=5", "https://i.pravatar.cc/100?img=12"]
+            },
+            {
+              "title": "Maldives Paradise Escape",
+              "text": "This tour was a memorable experience. The turquoise waters, white sands and shared moments were incredible.",
+              "image": "/gallery/maldives.jpg",
+              "travelersCount": "3+",
+              "avatars": ["https://i.pravatar.cc/100?img=32", "https://i.pravatar.cc/100?img=47"]
+            },
+            {
+              "title": "Cappadocia Tour",
+              "text": "This tour was a memorable experience. Cappadocia's scenery and shared moments were magical.",
+              "image": "/gallery/cappadocia.jpg",
+              "travelersCount": "3+",
+              "avatars": ["https://i.pravatar.cc/100?img=15", "https://i.pravatar.cc/100?img=23"]
+            },
+            {
+              "title": "Paris City Lights",
+              "text": "Paris felt like a dream. The Eiffel Tower views, cafes and evening walks made this trip unforgettable.",
+              "image": "/gallery/paris.jpg",
+              "travelersCount": "4+",
+              "avatars": ["https://i.pravatar.cc/100?img=8", "https://i.pravatar.cc/100?img=20"]
+            },
+            {
+              "title": "Swiss Alpine Journey",
+              "text": "The Alps were breathtaking. Trains, lakes and mountain air made every day special for our family.",
+              "image": "/gallery/swiss.jpg",
+              "travelersCount": "5+",
+              "avatars": ["https://i.pravatar.cc/100?img=11", "https://i.pravatar.cc/100?img=28"]
+            },
+            {
+              "title": "Greece Island Hopping",
+              "text": "Santorini sunsets and island food were perfect. Smooth planning and great local guides throughout.",
+              "image": "/gallery/greece.jpg",
+              "travelersCount": "3+",
+              "avatars": ["https://i.pravatar.cc/100?img=36", "https://i.pravatar.cc/100?img=41"]
+            },
+            {
+              "title": "Thailand Beach Holiday",
+              "text": "Beautiful beaches, kind people and easy transfers. We will book with TourVista again.",
+              "image": "/gallery/thailand.jpg",
+              "travelersCount": "6+",
+              "avatars": ["https://i.pravatar.cc/100?img=18", "https://i.pravatar.cc/100?img=44"]
+            },
+            {
+              "title": "London Heritage Tour",
+              "text": "History, food and city walks were well paced. Everything was organized without any stress.",
+              "image": "/gallery/london.jpg",
+              "travelersCount": "3+",
+              "avatars": ["https://i.pravatar.cc/100?img=9", "https://i.pravatar.cc/100?img=25"]
+            },
+            {
+              "title": "Dubai Desert Escape",
+              "text": "Skyline views and desert safari were outstanding. A luxury trip that still felt personal.",
+              "image": "/gallery/dubai.jpg",
+              "travelersCount": "4+",
+              "avatars": ["https://i.pravatar.cc/100?img=14", "https://i.pravatar.cc/100?img=33"]
+            }
+          ]
+        }
+      }
+    },
     "Testimonials": {
       "variants": {
         "variant-1": {
           "subtitle": "Testimonials",
           "title": "Real feedback from our happy travelers worldwide",
+          "limit": 3,
           "items": [
             {
               "title": "Japan Discovery Tour",
@@ -672,6 +908,152 @@
               "date": "08 June",
               "type": "large"
             }
+          ]
+        }
+      }
+    },
+    "BlogHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Our Blog",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "BlogPage": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Travel Blog",
+          "title": "Travel experience",
+          "pageSize": 6,
+          "posts": [
+            {
+              "id": 1,
+              "title": "The Top Travel Destinations for Photography Enthusiasts",
+              "author": "Joey Peterson",
+              "image": "/blog/lg1.jpg",
+              "date": "05 June"
+            },
+            {
+              "id": 2,
+              "title": "The Best Ways to Travel with Your Significant Other",
+              "author": "Alaric Smith",
+              "image": "/blog/md1.jpg",
+              "date": "06 June"
+            },
+            {
+              "id": 3,
+              "title": "Top 3 Adventure Destinations for Your Next Holiday",
+              "author": "Keith Cahn",
+              "image": "/Destinations/thailand.jpg",
+              "date": "07 June"
+            },
+            {
+              "id": 4,
+              "title": "The Top Travel Destinations for Photography Enthusiasts",
+              "author": "Joey Peterson",
+              "image": "/gallery/maldives.jpg",
+              "date": "05 June"
+            },
+            {
+              "id": 5,
+              "title": "The Best Ways to Travel with Your Significant Other",
+              "author": "Alaric Smith",
+              "image": "/gallery/cappadocia.jpg",
+              "date": "06 June"
+            },
+            {
+              "id": 6,
+              "title": "Top 3 Adventure Destinations for Your Next Holiday",
+              "author": "Keith Cahn",
+              "image": "/Destinations/phuket.jpg",
+              "date": "07 June"
+            },
+            {
+              "id": 7,
+              "title": "Resources for your first trip to overseas vacation",
+              "author": "Aidan Butler",
+              "image": "/blog/sm1.jpg",
+              "date": "14 June"
+            },
+            {
+              "id": 8,
+              "title": "Step by step guide to planning your ideal holiday",
+              "author": "Martin Hicks",
+              "image": "/blog/sm3.jpg",
+              "date": "24 June"
+            }
+          ],
+          "recentTitle": "Recent Posts",
+          "recentPosts": [
+            {
+              "title": "Resources for your first trip to overseas vacation",
+              "author": "Aidan Butler",
+              "image": "/blog/sm1.jpg",
+              "date": "14 June"
+            },
+            {
+              "title": "How to get acquainted with natives in a strange land",
+              "author": "Ricardo Bell",
+              "image": "/blog/sm2.jpg",
+              "date": "20 June"
+            },
+            {
+              "title": "Step by step guide to planning your ideal holiday",
+              "author": "Martin Hicks",
+              "image": "/blog/sm3.jpg",
+              "date": "24 June"
+            }
+          ],
+          "destinationsTitle": "Top Destinations",
+          "destinations": [
+            { "name": "Thailand", "listings": "05 Listing" },
+            { "name": "Maldives", "listings": "07 Listing" },
+            { "name": "Bangkok", "listings": "08 Listing" },
+            { "name": "Paris", "listings": "09 Listing" },
+            { "name": "Spain", "listings": "02 Listing" }
+          ],
+          "galleryTitle": "Gallery",
+          "galleries": [
+            [
+              "/gallery/maldives.jpg",
+              "/gallery/swiss.jpg",
+              "/gallery/cappadocia.jpg",
+              "/gallery/thailand.jpg",
+              "/gallery/bangkok.jpg",
+              "/gallery/hongkong.jpg"
+            ]
+          ]
+        }
+      }
+    },
+    "BlogDetailHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Blog Detail",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "BlogDetail": {
+      "variants": {
+        "variant-1": {
+          "intro": "Choosing a destination can be exciting, but not a little overwhelming at times. This guide is meant to give you proper information about every destination, so you can pick a place that matches your style, budget, and travel pace.",
+          "quote": "Why did you go away? So that you can come back. And you can see the place you came from with new eyes and new colors, and the people there you differently too. Coming back to where you started is not the same as never leaving.",
+          "quoteAuthor": "Terry Pratchett",
+          "afterQuote": "Choosing a destination can be exciting but not a little overwhelming at times. A clear plan, the right season, and honest local advice make every trip smoother and more memorable.",
+          "secondImage": "/Destinations/phuket.jpg",
+          "contentImages": ["/gallery/maldives.jpg", "/Destinations/phuket.jpg"],
+          "secondTitle": "International Tourists Are arriving in Spain, Portugal, Greece, Italy, France Rose of Huge Rate, Now Over tourism.",
+          "secondText": "Choosing a destination can be exciting but not a little overwhelming at times. Popular cities are seeing more visitors than ever, so it helps to travel mindfully and respect local life.",
+          "precautionsTitle": "What precautions should we take while travelling?",
+          "precautions": [
+            "Stay aware of local laws and customs",
+            "Keep copies of important documents",
+            "Stay hydrated and eat properly",
+            "Download offline maps and a translation app"
           ]
         }
       }
@@ -1322,6 +1704,360 @@
               }
             }
           ]
+        }
+      }
+    },
+    "PackagesHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Tour Packages",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "PackagesList": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "Tour Packages",
+          "title": "Explore Our Best Tour Packages",
+          "description": "Handpicked packages for an unforgettable journey. Choose your perfect getaway!",
+          "buttonText": "VIEW ALL PACKAGES",
+          "buttonLink": "/packages",
+          "filters": [
+            {
+              "id": "all",
+              "label": "All Packages",
+              "icon": "LayoutGrid"
+            },
+            {
+              "id": "family",
+              "label": "Family Tours",
+              "icon": "Users"
+            },
+            {
+              "id": "group",
+              "label": "Group Tours",
+              "icon": "UsersRound"
+            },
+            {
+              "id": "corporate",
+              "label": "Corporate Tours",
+              "icon": "Briefcase"
+            },
+            {
+              "id": "international",
+              "label": "International Tours",
+              "icon": "Globe"
+            }
+          ],
+          "items": [
+            {
+              "id": 1,
+              "title": "MALDIVES BEACH ESCAPE",
+              "category": "FAMILY TOURS",
+              "categoryId": "family",
+              "location": "Maldives",
+              "image": "/Package/maldives.jpg",
+              "price": 750,
+              "rating": 5,
+              "reviews": "25",
+              "days": "7D / 6N",
+              "people": "2 Adults + 2 Kids",
+              "description": "Relax on pristine beaches, stay in overwater villas, and enjoy the beauty of the crystal-clear ocean."
+            },
+            {
+              "id": 2,
+              "title": "SWISS ALPINE ADVENTURE",
+              "category": "GROUP TOURS",
+              "categoryId": "group",
+              "location": "Switzerland",
+              "image": "/Package/swiss.jpg",
+              "price": 620,
+              "rating": 5,
+              "reviews": "18",
+              "days": "5D / 4N",
+              "people": "4+ People",
+              "description": "Experience the breathtaking Alps, charming villages, and scenic landscapes that Switzerland is famous for."
+            },
+            {
+              "id": 3,
+              "title": "CAPPADOCIA WONDERS",
+              "category": "INTERNATIONAL TOUR",
+              "categoryId": "international",
+              "location": "Turkey",
+              "image": "/Package/cappadocia.jpg",
+              "price": 580,
+              "rating": 5,
+              "reviews": "22",
+              "days": "7D / 6N",
+              "people": "2 Adults",
+              "description": "Unique landscapes, ancient history and magical hot air balloon rides."
+            },
+            {
+              "id": 4,
+              "title": "GREECE ISLAND HOPPING",
+              "category": "CORPORATE TOUR",
+              "categoryId": "corporate",
+              "location": "Greece",
+              "image": "/Package/greece.jpg",
+              "price": 680,
+              "rating": 5,
+              "reviews": "16",
+              "days": "5D / 3N",
+              "people": "Team",
+              "description": "Discover the beauty of Santorini and Mykonos with stunning views, delicious food, and rich culture."
+            }
+          ]
+        }
+      }
+    },
+    "PackageDetailHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Package Detail",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "PackageDetail": {
+      "variants": {
+        "variant-1": {
+          "tabs": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "itinerary", "label": "Day Wise Itinerary" },
+            { "id": "inclusion", "label": "Inclusions / Exclusions" },
+            { "id": "terms", "label": "Term & Condition" }
+          ],
+          "bookText": "Book Now",
+          "fromLabel": "FROM",
+          "labels": {
+            "overviewTitle": "Package Overview",
+            "delightsTitle": "Additional Everyday Delights",
+            "itineraryTitle": "Day Wise Itinerary",
+            "itineraryDayPrefix": "Day",
+            "itineraryDayBadge": "DAY",
+            "inclusionTitle": "Inclusion",
+            "exclusionTitle": "Exclusion",
+            "termsTitle": "Term & Condition",
+            "startingFrom": "Starting from",
+            "perPerson": "/ Person",
+            "emiPrefix": "No Cost EMI Starts from",
+            "seeOption": "See option",
+            "enquireNow": "Enquire Now",
+            "enquireLink": "/contact",
+            "durationLabel": "Duration : ",
+            "placesLabel": "Places to Visit : ",
+            "packageIncludes": "Package Includes"
+          },
+          "includes": [
+            { "icon": "Hotel", "label": "Hotel" },
+            { "icon": "Binoculars", "label": "Sightseeing" },
+            { "icon": "Car", "label": "Transfer" },
+            { "icon": "Utensils", "label": "Meal" }
+          ],
+          "inclusions": [
+            "Hotel accommodation as per itinerary",
+            "Daily breakfast at the hotel",
+            "Airport pickup and drop",
+            "Private AC transfers for sightseeing",
+            "All entrance fees mentioned in the plan",
+            "English speaking local guide",
+            "Welcome drink on arrival"
+          ],
+          "exclusions": [
+            "International or domestic airfare",
+            "Travel insurance and visa charges",
+            "Personal expenses and shopping",
+            "Meals not mentioned in the itinerary",
+            "Optional activities and adventure sports",
+            "Tips and porterage"
+          ],
+          "terms": [
+            {
+              "title": "Booking Policy",
+              "text": "A 30% advance payment is required to confirm the booking. Remaining amount is payable 15 days before departure."
+            },
+            {
+              "title": "High Season",
+              "text": "Prices may vary during peak holidays, festivals, and long weekends. Final rates are confirmed at the time of booking."
+            },
+            {
+              "title": "Payment",
+              "text": "We accept bank transfer, credit/debit cards, and approved digital wallets. Payment receipts will be shared instantly."
+            },
+            {
+              "title": "Cancellation",
+              "text": "Cancellations made 20 days before travel are eligible for a partial refund. Later cancellations may be non-refundable."
+            },
+            {
+              "title": "Visa & Conditions",
+              "text": "Travelers are responsible for valid passports and visas. TourVista can assist with documentation on request."
+            },
+            {
+              "title": "Booking Time",
+              "text": "Packages should be booked at least 10 days in advance to secure hotels, transfers, and activity slots."
+            },
+            {
+              "title": "Warranty",
+              "text": "Services are provided as described. Any service issue during the trip should be reported immediately for resolution."
+            },
+            {
+              "title": "Refund Policy",
+              "text": "Approved refunds are processed within 7–10 working days to the original payment method."
+            }
+          ],
+          "details": {
+            "1": {
+              "headline": "The Most Beautiful Destination , Maldives",
+              "ratingLabel": "(4.8 Review)",
+              "nightsLine": "2N Male | 3N Overwater Villa | 1N Sandbank | 1N Reef Island",
+              "heroImage": "/Package/detail-hero.jpg",
+              "overviewText": "The Maldives is a tropical island nation in the Indian Ocean, known for its crystal-clear lagoons, white-sand beaches, and overwater villas. This package is designed for a slow, luxurious island holiday with handpicked stays and daily experiences.",
+              "subtitle": "Stay in overwater villas, snorkel crystal lagoons, and enjoy a slow, luxurious island holiday with your family.",
+              "type": "Beach Holiday",
+              "durationLabel": "7 DAYS",
+              "durationFull": "6 Nights & 7 Days",
+              "oldPrice": 938,
+              "emiPrice": 488,
+              "discount": "20% Off",
+              "gallery": ["/Package/detail-hero.jpg", "/Package/maldives.jpg", "/Destinations/phuket.jpg"],
+              "overview": [
+                "Private overwater villa with sunrise lagoon views",
+                "Daily breakfast and selected gourmet dinners",
+                "Guided snorkeling at vibrant coral reefs",
+                "Sunset cruise with light refreshments",
+                "Family-friendly beach club access",
+                "Airport speedboat transfers included"
+              ],
+              "delights": [
+                { "title": "Sunset Cruise", "text": "Sail across turquoise waters while the sky turns gold." },
+                { "title": "Reef Snorkeling", "text": "Swim with colorful fish in shallow, clear lagoons." },
+                { "title": "Island Picnic", "text": "A private sandbank lunch prepared by the resort chef." },
+                { "title": "Spa Evening", "text": "Couple or family spa session with ocean-view treatment rooms." }
+              ],
+              "itinerary": [
+                { "day": "01", "title": "Arrival In Male", "points": ["Airport welcome and speedboat transfer", "Villa check-in with welcome drinks", "Evening at leisure on the beach"] },
+                { "day": "02", "title": "Lagoon & Leisure", "points": ["Breakfast at the overwater restaurant", "Guided snorkeling session", "Free time for swimming and spa"] },
+                { "day": "03", "title": "Island Hopping", "points": ["Visit a local fishing island", "Cultural walk and photo stops", "Sunset cruise after dinner"], "images": ["/Package/maldives.jpg", "/Destinations/phuket.jpg"] },
+                { "day": "04", "title": "Water Adventures", "points": ["Optional jet ski or kayak", "Sandbank picnic lunch", "Stargazing from the villa deck"] },
+                { "day": "05", "title": "Family Beach Day", "points": ["Kids club activities", "Private beach cabana", "Seafood dinner by the lagoon"], "images": ["/Destinations/phuket.jpg", "/Package/greece.jpg"] },
+                { "day": "06", "title": "Relax & Explore", "points": ["Slow morning at the pool", "Resort photography session", "Farewell dinner"], "images": ["/Package/maldives.jpg", "/Package/swiss.jpg"] },
+                { "day": "07", "title": "Departure", "points": ["Breakfast and checkout", "Speedboat to the airport", "Assistance for onward flight"] }
+              ]
+            },
+            "2": {
+              "headline": "The Most Beautiful Destination , Switzerland",
+              "ratingLabel": "(4.8 Review)",
+              "nightsLine": "1N Zurich | 2N Lucerne | 2N Interlaken",
+              "heroImage": "/Package/detail-hero.jpg",
+              "overviewText": "Switzerland is a land of alpine lakes, scenic trains, and charming villages. This journey takes you through Zurich, Lucerne, and Interlaken with a well-paced mix of sightseeing and mountain views.",
+              "subtitle": "Ride mountain trains, wander lakeside towns, and experience the Swiss Alps with a well-paced group itinerary.",
+              "type": "Adventure Tour",
+              "durationLabel": "5 DAYS",
+              "durationFull": "4 Nights & 5 Days",
+              "oldPrice": 775,
+              "emiPrice": 403,
+              "discount": "15% Off",
+              "gallery": ["/Package/detail-hero.jpg", "/Package/swiss.jpg", "/Destinations/swiss.jpg"],
+              "overview": [
+                "Panoramic train journeys through the Alps",
+                "Lakeside stays in Interlaken and Lucerne",
+                "Guided old-town walking tours",
+                "Cable car ride with mountain views",
+                "Swiss chocolate and cheese tasting",
+                "Comfortable group transfers throughout"
+              ],
+              "delights": [
+                { "title": "Alpine Train", "text": "Travel through valleys and snow-capped peaks in comfort." },
+                { "title": "Lake Cruise", "text": "A peaceful cruise on a crystal-clear Swiss lake." },
+                { "title": "Mountain Peak", "text": "Cable car ride to a viewpoint above the clouds." },
+                { "title": "Local Tasting", "text": "Sample authentic Swiss chocolate, cheese, and fondue." }
+              ],
+              "itinerary": [
+                { "day": "01", "title": "Arrival In Zurich", "points": ["Airport pickup and city orientation", "Hotel check-in", "Evening walk by the lake"] },
+                { "day": "02", "title": "Lucerne Discovery", "points": ["Chapel Bridge and old town", "Optional Mount Pilatus visit", "Group dinner in the city"] },
+                { "day": "03", "title": "Interlaken Alps", "points": ["Scenic transfer to Interlaken", "Photo stops at lakes Brienz and Thun", "Free evening in town"], "images": ["/Package/swiss.jpg", "/Destinations/swiss.jpg"] },
+                { "day": "04", "title": "Jungfrau Region", "points": ["Mountain excursion", "Village walk in Grindelwald", "Swiss lunch with a view"] },
+                { "day": "05", "title": "Departure", "points": ["Breakfast and checkout", "Transfer to Zurich airport", "Tour concludes"], "images": ["/Destinations/swiss.jpg", "/Package/cappadocia.jpg"] }
+              ]
+            },
+            "3": {
+              "headline": "The Most Beautiful Destination , Cappadocia",
+              "ratingLabel": "(4.8 Review)",
+              "nightsLine": "2N Goreme | 2N Cave Hotel | 2N Red Valley | 1N Avanos",
+              "heroImage": "/Package/detail-hero.jpg",
+              "overviewText": "Cappadocia is a unique region of fairy chimneys, cave hotels, and sunrise balloon rides. This package combines valley walks, underground cities, and authentic local experiences.",
+              "subtitle": "Float over fairy chimneys, explore cave hotels, and discover ancient valleys unique to Turkey.",
+              "type": "International Tour",
+              "durationLabel": "7 DAYS",
+              "durationFull": "6 Nights & 7 Days",
+              "oldPrice": 725,
+              "emiPrice": 377,
+              "discount": "18% Off",
+              "gallery": ["/Package/detail-hero.jpg", "/Package/cappadocia.jpg", "/Destinations/cappadocia.jpg"],
+              "overview": [
+                "Sunrise hot air balloon experience",
+                "Cave hotel stay in Goreme",
+                "Guided valley hikes and photo walks",
+                "Underground city exploration",
+                "Traditional pottery workshop",
+                "All airport and local transfers"
+              ],
+              "delights": [
+                { "title": "Balloon Sunrise", "text": "Float above the valleys as the sun lights the chimneys." },
+                { "title": "Cave Stay", "text": "Sleep in a beautifully restored Cappadocian cave suite." },
+                { "title": "Valley Walk", "text": "Easy trails through Love Valley and Goreme viewpoints." },
+                { "title": "Pottery Art", "text": "Try your hand at Avanos ceramic making with a local artist." }
+              ],
+              "itinerary": [
+                { "day": "01", "title": "Arrival In Cappadocia", "points": ["Airport pickup", "Cave hotel check-in", "Sunset viewpoint visit"] },
+                { "day": "02", "title": "Balloon & Valleys", "points": ["Hot air balloon ride", "Breakfast with a view", "Open-air museum tour"] },
+                { "day": "03", "title": "Goreme Highlights", "points": ["Love Valley walk", "Castle viewpoint", "Local lunch"], "images": ["/Package/cappadocia.jpg", "/Destinations/cappadocia.jpg"] },
+                { "day": "04", "title": "Underground City", "points": ["Kaymakli or Derinkuyu visit", "Pottery town Avanos", "Free evening"] },
+                { "day": "05", "title": "Red Valley Sunset", "points": ["Canyon walk", "Sunset from a ridge", "Traditional dinner"], "images": ["/Destinations/cappadocia.jpg", "/Package/swiss.jpg"] },
+                { "day": "06", "title": "Leisure Day", "points": ["Optional ATV or horseback", "Spa time at the hotel", "Souvenir shopping"], "images": ["/Package/cappadocia.jpg", "/Package/greece.jpg"] },
+                { "day": "07", "title": "Departure", "points": ["Breakfast", "Airport transfer", "Tour ends"] }
+              ]
+            },
+            "4": {
+              "headline": "The Most Beautiful Destination , Greece",
+              "ratingLabel": "(4.8 Review)",
+              "nightsLine": "2N Santorini | 2N Fira | 1N Oia",
+              "heroImage": "/Package/detail-hero.jpg",
+              "overviewText": "Greece is famous for whitewashed villages, caldera views, and island sunsets. This itinerary focuses on Santorini with walking tours, a catamaran cruise, and relaxed evenings by the sea.",
+              "subtitle": "Combine Santorini sunsets, whitewashed villages, and a smooth corporate-friendly island itinerary.",
+              "type": "Island Tour",
+              "durationLabel": "5 DAYS",
+              "durationFull": "3 Nights & 5 Days",
+              "oldPrice": 850,
+              "emiPrice": 442,
+              "discount": "12% Off",
+              "gallery": ["/Package/detail-hero.jpg", "/Package/greece.jpg", "/Destinations/phuket.jpg"],
+              "overview": [
+                "Santorini caldera-view hotel stay",
+                "Guided Oia and Fira walking tour",
+                "Catamaran cruise with swimming stops",
+                "Wine tasting at a cliffside vineyard",
+                "Team-friendly private transfers",
+                "Ferry or domestic flight support"
+              ],
+              "delights": [
+                { "title": "Oia Sunset", "text": "Watch the world-famous Santorini sunset from the cliffs." },
+                { "title": "Caldera Cruise", "text": "Sail the volcanic caldera with swimming and BBQ." },
+                { "title": "Wine Tasting", "text": "Sample Assyrtiko wines with a sea-view terrace." },
+                { "title": "Village Walks", "text": "Explore blue-dome churches and boutique lanes." }
+              ],
+              "itinerary": [
+                { "day": "01", "title": "Arrival In Santorini", "points": ["Airport or port pickup", "Hotel check-in", "Evening in Fira"] },
+                { "day": "02", "title": "Oia & Villages", "points": ["Guided walk in Oia", "Photo stops at blue domes", "Free time for lunch"] },
+                { "day": "03", "title": "Caldera Cruise", "points": ["Catamaran sailing", "Hot spring stop", "Onboard lunch"], "images": ["/Package/greece.jpg", "/Destinations/phuket.jpg"] },
+                { "day": "04", "title": "Wine & Leisure", "points": ["Vineyard tasting", "Team free afternoon", "Sunset dinner"] },
+                { "day": "05", "title": "Departure", "points": ["Breakfast and checkout", "Transfer to airport or port", "Tour concludes"], "images": ["/Package/greece.jpg", "/Package/maldives.jpg"] }
+              ]
+            }
+          }
         }
       }
     },

@@ -9,7 +9,9 @@ import { fadeInUp, staggerContainer, fadeInLeft } from "../../utils/animations";
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-export default function Hero({ data }: { data: any }) {
+import type { HeroData } from "../../types";
+
+export default function Hero({ data }: { data: HeroData }) {
   const hero = data;
   return (
     <section className={`relative min-h-[80dvh] lg:min-h-[100dvh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-0 ${poppins.className}`}>

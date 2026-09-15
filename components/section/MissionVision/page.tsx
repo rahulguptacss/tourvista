@@ -9,7 +9,9 @@ import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-export default function MissionVision({ data }: { data: any }) {
+import type { MissionVisionData } from "../../types";
+
+export default function MissionVision({ data }: { data: MissionVisionData }) {
   if (!data) return null;
 
   return (

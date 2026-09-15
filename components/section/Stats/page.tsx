@@ -71,7 +71,9 @@ const AnimatedCounter = ({ value }: { value: string }) => {
   );
 };
 
-export default function Stats({ data }: { data: any }) {
+import type { StatItem, StatsData } from "../../types";
+
+export default function Stats({ data }: { data: StatsData }) {
   const stats = data.items || [];
   if (!stats || stats.length === 0) return null;
 
@@ -80,7 +82,7 @@ export default function Stats({ data }: { data: any }) {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="bg-[#0b1d3d] bg-gradient-to-r from-[#071736] via-[#0b2046] to-[#071736] px-4 sm:px-6 py-8 md:py-10 rounded-b-[2rem] shadow-2xl">
           <div className="flex flex-wrap items-center justify-center max-w-5xl mx-auto md:divide-x md:divide-white/10">
-            {stats.map((stat: any, idx: number) => {
+            {stats.map((stat: StatItem, idx: number) => {
               let IconComponent = null;
               const lowerLabel = stat.label?.toLowerCase() || '';
               

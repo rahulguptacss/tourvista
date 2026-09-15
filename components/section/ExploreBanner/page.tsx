@@ -7,14 +7,17 @@ import { Globe2, Plane, Mountain, Camera, ArrowDown } from "lucide-react";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
-const IconMap: any = {
-  Globe2: Globe2,
-  Plane: Plane,
-  Mountain: Mountain,
-  Camera: Camera
+import type { LucideIcon } from "lucide-react";
+import type { ExploreBannerData, ExploreCard } from "../../types";
+
+const IconMap: Record<string, LucideIcon> = {
+  Globe2,
+  Plane,
+  Mountain,
+  Camera,
 };
 
-export default function ExploreBanner({ data }: { data: any }) {
+export default function ExploreBanner({ data }: { data: ExploreBannerData }) {
   if (!data) return null;
 
   return (
@@ -73,7 +76,7 @@ export default function ExploreBanner({ data }: { data: any }) {
               viewport={{ once: true }}
               className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 w-full max-w-[1000px]"
             >
-              {data.cards?.map((card: any, index: number) => {
+              {data.cards?.map((card: ExploreCard, index: number) => {
                 const Icon = IconMap[card.icon] || Globe2;
                 return (
                   <motion.div 

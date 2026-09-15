@@ -7,12 +7,14 @@ import Footer from "../section/Footer/page";
 import CarAnimation from "../section/CarAnimation/page";
 import BreadcrumbBanner from "../section/BreadcrumbBanner/page";
 
+import type { FooterData, HeaderData, PackagesHeroData, TopbarData } from "../types";
+
 interface GlobalLayoutProps {
   children: React.ReactNode;
-  headerData: any;
-  topbarData: any;
-  footerData: any;
-  banners: Record<string, { title: string; backgroundImage: string }>;
+  headerData: HeaderData;
+  topbarData: TopbarData;
+  footerData: FooterData;
+  banners: Record<string, PackagesHeroData>;
 }
 
 export default function GlobalLayout({
@@ -42,6 +44,16 @@ export default function GlobalLayout({
         ...currentBanner,
         title: "Service Detail",
       };
+    } else if (baseRoute === "package-detail" && currentRoute !== "package-detail") {
+      currentBanner = {
+        ...currentBanner,
+        title: "Package Detail",
+      };
+    } else if (baseRoute === "blog-detail" && currentRoute !== "blog-detail") {
+      currentBanner = {
+        ...currentBanner,
+        title: "Blog Detail",
+      };
     }
   }
 
@@ -54,6 +66,7 @@ export default function GlobalLayout({
         <BreadcrumbBanner
           title={currentBanner.title}
           backgroundImage={currentBanner.backgroundImage}
+          showBreadcrumb={currentBanner.showBreadcrumb !== false}
         />
       )}
       
