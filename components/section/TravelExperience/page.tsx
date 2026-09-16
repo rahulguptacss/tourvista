@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Home } from "lucide-react";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 import { TravelBlogData, BlogItem } from "../../types";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../../utils/animations";
@@ -34,7 +35,7 @@ function DateBadge({ date, light = false }: { date: string; light?: boolean }) {
 
 function SmallBlogCard({ blog }: { blog: BlogItem }) {
   return (
-    <article className="relative flex h-full items-center gap-4 rounded-[20px] bg-[#f3f5f8] p-3 pr-[58px]">
+    <Link href={`/blog-detail/${blog.id}`} className="block relative flex h-full items-center gap-4 rounded-[20px] bg-[#f3f5f8] p-3 pr-[58px] transition-transform hover:-translate-y-1">
       <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full">
         <Image src={blog.image} alt={blog.title} fill sizes="72px" className="object-cover" />
       </div>
@@ -45,13 +46,13 @@ function SmallBlogCard({ blog }: { blog: BlogItem }) {
       <div className="absolute right-3 top-3">
         <DateBadge date={blog.date} />
       </div>
-    </article>
+    </Link>
   );
 }
 
 function MediumBlogCard({ blog }: { blog: BlogItem }) {
   return (
-    <article className="relative">
+    <Link href={`/blog-detail/${blog.id}`} className="block relative transition-transform hover:-translate-y-1">
       <div className="relative overflow-hidden rounded-[20px]">
         <Image
           src={blog.image}
@@ -68,7 +69,7 @@ function MediumBlogCard({ blog }: { blog: BlogItem }) {
         <p className="mb-1 text-[13px] font-medium text-[#8b92a0]">{blog.author}</p>
         <h4 className="text-[16px] font-semibold leading-[1.35] text-[#0b1b3f]">{blog.title}</h4>
       </div>
-    </article>
+    </Link>
   );
 }
 
@@ -76,8 +77,8 @@ function LargeBlogCard({ blog }: { blog: BlogItem }) {
   const author = blog.author?.startsWith("By ") ? blog.author : `By ${blog.author}`;
 
   return (
-    <article className="relative h-full min-h-[420px] overflow-hidden rounded-[20px]">
-      <Image src={blog.image} alt={blog.title} fill sizes="420px" className="object-cover object-center" />
+    <Link href={`/blog-detail/${blog.id}`} className="block relative h-full min-h-[420px] overflow-hidden rounded-[20px] group">
+      <Image src={blog.image} alt={blog.title} fill sizes="420px" className="object-cover object-center transition-transform duration-500 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
       <div className="absolute right-4 top-4">
         <DateBadge date={blog.date} light />
@@ -86,7 +87,7 @@ function LargeBlogCard({ blog }: { blog: BlogItem }) {
         <p className="mb-2 text-[13px] font-medium text-white/90">{author}</p>
         <h3 className="text-[26px] font-bold leading-[1.25] text-white">{blog.title}</h3>
       </div>
-    </article>
+    </Link>
   );
 }
 

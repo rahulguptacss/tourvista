@@ -607,9 +607,123 @@ export interface ServicesListData {
   description: string;
   services: ServiceItem[];
 }
+export interface ContactInfoCard {
+  icon: string;
+  title: string;
+  subtitle: string;
+  lines: string[];
+}
+
+export interface ContactInfoData {
+  subtitle: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  description: string;
+  cards: ContactInfoCard[];
+}
+
+export interface ContactFormData {
+  chatImage: string;
+  chatTitle1: string;
+  chatTitleHighlight: string;
+  chatDescription: string;
+  chatButtonText: string;
+  formTitle: string;
+  disclaimer: string;
+  submitText: string;
+}
+
+export interface ContactMapData {
+  embedUrl: string;
+  cardTitle: string;
+  cardAddress: string;
+  cardRating: string;
+  cardReviews: string;
+  cardLink: string;
+}
+
+export interface PartnerBrand {
+  name: string;
+  logo: string;
+}
+
+export interface PartnersData {
+  subtitle: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  brands: PartnerBrand[];
+}
+
+export interface EnquiryFormField {
+  name: string;
+  label: string;
+  type: string;
+  placeholder?: string;
+  icon?: string;
+  required?: boolean;
+  options?: { label: string; value: string }[];
+  fullWidth?: boolean;
+}
+
+export interface EnquiryFormSection {
+  title: string;
+  icon: string;
+  fields: EnquiryFormField[];
+  submitText: string;
+  secureText: string;
+}
+
+export interface EnquiryPageData {
+  titlePrefix: string;
+  titleHighlight: string;
+  subtitle: string;
+  description: string;
+  form: EnquiryFormSection;
+  whyEnquire: {
+    title: string;
+    items: {
+      title: string;
+      description: string;
+      icon: string;
+    }[];
+  };
+  assistance: {
+    title: string;
+    description: string;
+    phones: string[];
+    email: string;
+  };
+  steps: {
+    title: string;
+    items: {
+      step: number;
+      title: string;
+      description: string;
+      icon: string;
+    }[];
+  };
+}
+
+export interface NotFoundFeature {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface NotFoundData {
+  backgroundImage: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  descriptionLine1: string;
+  descriptionLine2: string;
+  buttonText: string;
+  buttonLink: string;
+  features: NotFoundFeature[];
+}
 
 export interface SectionsData {
   Hero: { variants: { "variant-1": HeroData } };
+  NotFound: { variants: { "variant-1": NotFoundData } };
   ServicesHero: { variants: { "variant-1": ServicesHeroData } };
   ServicesList: { variants: { "variant-1": ServicesListData } };
   ServiceDetail: { variants: { "variant-1": ServiceDetailData } };
@@ -651,6 +765,14 @@ export interface SectionsData {
   OurTeam: { variants: { "variant-1": OurTeamData } };
   TeamDetailHero: { variants: { "variant-1": PackagesHeroData } };
   TeamDetail: { variants: { "variant-1": TeamDetailSectionData } };
+  ContactHero: { variants: { "variant-1": PackagesHeroData } };
+  ContactInfo: { variants: { "variant-1": ContactInfoData } };
+  ContactForm: { variants: { "variant-1": ContactFormData } };
+  ContactMap: { variants: { "variant-1": ContactMapData } };
+  PartnersHero: { variants: { "variant-1": PackagesHeroData } };
+  Partners: { variants: { "variant-1": PartnersData } };
+  EnquiryHero: { variants: { "variant-1": PackagesHeroData } };
+  EnquiryPage: { variants: { "variant-1": EnquiryPageData } };
 }
 
 export interface PageComponent {
@@ -670,6 +792,9 @@ export interface PagesData {
   awards?: PageData;
   "why-choose-us"?: PageData;
   "our-team"?: PageData;
+  contact?: PageData;
+  partners?: PageData;
+  enquiry?: PageData;
 }
 
 export interface CommonData {

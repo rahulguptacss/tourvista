@@ -48,20 +48,20 @@ export function BlogSidebar({ data }: { data: BlogPageData }) {
         </div>
         <div className="rounded-[18px] bg-white px-5 py-2 shadow-[0_15px_50px_rgba(15,23,42,0.08)]">
           {data.recentPosts.map((post, index) => (
-            <div
+            <Link
               key={post.title + post.date}
-              className={`flex items-start gap-3 py-4 ${
-                index < data.recentPosts.length - 1 ? "border-b border-dashed border-[#d9e0e6]" : ""
-              }`}
+              href={post.id ? `/blog-detail/${post.id}` : "/blog"}
+              className={`flex items-start gap-3 py-4 group ${index < data.recentPosts.length - 1 ? "border-b border-dashed border-[#d9e0e6]" : ""
+                }`}
             >
               <RecentDateBadge date={post.date} />
               <div className="min-w-0">
                 <p className="mb-1 text-[13px] font-medium text-[#ff7a00]">{post.author}</p>
-                <p className="text-[14px] font-medium leading-[1.4] text-[#0d4f56]">
+                <p className="text-[14px] font-medium leading-[1.4] text-[#0d4f56] group-hover:text-[#ff7a00] transition-colors">
                   {post.title}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -215,11 +215,10 @@ export default function BlogList({ data }: { data: BlogPageData }) {
                     key={num}
                     type="button"
                     onClick={() => goToPage(num)}
-                    className={`flex h-10 w-10 items-center justify-center rounded-[12px] text-[15px] font-semibold ${
-                      page === num
+                    className={`flex h-10 w-10 items-center justify-center rounded-[12px] text-[15px] font-semibold ${page === num
                         ? "bg-[#0b1b36] text-white shadow-[0_6px_18px_rgba(11,27,54,0.25)]"
                         : "bg-white text-[#0b1b36] shadow-[0_6px_18px_rgba(15,23,42,0.08)]"
-                    }`}
+                      }`}
                   >
                     {num}
                   </button>

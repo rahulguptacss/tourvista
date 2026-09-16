@@ -45,6 +45,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     blog: sections.BlogHero.variants["variant-1"],
     "blog-detail": sections.BlogDetailHero.variants["variant-1"],
     "package-detail": sections.PackageDetailHero.variants["variant-1"],
+    contact: sections.ContactHero?.variants["variant-1"],
+    partners: sections.PartnersHero?.variants["variant-1"],
+    enquiry: sections.EnquiryHero?.variants["variant-1"],
   };
 
   return (
