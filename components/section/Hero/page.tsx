@@ -45,14 +45,14 @@ export default function Hero({ data }: { data: HeroData }) {
 
           {/* Buttons */}
           <motion.div variants={fadeInUp} className="flex flex-row items-center gap-3 md:gap-5 w-full">
-            <Link href="#" className="cursor-pointer flex-1 md:flex-none flex items-center justify-between md:justify-start gap-2 bg-[#ff7a00] text-white pl-5 md:pl-8 pr-1.5 md:pr-2 py-1.5 md:py-2 rounded-full text-[14px] md:text-[1.05rem] font-[600] hover:bg-[#e66e00] transition-all hover:scale-105 shadow-lg shadow-orange-500/30">
+            <Link href="/services" className="cursor-pointer flex-1 md:flex-none flex items-center justify-between md:justify-start gap-2 bg-[#ff7a00] text-white pl-5 md:pl-8 pr-1.5 md:pr-2 py-1.5 md:py-2 rounded-full text-[14px] md:text-[1.05rem] font-[600] hover:bg-[#e66e00] transition-all hover:scale-105 shadow-lg shadow-orange-500/30">
               <span className="whitespace-nowrap">{hero?.button1 || "Discover More"}</span>
               <div className="bg-white text-[#ff7a00] rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shrink-0">
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />
               </div>
             </Link>
 
-            <Link href="#" className="cursor-pointer flex-1 md:flex-none flex items-center justify-between md:justify-start gap-2 bg-transparent border-[1.5px] border-white/60 text-white pl-5 md:pl-8 pr-1.5 md:pr-2 py-1.5 md:py-2 rounded-full text-[14px] md:text-[1.05rem] font-[500] hover:bg-white/10 transition-all hover:scale-105">
+            <Link href="/packages" className="cursor-pointer flex-1 md:flex-none flex items-center justify-between md:justify-start gap-2 bg-transparent border-[1.5px] border-white/60 text-white pl-5 md:pl-8 pr-1.5 md:pr-2 py-1.5 md:py-2 rounded-full text-[14px] md:text-[1.05rem] font-[500] hover:bg-white/10 transition-all hover:scale-105">
               <span className="whitespace-nowrap">{hero?.button2 || "View Packages"}</span>
               <div className="bg-white text-slate-900 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shrink-0">
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />

@@ -492,7 +492,7 @@ export default function Recommendation({
                   "
                 >
                   {/* Button */}
-                  <Link href="#"
+                  <Link href="/about"
                     className="
                       cursor-pointer
                       flex

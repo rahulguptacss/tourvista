@@ -77,7 +77,7 @@ export default function Packages({ data }: { data: PackagesData }) {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-12 max-w-7xl mx-auto"
         >
-          {packages.items.map((pkg) => {
+          {packages.items.slice(0, 4).map((pkg) => {
             const Icon = pkg.title.toLowerCase().includes('mountain') || pkg.title.toLowerCase().includes('swiss') || pkg.title.toLowerCase().includes('cappadocia') ? Plane : Plane; // We will just import Palmtree and Mountain from lucide react if needed, for now use Plane as fallback if we don't have others imported yet. Wait, I should import Palmtree and Mountain at the top. Let me use MapPin as fallback for icon. Let's assume we render based on a condition or just use a generic orange icon. The screenshot has Palm tree and Mountain. I will import them.
             return (
               <motion.div variants={fadeInUp} key={pkg.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col sm:flex-row group h-full">
@@ -161,10 +161,13 @@ export default function Packages({ data }: { data: PackagesData }) {
           })}
         </motion.div>
 
-        {/* View All Button */}
         <div className="text-center">
-          <Link href={packages.buttonLink || "#"} className="cursor-pointer inline-flex items-center justify-center border-[1.5px] border-[#3474d4] text-[#3474d4] hover:bg-[#3474d4] hover:text-white px-8 py-2.5 rounded-full font-semibold text-[0.95rem] transition-all">
+          <Link
+            href={packages.buttonLink || "/packages"}
+            className="cursor-pointer inline-flex items-center justify-center gap-2 border-[1.5px] border-[#3474d4] text-[#3474d4] hover:bg-[#3474d4] hover:text-white px-8 py-2.5 rounded-full font-semibold text-[0.95rem] tracking-wide uppercase transition-all"
+          >
             {packages.buttonText || "View All Packages"}
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </Link>
         </div>
       </div>

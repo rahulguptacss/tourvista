@@ -131,7 +131,11 @@ export default function Destinations({ data }: { data: DestinationsData }) {
           className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-6 md:mb-8 pb-4 md:pb-0"
         >
           {destinations.items.map((dest: DestinationItem) => (
-            <div key={dest.id} className="w-full min-w-[100%] md:w-auto md:min-w-0 snap-center shrink-0 bg-white rounded-[1.5rem] shadow-[0_4px_25px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-300 group flex flex-col border border-gray-100/50">
+            <Link
+              key={dest.id}
+              href={`/package-detail/${dest.packageId || dest.id}`}
+              className="w-full min-w-[100%] md:w-auto md:min-w-0 snap-center shrink-0 bg-white rounded-[1.5rem] shadow-[0_4px_25px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)] transition-all duration-300 group flex flex-col border border-gray-100/50"
+            >
               
               <div className="relative h-[220px] w-full shrink-0">
                 <div className="absolute inset-0 overflow-hidden rounded-t-[1.5rem]">
@@ -175,15 +179,12 @@ export default function Destinations({ data }: { data: DestinationsData }) {
                 <p className="text-[#4b5563] text-[14px] md:text-[13.5px] leading-[1.6] mb-5 flex-1 line-clamp-2 md:line-clamp-2">
                   {dest.description}
                 </p>
-                <Link 
-                  href={`/destinations/${dest.id}`}
-                  className="inline-flex items-center gap-1.5 text-[#0055ff] font-[700] text-[15px] md:text-[14.5px] group-hover:gap-2.5 transition-all mt-auto"
-                >
+                <span className="inline-flex items-center gap-1.5 text-[#0055ff] font-[700] text-[15px] md:text-[14.5px] group-hover:gap-2.5 transition-all mt-auto">
                   Explore Now <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-                </Link>
+                </span>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -224,7 +225,7 @@ export default function Destinations({ data }: { data: DestinationsData }) {
 
         {/* View More Button */}
         <div className="text-center md:px-0">
-          <Link href="#" className="cursor-pointer w-full md:w-auto bg-[#0055ff] hover:bg-blue-700 text-white px-8 py-4 md:py-3.5 rounded-[2rem] md:rounded-full font-semibold transition-colors shadow-lg shadow-blue-500/30 inline-flex items-center justify-center gap-2 mx-auto">
+          <Link href="/destinations" className="cursor-pointer w-full md:w-auto bg-[#0055ff] hover:bg-blue-700 text-white px-8 py-4 md:py-3.5 rounded-[2rem] md:rounded-full font-semibold transition-colors shadow-lg shadow-blue-500/30 inline-flex items-center justify-center gap-2 mx-auto">
             <svg className="md:hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 3.1-3.2 3.2c-1.4-1.4-3.5-1.5-4.8-.2l-.6.6 3.6 1.8 1.8 3.6.6-.6c1.3-1.3 1.2-3.4-.2-4.8L9.4 12l3.1 6 1.2-.7.4-3.9.6-.2z"/></svg>
             <span className="md:hidden">More Destinations</span>
             <span className="hidden md:inline">See More Destinations</span>

@@ -103,6 +103,8 @@ export default function TeamDetail({ data }: { data: TeamDetailViewData }) {
                   <a 
                     key={idx} 
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full border border-gray-400 flex items-center justify-center text-[#214358] hover:bg-[#ff7a00] hover:text-white hover:border-[#ff7a00] transition-colors"
                   >
                     {social.icon === 'Twitter' ? (

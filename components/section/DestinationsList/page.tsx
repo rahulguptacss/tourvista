@@ -2,10 +2,12 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Poppins } from "next/font/google";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../../utils/animations";
+import { toCountrySlug } from "../../lib/country";
 import type { DestinationItem, DestinationsPageData } from "../../types";
 
 const poppins = Poppins({
@@ -54,23 +56,21 @@ export default function DestinationsList({
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-7 lg:gap-x-4 lg:gap-y-8"
         >
           {visibleItems.map((item: DestinationItem) => (
-            <motion.article
-              key={item.id}
-              variants={fadeInUp}
-              className="relative"
-            >
-              <div className="relative w-full h-[260px] sm:h-[290px] lg:h-[320px] rounded-[28px] overflow-hidden border border-[#edf2f5] shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-              <p className="relative z-10 -mt-8 mx-0 bg-white rounded-full text-center text-[16px] sm:text-[17px] font-medium text-[#0d4f56] py-[14px] shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
-                {item.title}
-              </p>
+            <motion.article key={item.id} variants={fadeInUp} className="relative">
+              <Link href={`/destinations/${toCountrySlug(item.title)}`} className="block">
+                <div className="relative w-full h-[260px] sm:h-[290px] lg:h-[320px] rounded-[28px] overflow-hidden border border-[#edf2f5] shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="relative z-10 -mt-8 mx-0 bg-white rounded-full text-center text-[16px] sm:text-[17px] font-medium text-[#0d4f56] py-[14px] shadow-[0_8px_22px_rgba(15,23,42,0.08)]">
+                  {item.title}
+                </p>
+              </Link>
             </motion.article>
           ))}
         </motion.div>

@@ -54,6 +54,15 @@ export default function GlobalLayout({
         ...currentBanner,
         title: "Blog Detail",
       };
+    } else if (baseRoute === "destinations" && currentRoute !== "destinations") {
+      const slug = currentRoute.split("/")[1] || "";
+      const title = decodeURIComponent(slug)
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (letter) => letter.toUpperCase());
+      currentBanner = {
+        ...currentBanner,
+        title,
+      };
     }
   }
 
@@ -70,9 +79,9 @@ export default function GlobalLayout({
         />
       )}
       
-      <main className="flex-grow">{children}</main>
+      <main>{children}</main>
       
-      <CarAnimation />
+      {(isHome || currentBanner) && <CarAnimation />}
       <Footer data={{ footer: footerData, header: headerData }} />
     </>
   );

@@ -79,6 +79,7 @@
     },
     "Footer": {
       "description": "Discover the world's most amazing destinations with Tour Vista. We provide the best travel experiences and packages tailored for you.",
+      "backgroundImage": "/img/footerbg.png",
       "quickLinks": [
         {
           "label": "Home",
@@ -144,19 +145,19 @@
       "socials": [
         {
           "platform": "facebook",
-          "href": "#"
+          "href": "https://www.facebook.com"
         },
         {
           "platform": "twitter",
-          "href": "#"
+          "href": "https://x.com"
         },
         {
           "platform": "instagram",
-          "href": "#"
+          "href": "https://www.instagram.com"
         },
         {
           "platform": "linkedin",
-          "href": "#"
+          "href": "https://www.linkedin.com"
         }
       ]
     }
@@ -721,63 +722,28 @@
           "items": [
             {
               "id": 1,
-              "title": "Paris",
-              "image": "/Destinations/paris.jpg"
-            },
-            {
-              "id": 2,
               "title": "Maldives",
               "image": "/Destinations/maldives.jpg"
             },
             {
+              "id": 2,
+              "title": "Switzerland",
+              "image": "/Destinations/swiss.jpg"
+            },
+            {
               "id": 3,
-              "title": "Hongkong",
-              "image": "/Destinations/hongkong.jpg"
+              "title": "Turkey",
+              "image": "/Destinations/cappadocia.jpg"
             },
             {
               "id": 4,
-              "title": "Thailand",
-              "image": "/Destinations/thailand.jpg"
+              "title": "Greece",
+              "image": "/Package/greece.jpg"
             },
             {
               "id": 5,
-              "title": "Bangkok",
-              "image": "/Destinations/bangkok.jpg"
-            },
-            {
-              "id": 6,
-              "title": "Tokyo",
-              "image": "/Destinations/tokiyonew.png"
-            },
-            {
-              "id": 7,
-              "title": "Spain",
-              "image": "/Destinations/spainnew.png"
-            },
-            {
-              "id": 8,
-              "title": "California",
-              "image": "/Destinations/california.png"
-            },
-            {
-              "id": 9,
-              "title": "London",
-              "image": "/Destinations/london.jpg"
-            },
-            {
-              "id": 10,
-              "title": "Rome",
-              "image": "/Destinations/rome.jpg"
-            },
-            {
-              "id": 11,
               "title": "Dubai",
               "image": "/Destinations/dubai.jpg"
-            },
-            {
-              "id": 12,
-              "title": "Bali",
-              "image": "/Destinations/bali.jpg"
             }
           ]
         }
@@ -796,6 +762,7 @@
               "image": "/Destinations/phuket.jpg",
               "flag": "🇹🇭",
               "country": "THAILAND",
+              "packageId": 1,
               "rating": "4.8",
               "reviews": "1.2K Reviews",
               "description": "Stunning beaches, crystal clear waters and vibrant culture."
@@ -806,6 +773,7 @@
               "image": "/Destinations/swiss.jpg",
               "flag": "🇨🇭",
               "country": "SWITZERLAND",
+              "packageId": 2,
               "rating": "4.9",
               "reviews": "2.4K Reviews",
               "description": "Breathtaking mountains, serene lakes and charming villages."
@@ -816,6 +784,7 @@
               "image": "/Destinations/cappadocia.jpg",
               "flag": "🇹🇷",
               "country": "TURKEY",
+              "packageId": 3,
               "rating": "4.7",
               "reviews": "980 Reviews",
               "description": "Unique landscapes, ancient history and magical hot air balloon rides."
@@ -826,6 +795,7 @@
               "image": "/Destinations/newyork.jpg",
               "flag": "🇺🇸",
               "country": "USA",
+              "packageId": 4,
               "rating": "4.6",
               "reviews": "3.1K Reviews",
               "description": "The city that never sleeps with iconic sights and endless energy."
@@ -847,6 +817,7 @@
               "id": 1,
               "title": "MALDIVES BEACH ESCAPE",
               "location": "Maldives",
+              "country": "Maldives",
               "image": "/Package/maldives.jpg",
               "price": 750,
               "rating": 5,
@@ -859,6 +830,7 @@
               "id": 2,
               "title": "SWISS ALPINE ADVENTURE",
               "location": "Switzerland",
+              "country": "Switzerland",
               "image": "/Package/swiss.jpg",
               "price": 620,
               "rating": 5,
@@ -871,6 +843,7 @@
               "id": 3,
               "title": "CAPPADOCIA WONDERS",
               "location": "Turkey",
+              "country": "Turkey",
               "image": "/Package/cappadocia.jpg",
               "price": 580,
               "rating": 5,
@@ -883,6 +856,7 @@
               "id": 4,
               "title": "GREECE ISLAND HOPPING",
               "location": "Greece",
+              "country": "Greece",
               "image": "/Package/greece.jpg",
               "price": 680,
               "rating": 5,
@@ -1642,7 +1616,7 @@
       "variants": {
         "variant-1": {
           "title": "Our Teams",
-          "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=2070"
+          "backgroundImage": "/breadcrumb/inner-banner.jpg"
         }
       }
     },
@@ -1729,27 +1703,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -1776,27 +1750,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -1823,27 +1797,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -1870,27 +1844,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -1917,27 +1891,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -1964,27 +1938,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -2011,27 +1985,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -2058,27 +2032,27 @@
               "socials": [
                 {
                   "platform": "facebook",
-                  "url": "#",
+                  "url": "https://www.facebook.com",
                   "icon": "Facebook"
                 },
                 {
                   "platform": "twitter",
-                  "url": "#",
+                  "url": "https://x.com",
                   "icon": "Twitter"
                 },
                 {
                   "platform": "instagram",
-                  "url": "#",
+                  "url": "https://www.instagram.com",
                   "icon": "Instagram"
                 },
                 {
                   "platform": "linkedin",
-                  "url": "#",
+                  "url": "https://www.linkedin.com",
                   "icon": "Linkedin"
                 },
                 {
                   "platform": "youtube",
-                  "url": "#",
+                  "url": "https://www.youtube.com",
                   "icon": "Youtube"
                 }
               ],
@@ -2147,6 +2121,7 @@
               "category": "FAMILY TOURS",
               "categoryId": "family",
               "location": "Maldives",
+              "country": "Maldives",
               "image": "/Package/maldives.jpg",
               "price": 750,
               "rating": 5,
@@ -2161,6 +2136,7 @@
               "category": "GROUP TOURS",
               "categoryId": "group",
               "location": "Switzerland",
+              "country": "Switzerland",
               "image": "/Package/swiss.jpg",
               "price": 620,
               "rating": 5,
@@ -2175,6 +2151,7 @@
               "category": "INTERNATIONAL TOUR",
               "categoryId": "international",
               "location": "Turkey",
+              "country": "Turkey",
               "image": "/Package/cappadocia.jpg",
               "price": 580,
               "rating": 5,
@@ -2189,6 +2166,7 @@
               "category": "CORPORATE TOUR",
               "categoryId": "corporate",
               "location": "Greece",
+              "country": "Greece",
               "image": "/Package/greece.jpg",
               "price": 680,
               "rating": 5,
@@ -2196,6 +2174,36 @@
               "days": "5D / 3N",
               "people": "Team",
               "description": "Discover the beauty of Santorini and Mykonos with stunning views, delicious food, and rich culture."
+            },
+            {
+              "id": 5,
+              "title": "DUBAI CITY LIGHTS",
+              "category": "INTERNATIONAL TOUR",
+              "categoryId": "international",
+              "location": "Dubai",
+              "country": "Dubai",
+              "image": "/Destinations/dubai.jpg",
+              "price": 540,
+              "rating": 5,
+              "reviews": "20",
+              "days": "5D / 4N",
+              "people": "2 Adults",
+              "description": "Explore Burj Khalifa views, desert safari, and Dubai Marina with a compact city-and-desert holiday."
+            },
+            {
+              "id": 6,
+              "title": "DUBAI FAMILY ESCAPE",
+              "category": "FAMILY TOURS",
+              "categoryId": "family",
+              "location": "Dubai",
+              "country": "Dubai",
+              "image": "/gallery/dubai.jpg",
+              "price": 690,
+              "rating": 5,
+              "reviews": "14",
+              "days": "6D / 5N",
+              "people": "2 Adults + 2 Kids",
+              "description": "Theme parks, aquarium, and beach time combined into a fun family-friendly Dubai package."
             }
           ]
         }
@@ -2765,6 +2773,207 @@
                   ]
                 }
               ]
+            },
+            "5": {
+              "headline": "The Most Beautiful Destination , Dubai",
+              "ratingLabel": "(4.8 Review)",
+              "nightsLine": "2N Downtown | 2N Marina",
+              "heroImage": "/Destinations/dubai.jpg",
+              "overviewText": "Dubai is a city of modern landmarks, desert adventures, and luxury shopping. This demo package covers Downtown views, a desert safari, and Marina evenings in a compact 5-day plan.",
+              "subtitle": "See Burj Khalifa, cruise Dubai Marina, and enjoy a desert safari in one easy city break.",
+              "type": "City Holiday",
+              "durationLabel": "5 DAYS",
+              "durationFull": "4 Nights & 5 Days",
+              "oldPrice": 675,
+              "emiPrice": 351,
+              "discount": "18% Off",
+              "gallery": [
+                "/Destinations/dubai.jpg",
+                "/gallery/dubai.jpg",
+                "/Package/detail-hero.jpg"
+              ],
+              "overview": [
+                "Downtown hotel near Burj Khalifa",
+                "Guided city tour with photo stops",
+                "Desert safari with BBQ dinner",
+                "Dubai Marina evening walk",
+                "Private airport transfers",
+                "Shopping time at Dubai Mall"
+              ],
+              "delights": [
+                {
+                  "title": "Burj Views",
+                  "text": "Visit the observation deck for skyline and fountain views."
+                },
+                {
+                  "title": "Desert Safari",
+                  "text": "Dune bashing, camel photos, and a desert camp dinner."
+                },
+                {
+                  "title": "Marina Night",
+                  "text": "Stroll the waterfront and optional dhow cruise."
+                },
+                {
+                  "title": "Mall Time",
+                  "text": "Shopping and the Dubai Fountain show."
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": "01",
+                  "title": "Arrival In Dubai",
+                  "points": [
+                    "Airport pickup",
+                    "Hotel check-in",
+                    "Evening at Dubai Fountain"
+                  ]
+                },
+                {
+                  "day": "02",
+                  "title": "Downtown Highlights",
+                  "points": [
+                    "Burj Khalifa visit",
+                    "Dubai Mall and aquarium time",
+                    "Old Dubai spice souk walk"
+                  ]
+                },
+                {
+                  "day": "03",
+                  "title": "Desert Safari",
+                  "points": [
+                    "Afternoon desert pickup",
+                    "Dune bashing and camp activities",
+                    "BBQ dinner under the stars"
+                  ],
+                  "images": [
+                    "/Destinations/dubai.jpg",
+                    "/gallery/dubai.jpg"
+                  ]
+                },
+                {
+                  "day": "04",
+                  "title": "Marina & Leisure",
+                  "points": [
+                    "Dubai Marina walk",
+                    "Optional JBR beach time",
+                    "Free evening"
+                  ]
+                },
+                {
+                  "day": "05",
+                  "title": "Departure",
+                  "points": [
+                    "Breakfast and checkout",
+                    "Airport transfer",
+                    "Tour concludes"
+                  ]
+                }
+              ]
+            },
+            "6": {
+              "headline": "The Most Beautiful Destination , Dubai",
+              "ratingLabel": "(4.7 Review)",
+              "nightsLine": "3N Downtown | 2N Palm / Beach",
+              "heroImage": "/gallery/dubai.jpg",
+              "overviewText": "This family-focused Dubai demo package mixes theme parks, the aquarium, and beach time so kids and adults both enjoy the trip.",
+              "subtitle": "Theme parks, aquarium, and beach days designed for a relaxed family holiday in Dubai.",
+              "type": "Family Holiday",
+              "durationLabel": "6 DAYS",
+              "durationFull": "5 Nights & 6 Days",
+              "oldPrice": 860,
+              "emiPrice": 449,
+              "discount": "16% Off",
+              "gallery": [
+                "/gallery/dubai.jpg",
+                "/Destinations/dubai.jpg",
+                "/Package/detail-hero.jpg"
+              ],
+              "overview": [
+                "Family hotel rooms with breakfast",
+                "Theme park day with transfers",
+                "Dubai Aquarium visit",
+                "Beach afternoon at JBR",
+                "Desert safari suitable for families",
+                "Airport pickup and drop"
+              ],
+              "delights": [
+                {
+                  "title": "Theme Park",
+                  "text": "A full day of rides and shows for the kids."
+                },
+                {
+                  "title": "Aquarium",
+                  "text": "Walk through tunnels with sharks and rays."
+                },
+                {
+                  "title": "Beach Time",
+                  "text": "Easy JBR beach afternoon with ice cream stops."
+                },
+                {
+                  "title": "Desert Evening",
+                  "text": "Family-friendly safari camp with dinner."
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": "01",
+                  "title": "Arrival In Dubai",
+                  "points": [
+                    "Airport welcome",
+                    "Hotel check-in",
+                    "Evening at leisure"
+                  ]
+                },
+                {
+                  "day": "02",
+                  "title": "Theme Park Day",
+                  "points": [
+                    "Park transfers",
+                    "Rides and lunch inside the park",
+                    "Return to hotel"
+                  ]
+                },
+                {
+                  "day": "03",
+                  "title": "Downtown Family Fun",
+                  "points": [
+                    "Dubai Aquarium",
+                    "Mall play time",
+                    "Fountain show"
+                  ],
+                  "images": [
+                    "/gallery/dubai.jpg",
+                    "/Destinations/dubai.jpg"
+                  ]
+                },
+                {
+                  "day": "04",
+                  "title": "Beach Day",
+                  "points": [
+                    "JBR beach",
+                    "Optional waterpark",
+                    "Casual dinner"
+                  ]
+                },
+                {
+                  "day": "05",
+                  "title": "Desert Safari",
+                  "points": [
+                    "Family desert camp",
+                    "Photo stops and dinner",
+                    "Return to hotel"
+                  ]
+                },
+                {
+                  "day": "06",
+                  "title": "Departure",
+                  "points": [
+                    "Breakfast and checkout",
+                    "Airport transfer",
+                    "Tour concludes"
+                  ]
+                }
+              ]
             }
           }
         }
@@ -3269,6 +3478,370 @@
               }
             ]
           }
+        }
+      }
+    },
+    "PrivacyPolicyHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Privacy Policy",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "PrivacyPolicy": {
+      "variants": {
+        "variant-1": {
+          "titlePrefix": "Privacy ",
+          "titleHighlight": "Policy",
+          "description": "Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.",
+          "items": [
+            {
+              "icon": "User",
+              "title": "1. Information We Collect",
+              "text": "We collect personal information that you voluntarily provide to us when you use our website, services, or contact us. This may include your name, email address, phone number, and any other information you choose to provide."
+            },
+            {
+              "icon": "ClipboardCheck",
+              "title": "2. How We Use Your Information",
+              "text": "We use the information we collect to provide, maintain, and improve our services, process your bookings, communicate with you, and personalize your travel experience."
+            },
+            {
+              "icon": "Users",
+              "title": "3. Information Sharing",
+              "text": "We do not sell, trade, or rent your personal information to others. We may share your information with trusted service providers who assist us in operating our website and delivering our services, under strict confidentiality agreements."
+            },
+            {
+              "icon": "Shield",
+              "title": "4. Data Security",
+              "text": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction."
+            },
+            {
+              "icon": "UserCheck",
+              "title": "5. Your Rights",
+              "text": "You have the right to access, update, or delete your personal information. You can also opt out of receiving promotional communications from us at any time."
+            },
+            {
+              "icon": "Cookie",
+              "title": "6. Cookies",
+              "text": "Our website uses cookies to enhance your browsing experience, analyze site traffic, and personalize content. You can choose to disable cookies through your browser settings."
+            },
+            {
+              "icon": "RefreshCw",
+              "title": "7. Changes to This Policy",
+              "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated effective date."
+            }
+          ],
+          "noteIcon": "CalendarDays",
+          "noteTitle": "Last Updated: May 20, 2025",
+          "noteText": "If you have any questions about this Privacy Policy, please contact us through our Contact Us page."
+        }
+      }
+    },
+    "TermsConditionsHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Terms & Conditions",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "TermsConditions": {
+      "variants": {
+        "variant-1": {
+          "titlePrefix": "Terms & ",
+          "titleHighlight": "Conditions",
+          "description": "Please read these Terms & Conditions carefully before booking any tour or using our services.",
+          "items": [
+            {
+              "icon": "User",
+              "title": "1. Acceptance of Terms",
+              "text": "By accessing our website or booking a package, you agree to be bound by these Terms & Conditions and all applicable laws. If you do not agree, please do not use our services."
+            },
+            {
+              "icon": "ClipboardCheck",
+              "title": "2. Booking & Confirmation",
+              "text": "A booking is confirmed only after we receive the required payment and send a written confirmation. Traveller details must match official identification documents."
+            },
+            {
+              "icon": "Users",
+              "title": "3. Traveller Responsibilities",
+              "text": "You are responsible for valid passports, visas, travel insurance, and following local laws. TourVista is not liable for delays or denial of entry due to incomplete documents."
+            },
+            {
+              "icon": "Shield",
+              "title": "4. Package Changes",
+              "text": "Itineraries may change due to weather, strikes, or operational reasons. We will offer suitable alternatives wherever possible without reducing the overall value of the trip."
+            },
+            {
+              "icon": "UserCheck",
+              "title": "5. Conduct During Travel",
+              "text": "Guests must behave respectfully toward guides, partners, and other travellers. We may refuse service to anyone whose conduct is unsafe or disruptive."
+            },
+            {
+              "icon": "Cookie",
+              "title": "6. Liability Limits",
+              "text": "We act as an organizer and are not liable for acts of third-party hotels, airlines, or transport providers, except as required by law."
+            },
+            {
+              "icon": "RefreshCw",
+              "title": "7. Updates to Terms",
+              "text": "These Terms & Conditions may be updated at any time. Continued use of our website or services after changes means you accept the revised terms."
+            }
+          ],
+          "noteIcon": "CalendarDays",
+          "noteTitle": "Last Updated: May 20, 2025",
+          "noteText": "If you have any questions about these Terms & Conditions, please contact us through our Contact Us page."
+        }
+      }
+    },
+    "RefundPolicyHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Refund Policy",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "RefundPolicy": {
+      "variants": {
+        "variant-1": {
+          "titlePrefix": "Refund ",
+          "titleHighlight": "Policy",
+          "description": "This Refund Policy explains when cancellations are allowed and how refunds are processed for TourVista bookings.",
+          "items": [
+            {
+              "icon": "User",
+              "title": "1. Cancellation Requests",
+              "text": "All cancellation requests must be sent in writing by email. The date we receive your request is used to calculate any refund."
+            },
+            {
+              "icon": "ClipboardCheck",
+              "title": "2. Refund Timeline",
+              "text": "Cancellations made 30 days or more before departure may receive a higher refund. Closer to travel dates, refund amounts reduce as per the booking terms."
+            },
+            {
+              "icon": "Users",
+              "title": "3. Non-Refundable Items",
+              "text": "Visa fees, airline tickets, insurance, and third-party deposits are often non-refundable once issued. These charges will be deducted from any refund."
+            },
+            {
+              "icon": "Shield",
+              "title": "4. No-Show Policy",
+              "text": "If you do not join the tour on the scheduled date without prior written notice, the booking is treated as a no-show and no refund is issued."
+            },
+            {
+              "icon": "UserCheck",
+              "title": "5. Force Majeure",
+              "text": "In events beyond our control such as natural disasters or government restrictions, we may offer a credit, reschedule, or partial refund as available."
+            },
+            {
+              "icon": "Cookie",
+              "title": "6. Refund Processing",
+              "text": "Approved refunds are returned to the original payment method within 10 to 15 working days after confirmation from our accounts team."
+            },
+            {
+              "icon": "RefreshCw",
+              "title": "7. Changes to This Policy",
+              "text": "We may update this Refund Policy from time to time. The latest version will always be available on this page."
+            }
+          ],
+          "noteIcon": "CalendarDays",
+          "noteTitle": "Last Updated: May 20, 2025",
+          "noteText": "If you have any questions about this Refund Policy, please contact us through our Contact Us page."
+        }
+      }
+    },
+    "PaymentPolicyHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Payment Policy",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "PaymentPolicy": {
+      "variants": {
+        "variant-1": {
+          "titlePrefix": "Payment ",
+          "titleHighlight": "Policy",
+          "description": "This Payment Policy outlines how deposits, balances, and accepted payment methods work for your bookings.",
+          "items": [
+            {
+              "icon": "User",
+              "title": "1. Booking Deposit",
+              "text": "A booking deposit is required to reserve your package. The remaining balance must be paid by the date mentioned in your confirmation."
+            },
+            {
+              "icon": "ClipboardCheck",
+              "title": "2. Accepted Methods",
+              "text": "We accept bank transfers, debit/credit cards, and other approved online payment options. Cash payments are not accepted for international packages."
+            },
+            {
+              "icon": "Users",
+              "title": "3. Balance Due Date",
+              "text": "Full payment is typically due 21 days before departure. Late payment may result in cancellation of services held with hotels or airlines."
+            },
+            {
+              "icon": "Shield",
+              "title": "4. Secure Transactions",
+              "text": "All online payments are processed through secure gateways. TourVista does not store your full card details on our servers."
+            },
+            {
+              "icon": "UserCheck",
+              "title": "5. Pricing & Taxes",
+              "text": "Quoted prices include the services listed in your itinerary. Airport taxes, visa fees, or personal expenses may be extra unless clearly mentioned."
+            },
+            {
+              "icon": "Cookie",
+              "title": "6. Failed or Pending Payments",
+              "text": "If a payment fails or remains pending, the booking is not confirmed. Please share the transaction proof so we can verify and update your status."
+            },
+            {
+              "icon": "RefreshCw",
+              "title": "7. Changes to This Policy",
+              "text": "We may update this Payment Policy from time to time. Please review this page before making a payment."
+            }
+          ],
+          "noteIcon": "CalendarDays",
+          "noteTitle": "Last Updated: May 20, 2025",
+          "noteText": "If you have any questions about this Payment Policy, please contact us through our Contact Us page."
+        }
+      }
+    },
+    "SitemapHero": {
+      "variants": {
+        "variant-1": {
+          "title": "Sitemap",
+          "backgroundImage": "/breadcrumb/inner-banner.jpg",
+          "showBreadcrumb": false
+        }
+      }
+    },
+    "Sitemap": {
+      "variants": {
+        "variant-1": {
+          "subtitle": "SITEMAP",
+          "titlePrefix": "Explore Our ",
+          "titleHighlight": "Website",
+          "description": "Find your way around! Browse all pages and explore everything we offer.",
+          "homeLabel": "HOME",
+          "homeHref": "/",
+          "topGroups": [
+            {
+              "title": "ABOUT US",
+              "icon": "Users",
+              "tone": "blue",
+              "links": [
+                { "label": "About Us", "href": "/about" },
+                { "label": "Mission & Vision", "href": "/mission-vision" },
+                { "label": "Awards & Recognition", "href": "/awards" },
+                { "label": "Why Choose Us", "href": "/why-choose-us" },
+                { "label": "Our Team", "href": "/our-team" },
+                { "label": "Team Detail", "href": "/team-detail/member-1" }
+              ]
+            },
+            {
+              "title": "SERVICES",
+              "icon": "Briefcase",
+              "tone": "blue",
+              "links": [
+                { "label": "Our Services", "href": "/services" },
+                { "label": "Service Detail", "href": "/service-detail/hotel" }
+              ]
+            },
+            {
+              "title": "PACKAGES",
+              "icon": "Package",
+              "tone": "blue",
+              "links": [
+                { "label": "Tour Packages", "href": "/packages" },
+                { "label": "Package Detail", "href": "/package-detail/1" }
+              ]
+            },
+            {
+              "title": "DESTINATIONS",
+              "icon": "MapPin",
+              "tone": "orange",
+              "links": [
+                { "label": "Destinations", "href": "/destinations" }
+              ]
+            },
+            {
+              "title": "GALLERY",
+              "icon": "Images",
+              "tone": "blue",
+              "links": [
+                { "label": "Gallery", "href": "/gallery" }
+              ]
+            },
+            {
+              "title": "BLOG",
+              "icon": "FileText",
+              "tone": "orange",
+              "links": [
+                { "label": "Blog", "href": "/blog" },
+                { "label": "Blog Detail", "href": "/blog-detail/1" }
+              ]
+            }
+          ],
+          "midGroups": [
+            {
+              "title": "ENQUIRY",
+              "icon": "CalendarCheck",
+              "tone": "orange",
+              "links": [
+                { "label": "Enquiry Now", "href": "/enquiry" }
+              ]
+            },
+            {
+              "title": "TESTIMONIALS",
+              "icon": "Headphones",
+              "tone": "orange",
+              "links": [
+                { "label": "Testimonials", "href": "/testimonials" }
+              ]
+            },
+            {
+              "title": "SUPPORT",
+              "icon": "FileText",
+              "tone": "orange",
+              "links": [
+                { "label": "FAQ's", "href": "/faqs" },
+                { "label": "Privacy Policy", "href": "/privacy-policy" },
+                { "label": "Terms & Conditions", "href": "/terms-conditions" },
+                { "label": "Refund Policy", "href": "/refund-policy" },
+                { "label": "Payment Policy", "href": "/payment-policy" },
+                { "label": "Sitemap", "href": "/sitemap" }
+              ]
+            },
+            {
+              "title": "PARTNERS",
+              "icon": "Handshake",
+              "tone": "orange",
+              "links": [
+                { "label": "Our Partners", "href": "/partners" }
+              ]
+            },
+            {
+              "title": "CONTACT US",
+              "icon": "Phone",
+              "tone": "orange",
+              "links": [
+                { "label": "Contact Us", "href": "/contact" }
+              ]
+            }
+          ],
+          "otherTitle": "OTHER PAGES",
+          "otherIcon": "Globe",
+          "otherLinks": [
+            { "label": "Sitemap", "href": "/sitemap" },
+            { "label": "404", "href": "/404" }
+          ]
         }
       }
     }

@@ -73,6 +73,7 @@ export interface DestinationItem {
   badge?: string;
   flag?: string;
   country?: string;
+  packageId?: number;
   rating?: string;
   reviews?: string;
   description?: string;
@@ -119,6 +120,7 @@ export interface PackageItem {
   id: number;
   title: string;
   location: string;
+  country?: string;
   image: string;
   price: number;
   rating: number;
@@ -384,6 +386,7 @@ export interface ContactData {
 
 export interface FooterData {
   description: string;
+  backgroundImage: string;
   quickLinks: LinkItem[];
   categories: LinkItem[];
   contact: ContactData;
@@ -721,6 +724,48 @@ export interface NotFoundData {
   features: NotFoundFeature[];
 }
 
+export interface PolicyItem {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+export interface PolicyPageData {
+  titlePrefix: string;
+  titleHighlight: string;
+  description: string;
+  items: PolicyItem[];
+  noteIcon: string;
+  noteTitle: string;
+  noteText: string;
+}
+
+export interface SitemapLink {
+  label: string;
+  href: string;
+}
+
+export interface SitemapGroup {
+  title: string;
+  icon: string;
+  tone: "navy" | "orange" | "blue";
+  links: SitemapLink[];
+}
+
+export interface SitemapPageData {
+  subtitle: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  description: string;
+  homeLabel: string;
+  homeHref: string;
+  topGroups: SitemapGroup[];
+  midGroups: SitemapGroup[];
+  otherTitle: string;
+  otherIcon: string;
+  otherLinks: SitemapLink[];
+}
+
 export interface SectionsData {
   Hero: { variants: { "variant-1": HeroData } };
   NotFound: { variants: { "variant-1": NotFoundData } };
@@ -773,6 +818,16 @@ export interface SectionsData {
   Partners: { variants: { "variant-1": PartnersData } };
   EnquiryHero: { variants: { "variant-1": PackagesHeroData } };
   EnquiryPage: { variants: { "variant-1": EnquiryPageData } };
+  PrivacyPolicyHero: { variants: { "variant-1": PackagesHeroData } };
+  PrivacyPolicy: { variants: { "variant-1": PolicyPageData } };
+  TermsConditionsHero: { variants: { "variant-1": PackagesHeroData } };
+  TermsConditions: { variants: { "variant-1": PolicyPageData } };
+  RefundPolicyHero: { variants: { "variant-1": PackagesHeroData } };
+  RefundPolicy: { variants: { "variant-1": PolicyPageData } };
+  PaymentPolicyHero: { variants: { "variant-1": PackagesHeroData } };
+  PaymentPolicy: { variants: { "variant-1": PolicyPageData } };
+  SitemapHero: { variants: { "variant-1": PackagesHeroData } };
+  Sitemap: { variants: { "variant-1": SitemapPageData } };
 }
 
 export interface PageComponent {

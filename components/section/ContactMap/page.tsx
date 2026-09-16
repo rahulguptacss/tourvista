@@ -4,7 +4,7 @@ import type { ContactMapData } from "../../types";
 
 export default function ContactMap({ data }: { data: ContactMapData }) {
   return (
-    <section className="w-full relative h-[450px] sm:h-[550px] md:h-[650px] border-t border-gray-200">
+    <section className="w-full relative h-[240px] sm:h-[280px] md:h-[320px] border-t border-gray-200">
       <iframe 
         src={data.embedUrl} 
         width="100%" 

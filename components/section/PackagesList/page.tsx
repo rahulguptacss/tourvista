@@ -38,16 +38,22 @@ const categoryIconMap: Record<string, ElementType> = {
   international: Globe,
 };
 
-export default function PackagesList({ data }: { data: PackagesListData }) {
+export default function PackagesList({
+  data,
+  hideFilters = false,
+}: {
+  data: PackagesListData;
+  hideFilters?: boolean;
+}) {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredPackages = useMemo(() => {
-    if (activeFilter === "all") return data.items;
+    if (hideFilters || activeFilter === "all") return data.items;
     return data.items.filter((pkg) => pkg.categoryId === activeFilter);
-  }, [activeFilter, data.items]);
+  }, [activeFilter, data.items, hideFilters]);
 
   return (
-    <section className={`pt-8 md:pt-12 pb-0 bg-white relative ${poppins.className}`}>
+    <section className={`pt-8 md:pt-12 pb-8 bg-white relative ${poppins.className}`}>
       <div className="container mx-auto px-4">
         <motion.div
           variants={fadeInUp}
@@ -80,6 +86,7 @@ export default function PackagesList({ data }: { data: PackagesListData }) {
           </div>
         </motion.div>
 
+        {!hideFilters && (
         <div className="max-w-7xl mx-auto mb-8">
           <div className="flex items-center gap-3 rounded-[16px] border border-[#e5e7eb] bg-white px-4 md:px-5 py-3.5 md:py-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)] overflow-x-auto">
             <span className="text-[#0f172a] text-[14px] md:text-[15px] font-bold whitespace-nowrap shrink-0">
@@ -125,6 +132,7 @@ export default function PackagesList({ data }: { data: PackagesListData }) {
             </button>
           </div>
         </div>
+        )}
 
         <motion.div
           variants={staggerContainer}
@@ -223,19 +231,10 @@ export default function PackagesList({ data }: { data: PackagesListData }) {
         </motion.div>
 
         {filteredPackages.length === 0 && (
-          <p className="text-center text-slate-500 mb-5">No packages found for this filter.</p>
+          <p className="text-center text-slate-500 mb-5">
+            {hideFilters ? "No packages found for this destination." : "No packages found for this filter."}
+          </p>
         )}
-
-        <div className="text-center mb-5">
-          <button
-            type="button"
-            onClick={() => setActiveFilter("all")}
-            className="cursor-pointer inline-flex items-center justify-center gap-2 border-[1.5px] border-[#3474d4] text-[#3474d4] hover:bg-[#3474d4] hover:text-white px-8 py-2.5 rounded-full font-semibold text-[0.95rem] tracking-wide transition-all uppercase"
-          >
-            {data.buttonText || "View All Packages"}
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-        </div>
       </div>
     </section>
   );

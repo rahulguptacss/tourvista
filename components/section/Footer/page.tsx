@@ -29,24 +29,24 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
     { label: "About us", href: "/about" },
     { label: "FAQ's", href: "/faqs" },
     { label: "Services", href: "/services" },
-    { label: "Team", href: "/team" },
-    { label: "News & Articles", href: "/news" },
+    { label: "Team", href: "/our-team" },
+    { label: "Blog", href: "/blog" },
   ];
 
   const destinations = [
-    { label: "Tokyo", href: "/destinations/tokyo" },
-    { label: "France", href: "/destinations/france" },
+    { label: "Maldives", href: "/destinations/maldives" },
+    { label: "Switzerland", href: "/destinations/switzerland" },
+    { label: "Turkey", href: "/destinations/turkey" },
+    { label: "Greece", href: "/destinations/greece" },
     { label: "Dubai", href: "/destinations/dubai" },
-    { label: "Kenya", href: "/destinations/kenya" },
-    { label: "Vietnam", href: "/destinations/vietnam" },
   ];
 
   const legalLinks = [
-    { label: "Terms & Condition", href: "/terms" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Contact", href: "/contact" },
-    { label: "Careers", href: "/careers" },
-    { label: "Help", href: "/help" },
+    { label: "Terms & Conditions", href: "/terms-conditions" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Refund Policy", href: "/refund-policy" },
+    { label: "Payment Policy", href: "/payment-policy" },
+    { label: "Sitemap", href: "/sitemap" },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
       {/* Background Image Overlay for Footer */}
       <div 
         className="absolute inset-0 bg-cover bg-bottom opacity-15 pointer-events-none" 
-        style={{ backgroundImage: "url('/whychoose/w-cho-btm.png')" }} 
+        style={{ backgroundImage: `url('${data.footer.backgroundImage}')` }} 
       />
 
       <div className="w-full mx-auto px-5 md:px-10 lg:px-16 max-w-[1440px] relative z-10">
@@ -69,16 +69,16 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
               {data.footer.description}
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
                 <XIcon className="w-5 h-5" />
               </a>
-              <a href="#" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
                 <Pinterest className="w-5 h-5" />
               </a>
             </div>

@@ -45,9 +45,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     blog: sections.BlogHero.variants["variant-1"],
     "blog-detail": sections.BlogDetailHero.variants["variant-1"],
     "package-detail": sections.PackageDetailHero.variants["variant-1"],
-    contact: sections.ContactHero?.variants["variant-1"],
-    partners: sections.PartnersHero?.variants["variant-1"],
-    enquiry: sections.EnquiryHero?.variants["variant-1"],
+    contact: sections.ContactHero.variants["variant-1"],
+    partners: sections.PartnersHero.variants["variant-1"],
+    enquiry: sections.EnquiryHero.variants["variant-1"],
+    "privacy-policy": sections.PrivacyPolicyHero.variants["variant-1"],
+    terms: sections.TermsConditionsHero.variants["variant-1"],
+    "terms-conditions": sections.TermsConditionsHero.variants["variant-1"],
+    "terms-and-conditions": sections.TermsConditionsHero.variants["variant-1"],
+    refund: sections.RefundPolicyHero.variants["variant-1"],
+    "refund-policy": sections.RefundPolicyHero.variants["variant-1"],
+    payment: sections.PaymentPolicyHero.variants["variant-1"],
+    "payment-policy": sections.PaymentPolicyHero.variants["variant-1"],
+    sitemap: sections.SitemapHero.variants["variant-1"],
   };
 
   return (
