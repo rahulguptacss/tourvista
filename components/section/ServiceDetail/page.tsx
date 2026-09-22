@@ -110,7 +110,7 @@ export default function ServiceDetail({ data }: { data: ServiceDetailData }) {
                   return (
                     <motion.div variants={fadeInUp} key={index} className="border border-slate-200 rounded-[12px] p-4 text-center hover:border-[#1d62f0]/30 transition-colors bg-white">
                       <div className="flex justify-center mb-4">
-                        <Icon className="w-[36px] h-[36px] text-[#1d62f0]" strokeWidth={1.2} />
+                        <Icon className="w-[52px] h-[52px] text-[#1d62f0]" strokeWidth={1.5} />
                       </div>
                       <h4 className="text-[#051036] text-[13px] font-[700] mb-2">{feature.title}</h4>
                       <p className="text-[#5b6478] text-[11px] leading-[1.6]">{feature.description}</p>

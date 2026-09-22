@@ -1,6 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { LucideIcon } from "lucide-react";
+import { CreditCard, Luggage, MapPin } from "lucide-react";
 import Image from "next/image";
 import { Kaushan_Script, Poppins } from "next/font/google";
 import { motion } from "framer-motion";
@@ -9,40 +10,10 @@ import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils
 const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
-function DestinationIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M9 20s-5-5.2-5-9a5 5 0 1 1 10 0c0 3.8-5 9-5 9Z" />
-      <circle cx="9" cy="11" r="1.3" />
-      <path d="M14 16.5c2.2.35 4.1 1.15 5.5 2.2" strokeDasharray="1.4 1.8" />
-    </svg>
-  );
-}
-
-function PaymentIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="5" width="13" height="8.5" rx="1.4" />
-      <path d="M4 8.4h13" />
-      <path d="M9.2 16.2v-2.1h2.1c1.15 0 1.9.7 1.9 1.7v.4" />
-      <path d="M6.4 20.2c0-1.5 1.1-2.3 2.6-2.3h3.3c1.2 0 2.1.7 2.1 1.9v1.4H6.4v-1Z" />
-    </svg>
-  );
-}
-
-function LuggageIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="5.5" y="8" width="13" height="11.5" rx="3.2" />
-      <path d="M9 8V6.2A1.7 1.7 0 0 1 10.7 4.5h2.6A1.7 1.7 0 0 1 15 6.2V8" />
-    </svg>
-  );
-}
-
-const stepIcons: Record<string, ReactNode> = {
-  Search: <DestinationIcon />,
-  CreditCard: <PaymentIcon />,
-  PlaneTakeoff: <LuggageIcon />,
+const stepIcons: Record<string, LucideIcon> = {
+  Search: MapPin,
+  CreditCard,
+  PlaneTakeoff: Luggage,
 };
 
 import { StepsData } from "@/components/types";
@@ -114,7 +85,10 @@ export default function Steps({ data }: { data: StepsData }) {
                       </p>
                     </div>
                     <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full border-[1.6px] border-[#ff7a00] text-[#ff7a00]">
-                      {stepIcons[item.icon] || <DestinationIcon />}
+                      {(() => {
+                        const Icon = stepIcons[item.icon] || MapPin;
+                        return <Icon className="h-[22px] w-[22px]" strokeWidth={1.8} />;
+                      })()}
                     </div>
                   </div>
                 ))}

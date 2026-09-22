@@ -125,20 +125,6 @@ export default function PackageDetail({ data }: { data: PackageDetailViewData })
             className="min-w-0 bg-white rounded-[22px] p-4 sm:p-5 lg:p-6 shadow-[0_8px_30px_rgba(15,23,42,0.04)]"
           >
 
-            <div className="flex flex-wrap items-center gap-2.5 mb-3">
-              <span className="text-[13px] sm:text-[14px] italic text-[#8aa3a8]">
-                {data.ratingLabel || "(4.8 Review)"}
-              </span>
-              <span className="flex items-center gap-[3px]">
-                {[1, 2, 3, 4, 5].map((n) => (
-                  <Star
-                    key={n}
-                    className="w-[15px] h-[15px] fill-[#f5b301] text-[#f5b301]"
-                  />
-                ))}
-              </span>
-            </div>
-
             <h1 className={`${playfair.className} text-[26px] sm:text-[32px] lg:text-[36px] leading-[1.25] font-semibold text-[#0f5c63] mb-3`}>
               {data.headline}
             </h1>
@@ -609,7 +595,7 @@ export default function PackageDetail({ data }: { data: PackageDetailViewData })
 
               <Link
                 href={data.labels.enquireLink}
-                className="inline-flex items-center justify-center rounded-full bg-[#7be33a] hover:bg-[#6ad12f] text-white font-semibold text-[14px] px-8 py-2"
+                className="w-full inline-flex items-center justify-center rounded-full bg-[#ff7a00] hover:bg-[#e66e00] text-white font-bold text-[15px] px-8 py-3.5 shadow-lg shadow-[#ff7a00]/30 hover:shadow-xl hover:shadow-[#ff7a00]/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase tracking-wider"
               >
                 {data.labels.enquireNow}
               </Link>
@@ -633,18 +619,20 @@ export default function PackageDetail({ data }: { data: PackageDetailViewData })
               </div>
 
               <div className="flex justify-center mb-5">
-                <span className="inline-flex items-center justify-center rounded-full bg-[#4d8ef7] text-white text-[12px] font-medium px-[18px] py-[6px] leading-none">
+                <span className="inline-flex items-center justify-center rounded-full bg-[#0d4f56] text-white text-[13px] font-semibold px-5 py-2 leading-none shadow-md shadow-[#0d4f56]/20 tracking-wide">
                   {data.labels.packageIncludes}
                 </span>
               </div>
 
-              <div className="grid grid-cols-4 gap-0">
+              <div className="grid grid-cols-4 gap-2">
                 {data.includes.map((item: PackageIncludeItem) => {
                   const Icon = includeIconMap[item.icon] || Hotel;
                   return (
-                    <div key={item.label} className="flex flex-col items-center text-center gap-[6px]">
-                      <Icon size={22} className="text-[#0d4f56]" strokeWidth={1.4} />
-                      <span className="text-[11px] leading-none text-[#6a7b82]">{item.label}</span>
+                    <div key={item.label} className="flex flex-col items-center text-center gap-1.5 p-2 rounded-xl bg-[#f4fbfb] border border-[#e2f3f5] transition-all hover:bg-[#eaf7f8] hover:scale-105">
+                      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#ff7a00] shadow-sm border border-[#d3eff2]">
+                        <Icon size={20} strokeWidth={2} />
+                      </div>
+                      <span className="text-[11px] font-medium leading-tight text-[#0d4f56]">{item.label}</span>
                     </div>
                   );
                 })}

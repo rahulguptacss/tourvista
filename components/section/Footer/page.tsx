@@ -161,7 +161,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
 
       {/* Footer Bottom */}
       <div className="relative z-10 border-t border-white/10">
-        <div className="container mx-auto px-5 md:px-8 py-3 flex items-center justify-center text-center text-[15px] font-medium text-gray-300">
+        <div className="w-full px-3 sm:px-5 md:px-8 py-3 text-center text-[11px] sm:text-[13px] md:text-[15px] font-medium text-gray-300 whitespace-nowrap overflow-x-auto">
           Copyright &copy; 2026. All rights reserved. Powered by Lestow
         </div>
       </div>

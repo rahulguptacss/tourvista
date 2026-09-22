@@ -11,10 +11,10 @@ const poppins = Poppins({
 });
 
 const icons: Record<string, React.ReactNode> = {
-  Edit: <FileEdit className="w-8 h-8 text-[#ff7a00]" strokeWidth={1.5} />,
-  Headphones: <Headphones className="w-8 h-8 text-[#0d6efd]" strokeWidth={1.5} />,
-  MapPin: <MapPin className="w-8 h-8 text-[#ff7a00]" strokeWidth={1.5} />,
-  Suitcase: <Briefcase className="w-8 h-8 text-[#0d6efd]" strokeWidth={1.5} />,
+  Edit: <FileEdit className="w-8 h-8 text-[#ff7a00]" strokeWidth={2.1} />,
+  Headphones: <Headphones className="w-8 h-8 text-[#0d6efd]" strokeWidth={2.1} />,
+  MapPin: <MapPin className="w-8 h-8 text-[#ff7a00]" strokeWidth={2.1} />,
+  Suitcase: <Briefcase className="w-8 h-8 text-[#0d6efd]" strokeWidth={2.1} />,
 };
 
 export default function EnquirySteps({ data }: { data: EnquiryPageData }) {
@@ -56,7 +56,7 @@ export default function EnquirySteps({ data }: { data: EnquiryPageData }) {
                     
                     {/* Connecting Arrow */}
                     {idx < data.steps.items.length - 1 && (
-                      <div className="hidden md:flex absolute top-[44px] left-[calc(50%+54px)] w-[calc(100%-92px)] items-center text-gray-300 z-[-1]">
+                      <div className="hidden md:flex absolute top-[48px] left-[calc(50%+58px)] w-[calc(100%-100px)] items-center text-gray-300 z-[-1]">
                         <div className="flex-grow border-t-2 border-dashed border-gray-300"></div>
                         <svg className="w-5 h-5 -ml-1 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -65,8 +65,10 @@ export default function EnquirySteps({ data }: { data: EnquiryPageData }) {
                     )}
 
                     <div className="relative mb-4">
-                      <div className={`w-[88px] h-[88px] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${isEven ? 'bg-[#f0f6ff]' : 'bg-[#fff5eb]'}`}>
-                        {icons[item.icon] || <FileEdit className={`w-8 h-8 ${isEven ? 'text-[#0d6efd]' : 'text-[#ff7a00]'}`} />}
+                      <div className={`w-[96px] h-[96px] rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 border ${isEven ? 'bg-[#f0f6ff] border-[#d6e6ff]' : 'bg-[#fff5eb] border-[#ffe4ce]'}`}>
+                        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm">
+                          {icons[item.icon] || <FileEdit className={`w-8 h-8 ${isEven ? 'text-[#0d6efd]' : 'text-[#ff7a00]'}`} strokeWidth={2.1} />}
+                        </div>
                       </div>
                       <div className="absolute bottom-0 -left-2 w-[30px] h-[30px] rounded-full text-white font-bold text-[14px] flex items-center justify-center border-[3px] border-white bg-[#0d6efd] shadow-sm">
                         {item.step}

@@ -1565,7 +1565,7 @@
             }
           ],
           "buttonText": "Book Now",
-          "buttonLink": "/tour-package",
+          "buttonLink": "/packages",
           "happyTravelers": {
             "count": "25K+",
             "text": "Happy Travelers",
@@ -3839,8 +3839,7 @@
           "otherTitle": "OTHER PAGES",
           "otherIcon": "Globe",
           "otherLinks": [
-            { "label": "Sitemap", "href": "/sitemap" },
-            { "label": "404", "href": "/404" }
+            { "label": "Sitemap", "href": "/sitemap" }
           ]
         }
       }

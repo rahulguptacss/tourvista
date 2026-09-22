@@ -147,19 +147,19 @@ export default function FaqList({ data }: { data: FaqPageData }) {
                     className="w-full flex items-center gap-3 px-4 sm:px-5 py-[15px] text-left"
                   >
                     <span
-                      className={`w-[22px] h-[22px] rounded-full flex items-center justify-center shrink-0 text-white ${
-                        isOpen ? "bg-[#ff7a00]" : "bg-[#4d8ef7]"
+                      className={`w-[26px] h-[26px] rounded-full flex items-center justify-center shrink-0 text-white transition-all ${
+                        isOpen ? "bg-[#ff7a00]" : "bg-[#ff7a00]"
                       }`}
                     >
-                      {isOpen ? <Minus size={11} strokeWidth={3} /> : <Plus size={11} strokeWidth={3} />}
+                      {isOpen ? <Minus size={14} strokeWidth={3} /> : <Plus size={14} strokeWidth={3} />}
                     </span>
                     <span className="flex-1 text-[14px] sm:text-[15px] font-semibold text-[#0b1b3f]">
                       {item.question}
                     </span>
                     {isOpen ? (
-                      <ChevronUp size={16} className="text-[#ff7a00] shrink-0" />
+                      <ChevronUp size={20} className="text-[#ff7a00] shrink-0" />
                     ) : (
-                      <ChevronDown size={16} className="text-[#1a2f4a] shrink-0" />
+                      <ChevronDown size={20} className="text-[#0b1b3f] shrink-0" />
                     )}
                   </button>
 
@@ -210,8 +210,8 @@ export default function FaqList({ data }: { data: FaqPageData }) {
                         key={stat.label}
                         className="bg-white rounded-[16px] shadow-[0_10px_30px_rgba(15,23,42,0.10)] px-3 py-3.5 flex items-center gap-2.5"
                       >
-                        <span className={`w-10 h-10 rounded-full ${circle} flex items-center justify-center shrink-0`}>
-                          <Icon size={18} className="text-white" strokeWidth={1.8} />
+                        <span className={`w-11 h-11 rounded-full ${circle} flex items-center justify-center shrink-0`}>
+                          <Icon size={22} className="text-white" strokeWidth={2} />
                         </span>
                         <div className="min-w-0">
                           <p className="text-[18px] font-bold text-[#0b1b3f] leading-none mb-1">
@@ -228,8 +228,8 @@ export default function FaqList({ data }: { data: FaqPageData }) {
 
               <div className="rounded-[18px] bg-white px-5 py-5">
                 <div className="flex items-start gap-4 mb-5">
-                  <span className="w-[52px] h-[52px] rounded-full bg-[#e8f0ff] flex items-center justify-center shrink-0">
-                    <Headphones size={22} className="text-[#4d8ef7]" strokeWidth={1.7} />
+                  <span className="w-[58px] h-[58px] rounded-full bg-[#ff7a00]/10 flex items-center justify-center shrink-0">
+                    <Headphones size={28} className="text-[#ff7a00]" strokeWidth={2} />
                   </span>
                   <div>
                     <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#0b1b3f] leading-tight mb-1.5">

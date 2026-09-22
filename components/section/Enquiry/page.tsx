@@ -15,15 +15,15 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const icons: Record<string, React.ReactNode> = {
-  Headset: <Headset className="w-6 h-6 text-[#ff7a00]" strokeWidth={2} />,
-  Tag: <Tag className="w-6 h-6 text-[#0d6efd]" strokeWidth={2} />,
-  Clock: <Clock className="w-6 h-6 text-[#ff7a00]" strokeWidth={2} />,
-  Shield: <Shield className="w-6 h-6 text-[#0d6efd]" strokeWidth={2} />,
+  Headset: <Headset className="w-7 h-7 text-[#ff7a00]" strokeWidth={2.2} />,
+  Tag: <Tag className="w-7 h-7 text-[#0d6efd]" strokeWidth={2.2} />,
+  Clock: <Clock className="w-7 h-7 text-[#ff7a00]" strokeWidth={2.2} />,
+  Shield: <Shield className="w-7 h-7 text-[#0d6efd]" strokeWidth={2.2} />,
 };
 
 export default function Enquiry({ data }: { data: EnquiryPageData }) {
   return (
-    <section className={`w-full bg-white pt-6 pb-8 sm:pt-8 sm:pb-12 ${poppins.className}`}>
+    <section className={`w-full bg-white pt-12 pb-8 sm:pt-16 sm:pb-12 ${poppins.className}`}>
       <div className="container mx-auto px-4 sm:px-6 max-w-[1280px]">
         {/* Header */}
         <motion.div 
@@ -34,7 +34,7 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
           className="text-center max-w-4xl mx-auto mb-10 relative"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ff7a00] text-[#ff7a00] font-semibold text-sm sm:text-base uppercase mb-4 shadow-sm bg-orange-50/30">
-            <Send className="w-4 h-4" />
+            <Send className="w-5 h-5" strokeWidth={2.2} />
             <span>{data.subtitle}</span>
           </div>
 
@@ -66,10 +66,10 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
             className="w-full lg:w-[65%] border border-gray-200 rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-sm bg-white"
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white">
+              <div className="w-14 h-14 rounded-full bg-[#fff5eb] border border-[#ffe4ce] flex items-center justify-center text-[#ff7a00] shadow-sm">
                 {(() => {
                   const Icon = iconMap[data.form.icon] || Mail;
-                  return <Icon className="w-6 h-6" />;
+                  return <Icon className="w-7 h-7" strokeWidth={2.2} />;
                 })()}
               </div>
               <h3 className="text-[22px] sm:text-[24px] font-bold text-[#051036]">{data.form.title}</h3>
@@ -100,13 +100,19 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
                       ) : (
                         <>
                           {IconComponent && (
-                            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
-                              <IconComponent className="w-5 h-5" />
+                            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#ff7a00]">
+                              <IconComponent className="w-[18px] h-[18px]" strokeWidth={2.2} />
                             </div>
                           )}
                           <input 
                             type={field.type === 'date' ? 'text' : field.type} 
-                            placeholder={field.placeholder} 
+                            placeholder={field.placeholder}
+                            inputMode={field.type === 'tel' ? 'numeric' : undefined}
+                            pattern={field.type === 'tel' ? '[0-9]*' : undefined}
+                            maxLength={field.type === 'tel' ? 15 : undefined}
+                            onInput={field.type === 'tel' ? (e) => {
+                              e.currentTarget.value = e.currentTarget.value.replace(/\D/g, "");
+                            } : undefined}
                             onFocus={field.type === 'date' ? (e) => { e.target.type = 'date'; } : undefined} 
                             onBlur={field.type === 'date' ? (e) => { if(!e.target.value) e.target.type = 'text'; } : undefined} 
                             className={`w-full ${IconComponent ? 'pl-11' : 'pl-4'} pr-4 py-3.5 border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors text-[15px] ${field.type === 'date' ? 'text-gray-500' : ''}`} 
@@ -119,12 +125,12 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
               })}
 
               <div className="md:col-span-2 mt-2">
-                <button type="button" className="w-full bg-[#0d6efd] text-white font-semibold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors shadow-md text-[16px]">
-                  <Send className="w-5 h-5" />
+                <button type="button" className="w-full bg-[#ff7a00] hover:bg-[#e66e00] text-white font-semibold py-4 rounded-xl flex items-center justify-center gap-2.5 transition-colors shadow-md shadow-[#ff7a00]/25 text-[16px]">
+                  <Send className="w-5 h-5" strokeWidth={2.2} />
                   {data.form.submitText}
                 </button>
                 <div className="flex items-center justify-center gap-2 mt-4 text-[13px] text-gray-500">
-                  <Shield className="w-4 h-4 text-gray-400" />
+                  <Shield className="w-[18px] h-[18px] text-[#ff7a00]" strokeWidth={2.2} />
                   {data.form.secureText}
                 </div>
               </div>
@@ -149,8 +155,8 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
                   const isEven = idx % 2 === 0;
                   return (
                     <div key={idx} className="flex gap-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 ${isEven ? 'bg-[#fff5eb]' : 'bg-[#f0f6ff]'}`}>
-                        {icons[item.icon] || <Shield className={`w-6 h-6 ${isEven ? 'text-[#ff7a00]' : 'text-[#0d6efd]'}`} />}
+                      <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 border ${isEven ? 'bg-[#fff5eb] border-[#ffe4ce]' : 'bg-[#f0f6ff] border-[#d6e6ff]'}`}>
+                        {icons[item.icon] || <Shield className={`w-7 h-7 ${isEven ? 'text-[#ff7a00]' : 'text-[#0d6efd]'}`} strokeWidth={2.2} />}
                       </div>
                       <div>
                         <h4 className="text-[16px] font-bold text-[#051036] mb-1">{item.title}</h4>
@@ -180,16 +186,16 @@ export default function Enquiry({ data }: { data: EnquiryPageData }) {
               <div className="space-y-5">
                 {data.assistance.phones.map((phone, idx) => (
                   <div key={idx} className="flex items-center gap-4">
-                    <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center shrink-0 ${idx === 1 ? 'border-[#0d6efd] text-[#0d6efd]' : 'border-[#ff7a00] text-[#ff7a00]'}`}>
-                      {idx === 1 ? <MessageCircle className="w-5 h-5" strokeWidth={2.5} /> : <Phone className="w-5 h-5" strokeWidth={2.5} />}
+                    <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center shrink-0 ${idx === 1 ? 'border-[#0d6efd] text-[#0d6efd] bg-[#f0f6ff]' : 'border-[#ff7a00] text-[#ff7a00] bg-[#fff5eb]'}`}>
+                      {idx === 1 ? <MessageCircle className="w-6 h-6" strokeWidth={2.3} /> : <Phone className="w-6 h-6" strokeWidth={2.3} />}
                     </div>
                     <span className="text-[16px] font-semibold text-[#051036]">{phone}</span>
                   </div>
                 ))}
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full border-2 border-[#ff7a00] flex items-center justify-center shrink-0 text-[#ff7a00]">
-                    <Mail className="w-5 h-5" strokeWidth={2.5} />
+                  <div className="w-12 h-12 rounded-full border-2 border-[#ff7a00] bg-[#fff5eb] flex items-center justify-center shrink-0 text-[#ff7a00]">
+                    <Mail className="w-6 h-6" strokeWidth={2.3} />
                   </div>
                   <span className="text-[16px] font-semibold text-[#051036]">{data.assistance.email}</span>
                 </div>

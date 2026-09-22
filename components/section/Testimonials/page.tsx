@@ -18,7 +18,7 @@ function TestimonialRow({
   const [active, setActive] = useState(0);
 
   return (
-    <div className="flex flex-col gap-4 md:h-[380px] md:flex-row md:gap-[15px] lg:h-[420px]">
+    <div className="flex flex-col gap-5 md:h-[380px] md:flex-row md:gap-[15px] lg:h-[420px]">
       {items.map((item, i) => {
         const isActive = active === i;
         const avatars = item.avatars || fallbackAvatars || [
@@ -30,35 +30,36 @@ function TestimonialRow({
           <article
             key={`${item.title}-${i}`}
             onMouseEnter={() => setActive(i)}
+            onClick={() => setActive(i)}
             className={`group relative overflow-hidden rounded-[24px] bg-white shadow-[0_10px_30px_rgba(15,36,84,0.04),0_20px_60px_rgba(15,36,84,0.06)] transition-[flex] duration-700 ease-out md:h-full ${
               isActive ? "md:flex-[2]" : "md:flex-[1]"
             }`}
           >
-            <div className="flex h-[320px] flex-col md:h-full md:flex-row">
+            <div className="flex h-auto flex-col md:h-full md:flex-row">
               <div
-                className={`relative overflow-hidden transition-all duration-700 ease-out ${
-                  isActive ? "h-[200px] md:h-full md:w-1/2" : "h-full md:w-full"
+                className={`relative h-[220px] w-full shrink-0 overflow-hidden transition-all duration-700 ease-out sm:h-[240px] md:h-full ${
+                  isActive ? "md:w-1/2" : "md:w-full"
                 }`}
               >
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
               </div>
 
               <div
-                className={`flex flex-col justify-center overflow-hidden bg-white px-6 py-6 transition-all duration-700 ease-out md:h-full ${
+                className={`flex flex-col justify-center bg-white px-5 py-5 sm:px-6 md:h-full md:overflow-hidden md:transition-all md:duration-700 md:ease-out ${
                   isActive
-                    ? "max-h-[280px] opacity-100 md:w-1/2 md:max-h-none md:px-8"
-                    : "max-h-0 py-0 opacity-0 md:w-0 md:px-0"
+                    ? "md:w-1/2 md:px-8 md:opacity-100"
+                    : "md:w-0 md:px-0 md:opacity-0"
                 }`}
               >
-                <div className={isActive ? "animate-[testimonialFade_0.8s_ease]" : ""}>
-                  <span className="mb-3 block text-[48px] leading-none text-[#0f4c5c]">&ldquo;</span>
-                  <h3 className="mb-2 text-[22px] font-bold leading-tight text-[#0b1b3f] md:text-[24px]">
+                <div className={isActive ? "md:animate-[testimonialFade_0.8s_ease]" : ""}>
+                  <span className="mb-2 block text-[40px] leading-none text-[#0f4c5c] md:mb-3 md:text-[48px]">&ldquo;</span>
+                  <h3 className="mb-2 text-[18px] font-bold leading-tight text-[#0b1b3f] sm:text-[20px] md:text-[24px]">
                     {item.title}
                   </h3>
                   <div className="mb-3 flex gap-0.5 text-[#f5b301]">
@@ -66,7 +67,7 @@ function TestimonialRow({
                       <Star key={star} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <p className="mb-6 text-[14px] leading-[1.7] text-[#6b7280]">{item.text}</p>
+                  <p className="mb-5 text-[13px] leading-[1.7] text-[#6b7280] sm:text-[14px] md:mb-6">{item.text}</p>
                   <div className="flex items-center">
                     <div className="flex">
                       {avatars.slice(0, 2).map((src: string, ai: number) => (

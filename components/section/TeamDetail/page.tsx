@@ -36,7 +36,7 @@ export default function TeamDetail({ data }: { data: TeamDetailViewData }) {
   if (!data) return null;
 
   return (
-    <section className={`py-12 md:py-20 bg-white ${poppins.className}`}>
+    <section className={`bg-white pb-8 pt-5 md:pb-10 md:pt-6 ${poppins.className}`}>
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         
         {/* Profile Card */}
@@ -45,7 +45,7 @@ export default function TeamDetail({ data }: { data: TeamDetailViewData }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-[#faf8f5] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-16 md:mb-24 shadow-sm"
+          className="bg-[#faf8f5] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-8 md:mb-10 shadow-sm"
         >
           {/* Image */}
           <motion.div variants={fadeInLeft} className="w-full md:w-[40%] lg:w-[32%] flex-shrink-0">
@@ -125,7 +125,7 @@ export default function TeamDetail({ data }: { data: TeamDetailViewData }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row gap-10 md:gap-16 items-start"
+          className="flex flex-col items-center md:flex-row md:items-center gap-10 md:gap-16"
         >
           {/* Biography Text */}
           <motion.div variants={fadeInLeft} className="w-full md:w-1/2 flex flex-col gap-6">
@@ -140,7 +140,7 @@ export default function TeamDetail({ data }: { data: TeamDetailViewData }) {
           </motion.div>
 
           {/* Biography Image */}
-          <motion.div variants={fadeInRight} className="w-full md:w-1/2 mt-4 md:mt-0">
+          <motion.div variants={fadeInRight} className="w-full md:w-1/2">
             <div className="relative w-full aspect-[4/3] md:aspect-[3/2] lg:aspect-[5/3] rounded-[32px] overflow-hidden">
               <Image 
                 src={data.biography.image}

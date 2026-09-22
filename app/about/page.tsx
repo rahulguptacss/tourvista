@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <div className="flex flex-col gap-10 md:gap-20 pt-0 pb-0 bg-white">
+      <div className="flex flex-col bg-white pt-0 pb-0">
         <Recommendation data={recommendationData} isAboutPage={true} />
         <Steps data={stepsData} />
         <WhyChooseUs data={whyChooseUsData} />

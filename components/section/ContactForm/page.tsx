@@ -1,7 +1,7 @@
 "use client";
 
 import { Poppins } from "next/font/google";
-import { User, Mail, Phone, Edit2, MessageSquare, Send, ArrowRight, ShieldCheck } from "lucide-react";
+import { User, Mail, Phone, Edit2, MessageSquare, Send, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import type { ContactFormData } from "../../types";
 
@@ -41,14 +41,9 @@ export default function ContactForm({ data }: { data: ContactFormData }) {
                 <span className="text-[#ff7a00]">{data.chatTitleHighlight}</span>
               </h3>
 
-              <p className="text-gray-300 text-[15px] leading-relaxed mb-8">
+              <p className="text-gray-300 text-[15px] leading-relaxed mt-auto">
                 {data.chatDescription}
               </p>
-
-              <button className="mt-auto inline-flex items-center justify-between w-max gap-4 px-6 py-3.5 bg-transparent border border-white/20 hover:border-[#ff7a00] rounded-full text-white text-[14px] font-semibold tracking-wide transition-colors group">
-                {data.chatButtonText}
-                <ArrowRight className="w-4 h-4 text-[#ff7a00] group-hover:translate-x-1 transition-transform" />
-              </button>
             </div>
           </div>
 
@@ -93,7 +88,13 @@ export default function ContactForm({ data }: { data: ContactFormData }) {
                 </div>
                 <input
                   type="tel"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  maxLength={15}
                   placeholder="Phone Number"
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(/\D/g, "");
+                  }}
                   className="w-full bg-white border border-gray-200 rounded-[12px] py-3.5 pl-12 pr-4 text-[#051036] placeholder:text-gray-400 focus:outline-none focus:border-[#0057ff] focus:ring-1 focus:ring-[#0057ff] transition-all"
                 />
               </div>

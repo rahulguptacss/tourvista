@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, ArrowRight, Plane, Camera, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, ArrowRight, Plane, Camera, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dancing_Script, Poppins } from "next/font/google";
 import { useRef, useState, useEffect } from "react";
 
@@ -161,20 +161,8 @@ export default function Destinations({ data }: { data: DestinationsData }) {
                 <h3 className="font-[800] text-[1.4rem] md:text-[1.25rem] text-[#051036] mb-1.5 group-hover:text-[#0055ff] transition-colors">
                   {dest.title}
                 </h3>
-                
-                {/* Rating (Visible on Mobile, hidden on desktop in screenshot but let's keep it clean) */}
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex items-center gap-0.5 text-[#fbbf24]">
-                    <Star fill="currentColor" strokeWidth={0} className="w-3.5 h-3.5" />
-                    <Star fill="currentColor" strokeWidth={0} className="w-3.5 h-3.5" />
-                    <Star fill="currentColor" strokeWidth={0} className="w-3.5 h-3.5" />
-                    <Star fill="currentColor" strokeWidth={0} className="w-3.5 h-3.5" />
-                    <Star fill="#f3f4f6" strokeWidth={0} className="w-3.5 h-3.5" />
-                  </div>
-                  <span className="text-[13px] text-[#94a3b8] font-[500]">{dest.rating} ({dest.reviews})</span>
-                </div>
 
-                <div className="hidden md:block w-8 h-[2.5px] bg-[#ff7a00] mb-3.5 rounded-full"></div>
+                <div className="hidden md:block w-8 h-[2.5px] bg-[#ff7a00] mb-3.5 mt-1 rounded-full"></div>
                 
                 <p className="text-[#4b5563] text-[14px] md:text-[13.5px] leading-[1.6] mb-5 flex-1 line-clamp-2 md:line-clamp-2">
                   {dest.description}

@@ -19,18 +19,16 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Top: Image Section */}
           <div 
-            className="relative h-[300px] md:h-[450px] lg:h-[500px] bg-cover bg-center rounded-t-[2rem] shadow-2xl overflow-hidden"
+            className="relative h-[340px] sm:h-[380px] md:h-[450px] lg:h-[500px] bg-cover bg-center rounded-t-[1.5rem] md:rounded-t-[2rem] shadow-2xl overflow-hidden"
             style={{ backgroundImage: `url('${videoBanner.backgroundImage}')` }}
           >
             {/* Inner White Frame */}
             <div className="absolute inset-4 md:inset-6 lg:inset-8 border-2 border-white/60 rounded-3xl pointer-events-none z-10"></div>
             
-            <div className="absolute inset-0 flex flex-col items-center justify-center md:flex-row md:justify-end px-6 sm:px-10 md:px-20 lg:px-24 z-20">
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-end px-5 pb-8 sm:px-10 md:flex-row md:items-center md:justify-end md:px-20 md:pb-0 lg:px-24">
               
-              {/* Play Button (Perfectly Centered) */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="relative flex items-center justify-center">
-                  {/* Pulsing ring animation */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none md:items-center">
+                <div className="relative mb-16 flex items-center justify-center md:mb-0">
                   <div className="absolute inset-0 bg-white/40 rounded-full animate-ping opacity-75"></div>
                   <button 
                     onClick={() => setIsVideoOpen(true)}
@@ -41,22 +39,20 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
                 </div>
               </div>
 
-              {/* Text Block */}
-              <div className="flex-none flex justify-center mt-36 sm:mt-48 md:mt-0">
+              <div className="relative z-10 flex-none">
                 <div className="relative group">
-                  {/* Irregular Dark Blue Background Blob */}
-                  <div className="absolute inset-[-15px] sm:inset-[-20px] md:inset-[-40px] bg-[#051036]/90 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] transform rotate-[-2deg] blur-[2px] transition-all duration-700 group-hover:rotate-0 group-hover:scale-105 -z-10"></div>
+                  <div className="absolute inset-[-12px] sm:inset-[-20px] md:inset-[-40px] bg-[#051036]/90 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] transform rotate-[-2deg] blur-[2px] transition-all duration-700 group-hover:rotate-0 group-hover:scale-105 -z-10"></div>
                   
                   <div className="text-center relative z-10 transition-transform duration-500 group-hover:scale-105">
                     <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 mb-1">
-                      <span className={`${dancingScript.className} text-white text-3xl sm:text-4xl md:text-5xl`}>
+                      <span className={`${dancingScript.className} text-white text-[28px] sm:text-4xl md:text-5xl`}>
                         {videoBanner.titleLine1}
                       </span>
-                      <span className={`${dancingScript.className} text-[#facc15] text-5xl sm:text-6xl md:text-8xl font-bold leading-[0.8] mb-[-5px] md:mb-[-10px]`}>
+                      <span className={`${dancingScript.className} text-[#facc15] text-[40px] sm:text-6xl md:text-8xl font-bold leading-[0.8] mb-[-4px] md:mb-[-10px]`}>
                         {videoBanner.titleHighlight}
                       </span>
                     </div>
-                    <div className={`${dancingScript.className} text-white text-2xl sm:text-3xl md:text-5xl mt-2`}>
+                    <div className={`${dancingScript.className} text-white text-[22px] sm:text-3xl md:text-5xl mt-1 sm:mt-2`}>
                       {videoBanner.titleLine2}
                     </div>
                   </div>

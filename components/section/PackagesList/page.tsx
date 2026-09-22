@@ -204,15 +204,6 @@ export default function PackagesList({
                   </div>
 
                   <div className="bg-[#3474d4] text-white p-6 sm:w-[23%] flex flex-col items-center justify-center text-center shrink-0 rounded-r-2xl rounded-b-2xl sm:rounded-bl-none">
-                    <div className="text-[0.9rem] font-[500] mb-2">({pkg.reviews} reviews)</div>
-                    <div className="flex gap-1 mb-4">
-                      {[...Array(pkg.rating || 5)].map((_, i) => (
-                        <Star key={i} className="w-[14px] h-[14px] fill-[#facc15] text-[#facc15]" />
-                      ))}
-                    </div>
-
-                    <div className="w-[85%] border-t border-dotted border-white/40 mb-4"></div>
-
                     <div className="font-bold text-[2.5rem] tracking-tight leading-none mb-1.5">${pkg.price}</div>
                     <div className="text-[0.9rem] font-[500] mb-6">/ per person</div>
 
