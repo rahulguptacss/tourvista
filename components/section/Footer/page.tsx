@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, Home } from "lucide-react";
-import { Poppins, Kaushan_Script } from "next/font/google";
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
-const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
@@ -50,7 +46,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
   ];
 
   return (
-    <footer className={`relative bg-[#222222] text-white pt-10 md:pt-12 ${poppins.className} overflow-hidden`}>
+    <footer className="relative bg-[#222222] text-white pt-10 md:pt-12 overflow-hidden">
       {/* Background Image Overlay for Footer */}
       <div 
         className="absolute inset-0 bg-cover bg-bottom opacity-15 pointer-events-none" 
@@ -69,16 +65,16 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
               {data.footer.description}
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (opens in a new tab)" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#c2410c] hover:text-white transition-colors">
                 <XIcon className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#c2410c] hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#c2410c] hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#ff7a00] hover:text-white transition-colors">
+              <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest (opens in a new tab)" className="w-[46px] h-[46px] rounded-full bg-white border-[3px] border-[#ff7a00] flex items-center justify-center hover:bg-[#ff7a00] text-[#c2410c] hover:text-white transition-colors">
                 <Pinterest className="w-5 h-5" />
               </a>
             </div>
@@ -86,7 +82,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
 
           {/* Column 2: Explore */}
           <div className="lg:col-span-2">
-            <h4 className="text-[#ff7a00] text-[20px] font-semibold mb-6 lg:mb-8">Explore</h4>
+            <h2 className="text-[#ffb35c] text-[20px] font-semibold mb-6 lg:mb-8">Explore</h2>
             <ul className="space-y-4">
               {exploreLinks.map((link, i) => (
                 <li key={i}>
@@ -100,7 +96,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
 
           {/* Column 3: Destinations */}
           <div className="lg:col-span-2">
-            <h4 className="text-[#ff7a00] text-[20px] font-semibold mb-6 lg:mb-8">Destinations</h4>
+            <h2 className="text-[#ffb35c] text-[20px] font-semibold mb-6 lg:mb-8">Destinations</h2>
             <ul className="space-y-4">
               {destinations.map((link, i) => (
                 <li key={i}>
@@ -114,7 +110,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
 
           {/* Column 4: Legal */}
           <div className="lg:col-span-2">
-            <h4 className="text-[#ff7a00] text-[20px] font-semibold mb-6 lg:mb-8">Legal</h4>
+            <h2 className="text-[#ffb35c] text-[20px] font-semibold mb-6 lg:mb-8">Legal</h2>
             <ul className="space-y-4">
               {legalLinks.map((link, i) => (
                 <li key={i}>
@@ -133,7 +129,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
                 <div className="w-[50px] h-[50px] shrink-0 rounded-full bg-[#ff7a00] flex items-center justify-center">
                   <Phone className="w-[22px] h-[22px] text-white" />
                 </div>
-                <div className={`${kaushan.className} text-[26px] tracking-wide text-white leading-none whitespace-nowrap`}>
+                <div className="font-kaushan text-[26px] tracking-wide text-white leading-none whitespace-nowrap">
                   123 654 0214
                 </div>
               </div>

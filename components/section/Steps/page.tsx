@@ -1,14 +1,6 @@
-"use client";
-
 import type { LucideIcon } from "lucide-react";
 import { CreditCard, Luggage, MapPin } from "lucide-react";
 import Image from "next/image";
-import { Kaushan_Script, Poppins } from "next/font/google";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils/animations";
-
-const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
 const stepIcons: Record<string, LucideIcon> = {
   Search: MapPin,
@@ -23,18 +15,14 @@ export default function Steps({ data }: { data: StepsData }) {
   const [titleLine1, titleLine2] = String(steps.titleSuffix || "").split("\n");
 
   return (
-    <section id="booking-steps" className={`relative overflow-hidden bg-gradient-to-r from-[#fdf6ec] via-[#fdfbf6] to-[#edf9f8] py-8 md:py-12 ${poppins.className}`}>
+    <section id="booking-steps" className="relative overflow-hidden bg-gradient-to-r from-[#fdf6ec] via-[#fdfbf6] to-[#edf9f8] py-8 md:py-12">
       <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-8">
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+        <div
           className="flex flex-col items-center gap-10 xl:flex-row xl:items-start xl:gap-6"
         >
-          <motion.div variants={fadeInLeft} className="w-full xl:w-[54%]">
+          <div className="w-full xl:w-[54%]">
             <h2 className="mb-7 text-[26px] font-bold leading-[1.2] text-[#0b1b3f] sm:text-[30px] md:mb-9 md:text-[32px]">
-              <span className="text-[#ff7a00]">{steps.titlePrefix} </span>
+              <span className="text-[#c2410c]">{steps.titlePrefix} </span>
               {titleLine1}
               {titleLine2 ? (
                 <>
@@ -94,9 +82,9 @@ export default function Steps({ data }: { data: StepsData }) {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={fadeInRight} className="relative w-full max-w-[720px] xl:w-[50%]">
+          <div className="relative w-full max-w-[720px] xl:w-[50%]">
             <div className="relative mx-auto h-[500px] w-full sm:h-[620px]">
               <Image
                 src="/step/hotballon-right.png"
@@ -135,15 +123,14 @@ export default function Steps({ data }: { data: StepsData }) {
                   alt="Traveler ready for summer"
                   width={560}
                   height={720}
-                  sizes="500px"
+                  sizes="(max-width: 768px) 90vw, 500px"
                   className="h-auto w-full object-contain"
-                  priority
                 />
               </div>
 
               <div className="pointer-events-none absolute right-[-4px] top-[8%] bottom-[8%] z-20 flex items-end sm:right-0">
                 <div
-                  className={`${kaushan.className} flex items-baseline text-[#1638c0]`}
+                  className="font-kaushan flex items-baseline text-[#1638c0]"
                   style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
                 >
                   <span className="text-[22px] leading-none sm:text-[34px]">For</span>
@@ -151,8 +138,8 @@ export default function Steps({ data }: { data: StepsData }) {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

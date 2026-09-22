@@ -1,27 +1,15 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Calendar, Users, Star, Camera, Plane } from "lucide-react";
-import { Dancing_Script, Poppins } from "next/font/google";
+import { MapPin, Calendar, Users, Camera, Plane } from "lucide-react";
 import { PackagesData } from "../../types";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils/animations";
-
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 export default function Packages({ data }: { data: PackagesData }) {
   const packages = data;
   return (
-    <section className={`py-8 md:py-12 bg-gray-50 relative ${poppins.className}`}>
+    <section className="py-8 md:py-12 bg-gray-50 relative">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div 
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+        <div
           className="max-w-4xl mx-auto mb-10 relative"
         >
           
@@ -30,7 +18,7 @@ export default function Packages({ data }: { data: PackagesData }) {
               <div className="bg-[#ff7a00] rounded-full w-8 h-8 flex items-center justify-center">
                 <Camera className="w-4 h-4 text-white" />
               </div>
-              <span className={`text-[#ff7a00] text-[15px] font-medium tracking-wide mt-0.5`}>
+              <span className="text-[#c2410c] text-[15px] font-semibold tracking-wide mt-0.5">
                 {packages.subtitle}
               </span>
             </div>
@@ -67,26 +55,23 @@ export default function Packages({ data }: { data: PackagesData }) {
           <p className="text-[#4b5563] max-w-full mx-auto text-[0.9rem] md:text-[1rem] font-[400] leading-relaxed text-left md:text-center mt-3 md:mt-0 pr-4 md:pr-0 md:whitespace-nowrap">
             {packages.description}
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid */}
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+        <div
           className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-12 max-w-7xl mx-auto"
         >
           {packages.items.slice(0, 4).map((pkg) => {
             const Icon = pkg.title.toLowerCase().includes('mountain') || pkg.title.toLowerCase().includes('swiss') || pkg.title.toLowerCase().includes('cappadocia') ? Plane : Plane; // We will just import Palmtree and Mountain from lucide react if needed, for now use Plane as fallback if we don't have others imported yet. Wait, I should import Palmtree and Mountain at the top. Let me use MapPin as fallback for icon. Let's assume we render based on a condition or just use a generic orange icon. The screenshot has Palm tree and Mountain. I will import them.
             return (
-              <motion.div variants={fadeInUp} key={pkg.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col sm:flex-row group h-full">
+              <div key={pkg.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow flex flex-col sm:flex-row group h-full">
                 {/* Left: Image */}
                 <div className="relative w-full sm:w-[35%] h-64 sm:h-auto overflow-hidden shrink-0">
                   <Image 
                     src={pkg.image} 
                     alt={pkg.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, 35vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
@@ -147,10 +132,10 @@ export default function Packages({ data }: { data: PackagesData }) {
                     <svg className="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
 
         <div className="text-center">
           <Link

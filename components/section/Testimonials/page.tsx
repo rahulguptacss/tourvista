@@ -3,10 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Quote, Star } from "lucide-react";
-import { Poppins } from "next/font/google";
 import type { TestimonialItem, TestimonialsData } from "../../types";
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 function TestimonialRow({
   items,
@@ -75,7 +72,7 @@ function TestimonialRow({
                           key={ai}
                           className="relative -ml-3 h-9 w-9 overflow-hidden rounded-full border-[3px] border-white first:ml-0"
                         >
-                          <Image src={src} alt="" fill sizes="36px" className="object-cover" />
+                          <Image src={src} alt="Traveler" fill sizes="36px" className="object-cover" />
                         </span>
                       ))}
                       <span className="relative -ml-3 flex h-9 w-9 items-center justify-center rounded-full border-[3px] border-white bg-[#0f4c5c] text-[11px] font-semibold text-white">
@@ -112,11 +109,11 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
   }
 
   return (
-    <section className={`bg-white py-8 md:py-12 ${poppins.className}`}>
+    <section className="bg-white py-8 md:py-12">
       <div className="mx-auto max-w-[1280px] px-5 md:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
           <div className="mb-4 inline-flex items-center gap-3">
-            <span className="flex items-center gap-1.5 rounded-full border border-[#ff7a00] px-3 py-[5px] text-[13px] font-medium uppercase tracking-wide text-[#ff7a00]">
+            <span className="flex items-center gap-1.5 rounded-full border border-[#c2410c] px-3 py-[5px] text-[13px] font-semibold uppercase tracking-wide text-[#c2410c]">
               <span className="flex h-4 w-4 items-center justify-center rounded-full border border-[#ff7a00]">
                 <Quote className="h-2.5 w-2.5" />
               </span>
@@ -128,7 +125,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
           {data.titleHighlight ? (
             <h2 className="mx-auto max-w-[720px] text-[28px] font-bold leading-[1.25] text-[#0b1b3f] sm:text-[34px] md:text-[40px]">
               {data.titlePrefix}
-              <span className="text-[#ff7a00]">{data.titleHighlight}</span>
+              <span className="text-[#c2410c]">{data.titleHighlight}</span>
               {data.titleSuffix}
             </h2>
           ) : (

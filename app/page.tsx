@@ -33,7 +33,7 @@ export default async function Home() {
   const components = fullData.pages.home.components;
 
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       {components.map((comp, index) => {
         const Component = componentMap[comp.key];
         if (!Component) return null;
@@ -44,6 +44,6 @@ export default async function Home() {
 
         return <Component key={index} data={sectionData} />;
       })}
-    </main>
+    </div>
   );
 }

@@ -3,11 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, ArrowRight, Plane, Camera, ChevronLeft, ChevronRight } from "lucide-react";
-import { Dancing_Script, Poppins } from "next/font/google";
 import { useRef, useState, useEffect } from "react";
-
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 import type { DestinationItem, DestinationsData } from "../../types";
 
@@ -45,21 +41,8 @@ export default function Destinations({ data }: { data: DestinationsData }) {
     }
   }, []);
 
-  // Auto-slide effect for mobile
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Only auto-slide on mobile
-      if (window.innerWidth < 768) {
-        const nextIndex = (activeIndex + 1) % destinations.items.length;
-        scrollToIndex(nextIndex);
-      }
-    }, 3000); // 3 seconds
-    
-    return () => clearInterval(interval);
-  }, [activeIndex, destinations.items.length]);
-
   return (
-    <section className={`py-8 md:py-12 bg-gray-50 relative overflow-hidden ${poppins.className}`}>
+    <section className="py-8 md:py-12 bg-gray-50 relative overflow-hidden">
       {/* Decorative Dashed Plane Path - Desktop Only */}
       <div className="absolute top-16 right-[5%] lg:right-[15%] pointer-events-none hidden md:block z-0 opacity-80">
         <div className="relative w-[280px] h-[160px]">
@@ -86,7 +69,7 @@ export default function Destinations({ data }: { data: DestinationsData }) {
               <div className="bg-[#ff7a00] rounded-full w-8 h-8 flex items-center justify-center">
                 <Camera className="w-4 h-4 text-white" />
               </div>
-              <span className={`text-[#ff7a00] text-[15px] font-medium tracking-wide mt-0.5`}>
+              <span className="text-[#c2410c] text-[15px] font-semibold tracking-wide mt-0.5">
                 {destinations.subtitle}
               </span>
             </div>
@@ -143,6 +126,8 @@ export default function Destinations({ data }: { data: DestinationsData }) {
                     src={dest.image} 
                     alt={dest.title}
                     fill
+                    sizes="(max-width: 768px) 85vw, 25vw"
+                    quality={60}
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -178,11 +163,13 @@ export default function Destinations({ data }: { data: DestinationsData }) {
 
         {/* Pagination indicators (Mobile Only) */}
         <div className="flex md:hidden items-center justify-center gap-5 mb-8">
-          <button 
+          <button
+            type="button"
+            aria-label="Previous destination"
             onClick={() => scrollToIndex(Math.max(0, activeIndex - 1))}
             disabled={activeIndex === 0}
             className={`cursor-pointer w-8 h-8 rounded-full border flex items-center justify-center shadow-sm transition-all ${
-              activeIndex === 0 ? "border-gray-200 text-gray-400 bg-white opacity-60" : "border-blue-200 text-blue-500 bg-white hover:bg-blue-50"
+              activeIndex === 0 ? "border-gray-300 text-gray-600 bg-white" : "border-blue-200 text-blue-700 bg-white hover:bg-blue-50"
             }`}
           >
             <ChevronLeft className="w-4 h-4" />
@@ -190,21 +177,25 @@ export default function Destinations({ data }: { data: DestinationsData }) {
           
           <div className="flex gap-2">
             {destinations.items.map((_, idx: number) => (
-              <div 
-                key={idx} 
+              <button
+                type="button"
+                key={idx}
+                aria-label={`Go to destination ${idx + 1}`}
                 onClick={() => scrollToIndex(idx)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeIndex === idx ? "bg-[#ff7a00]" : "bg-gray-200"
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  activeIndex === idx ? "bg-[#c2410c]" : "bg-gray-400"
                 }`}
-              ></div>
+              />
             ))}
           </div>
 
-          <button 
+          <button
+            type="button"
+            aria-label="Next destination"
             onClick={() => scrollToIndex(Math.min(destinations.items.length - 1, activeIndex + 1))}
             disabled={activeIndex === destinations.items.length - 1}
             className={`cursor-pointer w-8 h-8 rounded-full border flex items-center justify-center shadow-sm transition-all ${
-              activeIndex === destinations.items.length - 1 ? "border-gray-200 text-gray-400 bg-white opacity-60" : "border-blue-200 text-blue-500 bg-white hover:bg-blue-50"
+              activeIndex === destinations.items.length - 1 ? "border-gray-300 text-gray-600 bg-white" : "border-blue-200 text-blue-700 bg-white hover:bg-blue-50"
             }`}
           >
             <ChevronRight className="w-4 h-4" />

@@ -10,14 +10,14 @@ export default function Topbar({ data }: { data: TopbarData }) {
     <div className="absolute top-0 left-0 z-50 hidden w-full px-4 py-3 text-white md:block md:px-10">
       <div className="container mx-auto flex items-center justify-between px-6 text-sm font-medium md:px-8">
         <div className="flex items-center gap-6 [filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.7))]">
-          <div className="flex cursor-pointer items-center gap-2 transition-colors hover:text-gray-200">
-            <Mail className="h-4 w-4" />
+          <a href={`mailto:${data.email}`} className="flex items-center gap-2 transition-colors hover:text-gray-200">
+            <Mail className="h-4 w-4" aria-hidden />
             <span>{data.email}</span>
-          </div>
-          <div className="flex cursor-pointer items-center gap-2 transition-colors hover:text-gray-200">
-            <Phone className="h-4 w-4" />
+          </a>
+          <a href={`tel:${String(data.phone || "").replace(/[^\d+]/g, "")}`} className="flex items-center gap-2 transition-colors hover:text-gray-200">
+            <Phone className="h-4 w-4" aria-hidden />
             <span>{data.phone}</span>
-          </div>
+          </a>
         </div>
 
         <div className="flex items-center gap-3 rounded-full bg-black/35 px-3.5 py-1.5 backdrop-blur-[2px]">
@@ -26,7 +26,7 @@ export default function Topbar({ data }: { data: TopbarData }) {
             href={data.socials?.[0]?.href || "https://www.facebook.com"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Facebook"
+            aria-label="Facebook (opens in a new tab)"
             className="text-white transition-colors hover:text-[#ff7a00]"
           >
             <svg className="h-[18px] w-[18px] fill-current" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function Topbar({ data }: { data: TopbarData }) {
             href={data.socials?.[1]?.href || "https://x.com"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="X"
+            aria-label="X (opens in a new tab)"
             className="text-white transition-colors hover:text-[#ff7a00]"
           >
             <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Topbar({ data }: { data: TopbarData }) {
             href={data.socials?.[2]?.href || "https://www.instagram.com"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
+            aria-label="Instagram (opens in a new tab)"
             className="text-white transition-colors hover:text-[#ff7a00]"
           >
             <svg className="h-[18px] w-[18px] fill-current" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function Topbar({ data }: { data: TopbarData }) {
             href={data.socials?.[3]?.href || "https://www.linkedin.com"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            aria-label="LinkedIn (opens in a new tab)"
             className="text-white transition-colors hover:text-[#ff7a00]"
           >
             <svg className="h-[18px] w-[18px] fill-current" viewBox="0 0 24 24">

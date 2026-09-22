@@ -1,11 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Plane, ArrowRight, UserCircle, Mountain, Award } from "lucide-react";
 import { RecommendationData, FeatureItem } from "@/components/types";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils/animations";
 
 export default function Recommendation({
   data,
@@ -70,18 +66,14 @@ export default function Recommendation({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1250px] px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+        <div
           className="grid items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-16"
         >
           {/* =====================================================
               LEFT IMAGE COLLAGE
           ===================================================== */}
 
-          <motion.div variants={fadeInLeft} className="relative mx-auto h-[330px] w-full max-w-[520px] sm:h-[430px] lg:h-[570px] lg:max-w-none">
+          <div className="relative mx-auto h-[330px] w-full max-w-[520px] sm:h-[430px] lg:h-[570px] lg:max-w-none">
             {/* Left tall image */}
             <div
               className="
@@ -215,13 +207,13 @@ export default function Recommendation({
             <div className="absolute left-[47%] top-[1%] hidden sm:block lg:hidden">
               <Plane className="h-7 w-7 rotate-[-15deg] text-[#0a2a65]" />
             </div>
-          </motion.div>
+          </div>
 
           {/* =====================================================
               RIGHT CONTENT
           ===================================================== */}
 
-          <motion.div variants={fadeInRight} className="w-full">
+          <div className="w-full">
             {/* Subtitle */}
             <div className="mb-4 flex items-center justify-center gap-3 lg:justify-start">
               <div className="hidden h-px w-12 bg-orange-200 sm:block" />
@@ -243,7 +235,7 @@ export default function Recommendation({
                   <Plane className="h-3.5 w-3.5 text-[#ff7a00]" />
                 </div>
 
-                <span className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#ff7a00] sm:text-xs">
+                <span className="text-[11px] font-bold uppercase tracking-[1.5px] text-[#c2410c] sm:text-xs">
                   {recommendation.subtitle || "WHY TRAVEL WITH US?"}
                 </span>
               </div>
@@ -270,7 +262,7 @@ export default function Recommendation({
               "
             >
               {recommendation.titlePrefix || "We"}{" "}
-              <span className="text-[#ff7a00]">
+              <span className="text-[#c2410c]">
                 {recommendation.titleHighlight || "Recommend"}
               </span>{" "}
               {recommendation.titleSuffix}
@@ -601,8 +593,8 @@ export default function Recommendation({
                 </div>
               </>
             )}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

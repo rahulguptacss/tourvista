@@ -5,7 +5,6 @@ import { ChevronDown, ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 
 import type { HeaderData, NavLink } from "../../types";
 
@@ -31,7 +30,7 @@ export default function Header({ data }: { data: HeaderData }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -51,10 +50,8 @@ export default function Header({ data }: { data: HeaderData }) {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      <nav
+        aria-label="Main"
         className={`fixed left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "top-2 md:top-4 bg-transparent" : "top-3 md:top-14 bg-transparent"}`}
       >
         <div className="max-w-[1320px] w-full mx-auto px-3 sm:px-4 md:px-8">
@@ -72,6 +69,7 @@ export default function Header({ data }: { data: HeaderData }) {
                 width={180}
                 height={58}
                 className="h-8 w-auto sm:h-10 md:h-14"
+                sizes="180px"
                 priority
               />
             </Link>
@@ -138,23 +136,14 @@ export default function Header({ data }: { data: HeaderData }) {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+      {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 z-40 bg-black/40 lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            <div
               className="absolute right-0 top-0 bottom-0 flex w-[86%] max-w-[340px] flex-col overflow-hidden bg-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
@@ -191,15 +180,8 @@ export default function Header({ data }: { data: HeaderData }) {
                           </Link>
                         )}
 
-                        <AnimatePresence initial={false}>
                           {link.dropdown && isDropdownOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.22 }}
-                              className="overflow-hidden"
-                            >
+                            <div className="overflow-hidden">
                               <div className="mt-3 rounded-xl bg-[#f4f7fb] px-2 py-2">
                                 {link.dropdown.map((sublink, subIndex) => {
                                   const subActive = isLinkActive(sublink.href);
@@ -219,9 +201,8 @@ export default function Header({ data }: { data: HeaderData }) {
                                   );
                                 })}
                               </div>
-                            </motion.div>
+                            </div>
                           )}
-                        </AnimatePresence>
                       </div>
                     );
                   })}
@@ -238,10 +219,9 @@ export default function Header({ data }: { data: HeaderData }) {
                   </Link>
                 )}
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
     </>
   );
 }

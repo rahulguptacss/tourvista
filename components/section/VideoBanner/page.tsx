@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Award, Users, Briefcase, Star, UserPlus, CalendarCheck, Smile, Plane, X } from "lucide-react";
-import { Dancing_Script, Poppins } from "next/font/google";
-
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["400", "700"] });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
+import Image from "next/image";
+import { Play, X } from "lucide-react";
 
 import type { VideoBannerData } from "../../types";
 
@@ -15,13 +12,18 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
 
   return (
     <>
-      <section className={`pt-8 pb-0 bg-white ${poppins.className}`}>
+      <section className="pt-8 pb-0 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Top: Image Section */}
-          <div 
-            className="relative h-[340px] sm:h-[380px] md:h-[450px] lg:h-[500px] bg-cover bg-center rounded-t-[1.5rem] md:rounded-t-[2rem] shadow-2xl overflow-hidden"
-            style={{ backgroundImage: `url('${videoBanner.backgroundImage}')` }}
-          >
+          <div className="relative h-[340px] sm:h-[380px] md:h-[450px] lg:h-[500px] rounded-t-[1.5rem] md:rounded-t-[2rem] shadow-2xl overflow-hidden">
+            <Image
+              src={videoBanner.backgroundImage}
+              alt=""
+              fill
+              quality={55}
+              sizes="(max-width: 768px) 100vw, 1280px"
+              className="object-cover object-center"
+            />
             {/* Inner White Frame */}
             <div className="absolute inset-4 md:inset-6 lg:inset-8 border-2 border-white/60 rounded-3xl pointer-events-none z-10"></div>
             
@@ -29,8 +31,10 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
               
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none md:items-center">
                 <div className="relative mb-16 flex items-center justify-center md:mb-0">
-                  <div className="absolute inset-0 bg-white/40 rounded-full animate-ping opacity-75"></div>
+                  <div className="absolute inset-0 rounded-full bg-white/30"></div>
                   <button 
+                    type="button"
+                    aria-label="Play video"
                     onClick={() => setIsVideoOpen(true)}
                     className="cursor-pointer relative w-16 h-16 md:w-[72px] md:h-[72px] border-[2px] border-white bg-black/20 hover:bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all hover:scale-110 active:scale-95 group pointer-events-auto"
                   >
@@ -45,14 +49,14 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
                   
                   <div className="text-center relative z-10 transition-transform duration-500 group-hover:scale-105">
                     <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 mb-1">
-                      <span className={`${dancingScript.className} text-white text-[28px] sm:text-4xl md:text-5xl`}>
+                      <span className="font-dancing text-white text-[28px] sm:text-4xl md:text-5xl">
                         {videoBanner.titleLine1}
                       </span>
-                      <span className={`${dancingScript.className} text-[#facc15] text-[40px] sm:text-6xl md:text-8xl font-bold leading-[0.8] mb-[-4px] md:mb-[-10px]`}>
+                      <span className="font-dancing text-[#facc15] text-[40px] sm:text-6xl md:text-8xl font-bold leading-[0.8] mb-[-4px] md:mb-[-10px]">
                         {videoBanner.titleHighlight}
                       </span>
                     </div>
-                    <div className={`${dancingScript.className} text-white text-[22px] sm:text-3xl md:text-5xl mt-1 sm:mt-2`}>
+                    <div className="font-dancing text-white text-[22px] sm:text-3xl md:text-5xl mt-1 sm:mt-2">
                       {videoBanner.titleLine2}
                     </div>
                   </div>
@@ -69,6 +73,8 @@ export default function VideoBanner({ data }: { data: VideoBannerData }) {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm px-4 p-4">
           <div className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
             <button 
+              type="button"
+              aria-label="Close video"
               onClick={() => setIsVideoOpen(false)}
               className="cursor-pointer absolute top-4 right-4 text-white hover:text-[#facc15] z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
             >

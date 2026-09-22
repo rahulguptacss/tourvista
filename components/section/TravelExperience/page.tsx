@@ -1,14 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import { Home } from "lucide-react";
-import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { TravelBlogData, BlogItem } from "../../types";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer } from "../../utils/animations";
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
 function splitDate(date: string) {
   const [day, ...rest] = date.split(" ");
@@ -53,13 +46,13 @@ function SmallBlogCard({ blog }: { blog: BlogItem }) {
 function MediumBlogCard({ blog }: { blog: BlogItem }) {
   return (
     <Link href={`/blog-detail/${blog.id}`} className="block relative transition-transform hover:-translate-y-1">
-      <div className="relative overflow-hidden rounded-[20px]">
+      <div className="relative h-[210px] overflow-hidden rounded-[20px]">
         <Image
           src={blog.image}
           alt={blog.title}
-          width={420}
-          height={210}
-          className="h-[210px] w-full object-cover object-center"
+          fill
+          sizes="(max-width: 768px) 100vw, 420px"
+          className="object-cover object-center"
         />
         <div className="absolute right-3 top-3">
           <DateBadge date={blog.date} />
@@ -100,16 +93,12 @@ export default function TravelExperience({ data }: { data: TravelBlogData }) {
   const midSmall = smallBlogs.slice(3, 4);
 
   return (
-    <section className={`bg-white py-8 md:py-12 ${poppins.className}`}>
+    <section className="bg-white py-8 md:py-12">
       <div className="mx-auto max-w-[1280px] px-5 md:px-8">
-        <motion.div 
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+        <div
           className="mx-auto mb-12 max-w-2xl text-center"
         >
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#ff7a00] px-3 py-[5px] text-[13px] font-medium text-[#ff7a00]">
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-[#c2410c] px-3 py-[5px] text-[13px] font-semibold text-[#c2410c]">
             <span className="flex h-4 w-4 items-center justify-center rounded-full border border-[#ff7a00]">
               <Home className="h-2.5 w-2.5" />
             </span>
@@ -118,44 +107,40 @@ export default function TravelExperience({ data }: { data: TravelBlogData }) {
           <h2 className="text-[32px] font-bold leading-tight text-[#0b1b3f] md:text-[40px]">
             {travelExperience.title}
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+        <div
           className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           <div className="flex flex-col gap-5">
             {leftSmall.map((blog, idx) => (
-              <motion.div variants={fadeInUp} key={idx} className="flex-1">
+              <div key={idx} className="flex-1">
                 <SmallBlogCard blog={blog} />
-              </motion.div>
+              </div>
             ))}
           </div>
 
           <div className="flex flex-col gap-5">
             {midSmall.map((blog, idx) => (
-              <motion.div variants={fadeInUp} key={idx}>
+              <div key={idx}>
                 <SmallBlogCard blog={blog} />
-              </motion.div>
+              </div>
             ))}
-            <motion.div variants={fadeInUp} className="flex-1">
+            <div className="flex-1">
               {mediumBlogs.map((blog, idx) => (
                 <MediumBlogCard key={idx} blog={blog} />
               ))}
-            </motion.div>
+            </div>
           </div>
 
           <div className="min-h-[420px]">
             {largeBlogs.map((blog, idx) => (
-              <motion.div variants={fadeInUp} key={idx} className="h-full">
+              <div key={idx} className="h-full">
                 <LargeBlogCard blog={blog} />
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

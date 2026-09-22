@@ -1,13 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { Kaushan_Script, Poppins } from "next/font/google";
-import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, fadeInLeft, fadeInRight } from "../../utils/animations";
-
-const kaushan = Kaushan_Script({ subsets: ["latin"], weight: "400" });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
 import { WhyChooseUsData } from "@/components/types";
 
@@ -15,25 +7,22 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
   const whyChooseUs = data;
 
   return (
-    <section className={`relative bg-white px-4 pb-6 md:px-8 ${poppins.className}`}>
+    <section className="relative bg-white px-4 pb-6 md:px-8">
       <div className="relative mx-auto max-w-[1280px] overflow-hidden rounded-b-[50px] bg-[#136260] md:rounded-b-[80px]">
         <Image
           src="/step/w-cho-top.webp"
           alt=""
+          aria-hidden
           width={1600}
           height={220}
           className="pointer-events-none absolute left-0 top-0 z-20 w-full"
         />
 
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+        <div
           className="relative z-10 flex flex-col items-center justify-between gap-10 px-6 pb-10 pt-28 md:px-16 md:pb-12 md:pt-32 lg:flex-row lg:items-center lg:px-24"
         >
-          <motion.div variants={fadeInLeft} className="w-full max-w-[520px] text-white">
-            <h2 className={`${kaushan.className} mb-8 text-[28px] leading-tight md:text-[34px]`}>
+          <div className="w-full max-w-[520px] text-white">
+            <h2 className="font-kaushan mb-8 text-[28px] leading-tight md:text-[34px]">
               {whyChooseUs.title}
             </h2>
 
@@ -54,9 +43,9 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
             >
               {whyChooseUs.button || "Discover More"}
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div variants={fadeInRight} className="w-full max-w-[360px] text-center lg:text-left">
+          <div className="w-full max-w-[360px] text-center lg:text-left">
             <Image
               src="/step/24-Image.webp"
               alt="24 Hours Service"
@@ -73,12 +62,13 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
             >
               {whyChooseUs.contactNumber}
             </a>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         <Image
           src="/whychoose/w-cho-btm.png"
           alt=""
+          aria-hidden
           width={1600}
           height={280}
           className="pointer-events-none absolute bottom-0 left-0 z-0 w-full opacity-35"
