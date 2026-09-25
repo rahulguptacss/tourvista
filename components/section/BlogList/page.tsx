@@ -66,25 +66,6 @@ export function BlogSidebar({ data }: { data: BlogPageData }) {
         </div>
       </div>
 
-      <div>
-        <div className="mb-3 inline-flex items-center border-l-[3px] border-[#ff7a00] bg-[#fff6ea] px-3 py-1.5">
-          <h3 className="text-[16px] font-semibold text-[#0d4f56]">{data.destinationsTitle}</h3>
-        </div>
-        <div className="rounded-[18px] bg-white px-5 py-4 shadow-[0_15px_50px_rgba(15,23,42,0.08)]">
-          <ul className="space-y-3.5">
-            {data.destinations.map((item) => (
-              <li
-                key={item.name}
-                className="flex items-center justify-between text-[14px]"
-              >
-                <span className="font-medium text-[#0d4f56]">{item.name}</span>
-                <span className="text-[#b0b8be]">( {item.listings} )</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
       {data.galleries.map((images, gi) => (
         <div key={gi}>
           <div className="mb-3 inline-flex items-center border-l-[3px] border-[#ff7a00] bg-[#fff6ea] px-3 py-1.5">

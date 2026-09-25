@@ -81,9 +81,9 @@ export default function DestinationsList({
             aria-label="Previous page"
             onClick={() => goToPage(page - 1)}
             disabled={page === 1}
-            className="w-10 h-10 rounded-[12px] bg-white shadow-[0_6px_18px_rgba(15,23,42,0.08)] flex items-center justify-center text-[#c5cdd3] disabled:opacity-40 hover:text-[#0b1b36] transition-colors"
+            className="w-10 h-10 rounded-[12px] bg-white shadow-[0_6px_18px_rgba(15,23,42,0.08)] flex items-center justify-center text-[#0b1b36] disabled:opacity-40 hover:bg-[#f7f9fb] transition-colors"
           >
-            <ChevronLeft size={16} />
+            <ChevronLeft size={20} />
           </button>
 
           {pageNumbers.map((num) => (
@@ -106,9 +106,9 @@ export default function DestinationsList({
             aria-label="Next page"
             onClick={() => goToPage(page + 1)}
             disabled={page === totalPages}
-            className="w-10 h-10 rounded-[12px] bg-white shadow-[0_6px_18px_rgba(15,23,42,0.08)] flex items-center justify-center text-[#c5cdd3] disabled:opacity-40 hover:text-[#0b1b36] transition-colors"
+            className="w-10 h-10 rounded-[12px] bg-white shadow-[0_6px_18px_rgba(15,23,42,0.08)] flex items-center justify-center text-[#0b1b36] disabled:opacity-40 hover:bg-[#f7f9fb] transition-colors"
           >
-            <ChevronRight size={16} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>

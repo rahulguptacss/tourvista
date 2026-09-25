@@ -138,7 +138,7 @@ export default function Footer({ data }: { data: FooterLayoutData }) {
                   <Mail className="w-[22px] h-[22px] text-white" />
                 </div>
                 <div className="text-[15px] font-medium text-white leading-tight">
-                  travllainfo@gmail.com
+                  info@xyz.com
                 </div>
               </div>
               <div className="flex items-center gap-4">
