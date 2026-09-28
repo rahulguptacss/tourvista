@@ -13,6 +13,7 @@ import {
   Binoculars,
   Car,
   Utensils,
+  ChevronDown,
   type LucideIcon,
 } from "lucide-react";
 import { Poppins, Playfair_Display } from "next/font/google";
@@ -51,6 +52,7 @@ const playfair = Playfair_Display({
 
 export default function PackageDetail({ data }: { data: PackageDetailViewData }) {
   const [activeTab, setActiveTab] = useState("overview");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [slide, setSlide] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -184,26 +186,67 @@ export default function PackageDetail({ data }: { data: PackageDetailViewData })
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-5 mb-5 overflow-x-auto scrollbar-hide"
+          className="mt-5 mb-5"
         >
-
-          <div className="flex w-full items-center justify-evenly bg-[#4d8ef7] rounded-[10px] px-6 sm:px-10 py-4">
-
-            {data.tabs?.map((tab: PackageTab) => {
-              return (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => scrollToSection(tab.id)}
-                  className="cursor-pointer bg-white text-[#1a2f4a] rounded-full px-5 sm:px-7 py-2.5 text-[13px] sm:text-[14px] font-medium whitespace-nowrap"
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
-
+          {/* Desktop Tabs */}
+          <div className="hidden md:flex w-full items-center justify-evenly bg-[#4d8ef7] rounded-[10px] px-10 py-4">
+            {data.tabs?.map((tab: PackageTab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => scrollToSection(tab.id)}
+                className="cursor-pointer bg-white text-[#1a2f4a] rounded-full px-7 py-2.5 text-[14px] font-medium whitespace-nowrap"
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
 
+          {/* Mobile Dropdown Tabs */}
+          <div className="md:hidden block relative z-20">
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full flex items-center justify-between gap-2 rounded-xl bg-[#4d8ef7] px-4 py-3.5 shadow-sm text-left focus:outline-none"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-[14px] font-semibold text-white">
+                  {data.tabs?.find((t) => t.id === activeTab)?.label || "Overview"}
+                </span>
+              </div>
+              <ChevronDown className={`w-5 h-5 text-white transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute left-0 right-0 top-full mt-2 bg-white border border-[#e5e7eb] rounded-xl shadow-lg overflow-hidden flex flex-col z-30"
+                >
+                  {data.tabs?.map((tab) => {
+                    const isActive = activeTab === tab.id;
+                    return (
+                      <button
+                        key={tab.id}
+                        type="button"
+                        onClick={() => {
+                          scrollToSection(tab.id);
+                          setIsDropdownOpen(false);
+                        }}
+                        className={`flex items-center gap-2 px-4 py-3 text-[14px] font-semibold transition-colors border-b border-gray-100 last:border-0 ${
+                          isActive ? "bg-blue-50 text-[#4d8ef7]" : "text-slate-700 hover:bg-gray-50"
+                        }`}
+                      >
+                        {tab.label}
+                      </button>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.div>
 
 
@@ -585,13 +628,6 @@ export default function PackageDetail({ data }: { data: PackageDetailViewData })
                   <span className="w-[6px] h-[6px] rounded-full bg-[#1a2f4a]" />
                 </span>
               </div>
-
-              <label className="flex items-center gap-2 text-[12px] text-[#5b6b73] cursor-pointer">
-                <input type="checkbox" className="w-3.5 h-3.5 rounded-[3px] accent-[#0d4f56]" />
-                <span>{data.labels.emiPrefix} ${data.emiPrice || Math.round(Number(data.price) * 0.65)}</span>
-              </label>
-
-              <p className="text-[12px] text-[#0d4f56] mt-0.5 mb-4 pl-[22px]">{data.labels.seeOption}</p>
 
               <Link
                 href={data.labels.enquireLink}
