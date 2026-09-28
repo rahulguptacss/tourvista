@@ -2,14 +2,14 @@ import Header from "../section/Header/page";
 import Topbar from "../section/Topbar/page";
 import Footer from "../section/Footer/page";
 import PageChrome from "./PageChrome";
-import type { FooterData, HeaderData, PackagesHeroData, TopbarData } from "../types";
+import BackToTop from "./BackToTop";
+import type { FooterData, HeaderData, TopbarData } from "../types";
 
 interface GlobalLayoutProps {
   children: React.ReactNode;
   headerData: HeaderData;
   topbarData: TopbarData;
   footerData: FooterData;
-  banners: Record<string, PackagesHeroData>;
 }
 
 export default function GlobalLayout({
@@ -17,7 +17,6 @@ export default function GlobalLayout({
   headerData,
   topbarData,
   footerData,
-  banners,
 }: GlobalLayoutProps) {
   return (
     <>
@@ -25,8 +24,9 @@ export default function GlobalLayout({
         <Topbar data={topbarData} />
         <Header data={headerData} />
       </header>
-      <PageChrome banners={banners}>{children}</PageChrome>
+      <PageChrome>{children}</PageChrome>
       <Footer data={{ footer: footerData, header: headerData }} />
+      <BackToTop />
     </>
   );
 }

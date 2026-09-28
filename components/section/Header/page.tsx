@@ -30,7 +30,7 @@ export default function Header({ data }: { data: HeaderData }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
-      window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -56,11 +56,10 @@ export default function Header({ data }: { data: HeaderData }) {
       >
         <div className="max-w-[1320px] w-full mx-auto px-3 sm:px-4 md:px-8">
           <div
-            className={`bg-white rounded-full flex items-center justify-between gap-3 transition-all duration-300 ${
-              isScrolled
+            className={`bg-white rounded-full flex items-center justify-between gap-3 transition-all duration-300 ${isScrolled
                 ? "px-4 sm:px-6 md:px-8 py-2 shadow-md border border-gray-100"
                 : "px-4 sm:px-6 md:px-8 py-2.5 md:py-3.5 shadow-lg"
-            }`}
+              }`}
           >
             <Link href="/" className="flex items-center gap-2 relative z-50 min-w-0">
               <Image
@@ -138,90 +137,113 @@ export default function Header({ data }: { data: HeaderData }) {
         </div>
       </nav>
 
-      {isMobileMenuOpen && (
-          <div
-            className="fixed inset-0 z-40 bg-black/40 lg:hidden"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <div
-              className="absolute right-0 top-0 bottom-0 flex w-[86%] max-w-[340px] flex-col overflow-hidden bg-white shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
+      <div
+        className={`fixed inset-0 z-[60] lg:hidden transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+          }`}
+      >
+        <div
+          className="absolute inset-0 bg-black/40 transition-opacity duration-300"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        <div
+          className={`absolute right-0 top-0 bottom-0 flex w-[86%] max-w-[340px] flex-col overflow-hidden bg-white shadow-2xl transition-transform duration-300 ease-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between px-5 py-5 border-b border-gray-100">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <Image
+                src="/logo/logo.png"
+                alt="TourVista Logo"
+                width={150}
+                height={48}
+                className="h-8 w-auto"
+              />
+            </Link>
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="-mr-2 p-2 text-slate-800 focus:outline-none"
             >
-              <div className="hide-scrollbar mt-[88px] flex-1 overflow-y-auto overscroll-contain px-5 pb-8">
-                <div className="flex flex-col">
-                  {header.links?.map((link: NavLink, index: number) => {
-                    const isActive = isLinkActive(link.href);
-                    const isDropdownOpen = openDropdown === link.label;
-                    return (
-                      <div key={index} className="border-b border-gray-100 py-3.5">
-                        {link.hasDropdown ? (
-                          <button
-                            type="button"
-                            onClick={() => setOpenDropdown(isDropdownOpen ? null : link.label)}
-                            className={`flex w-full items-center justify-between text-left text-[17px] font-bold ${
-                              isActive || isDropdownOpen ? "text-blue-600" : "text-slate-800"
-                            }`}
-                          >
-                            {link.label}
-                            <ChevronDown
-                              className={`h-5 w-5 shrink-0 text-slate-500 transition-transform duration-300 ${
-                                isDropdownOpen ? "rotate-180 text-blue-600" : ""
-                              }`}
-                              strokeWidth={2.4}
-                            />
-                          </button>
-                        ) : (
-                          <Link
-                            href={link.href}
-                            className={`block text-[17px] font-bold ${isActive ? "text-blue-600" : "text-slate-800"}`}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {link.label}
-                          </Link>
-                        )}
-
-                          {link.dropdown && isDropdownOpen && (
-                            <div className="overflow-hidden">
-                              <div className="mt-3 rounded-xl bg-[#f4f7fb] px-2 py-2">
-                                {link.dropdown.map((sublink, subIndex) => {
-                                  const subActive = isLinkActive(sublink.href);
-                                  return (
-                                    <Link
-                                      key={subIndex}
-                                      href={sublink.href}
-                                      className={`block rounded-lg px-3 py-2.5 text-[14px] font-medium ${
-                                        subActive
-                                          ? "bg-white text-blue-600 shadow-sm"
-                                          : "text-slate-600 hover:bg-white hover:text-blue-600"
-                                      }`}
-                                      onClick={() => setIsMobileMenuOpen(false)}
-                                    >
-                                      {sublink.label}
-                                    </Link>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {header.button && (
-                  <Link
-                    href={header.button.href || "#"}
-                    className="mt-6 flex items-center justify-center gap-2 rounded-full bg-[#ff7a00] px-5 py-3.5 text-[15px] font-bold text-white shadow-md shadow-[#ff7a00]/25"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span>{header.button.label}</span>
-                    <ArrowUpRight className="h-5 w-5" strokeWidth={2.5} />
-                  </Link>
-                )}
-              </div>
-            </div>
+              <X className="w-6 h-6" strokeWidth={2.4} />
+            </button>
           </div>
-        )}
+          <div className="hide-scrollbar flex-1 overflow-y-auto overscroll-contain px-5 pb-8 pt-4">
+            <div className="flex flex-col">
+              {header.links?.map((link: NavLink, index: number) => {
+                const isActive = isLinkActive(link.href);
+                const isDropdownOpen = openDropdown === link.label;
+                return (
+                  <div key={index} className="border-b border-gray-100 py-3.5">
+                    {link.hasDropdown ? (
+                      <button
+                        type="button"
+                        onClick={() => setOpenDropdown(isDropdownOpen ? null : link.label)}
+                        className={`flex w-full items-center justify-between text-left text-[17px] font-bold ${isActive || isDropdownOpen ? "text-blue-600" : "text-slate-800"
+                          }`}
+                      >
+                        {link.label}
+                        <ChevronDown
+                          className={`h-5 w-5 shrink-0 text-slate-500 transition-transform duration-300 ${isDropdownOpen ? "rotate-180 text-blue-600" : ""
+                            }`}
+                          strokeWidth={2.4}
+                        />
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`block text-[17px] font-bold ${isActive ? "text-blue-600" : "text-slate-800"}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+
+                    {link.dropdown && (
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${isDropdownOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                          }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="rounded-xl bg-[#f4f7fb] px-2 py-2">
+                            {link.dropdown.map((sublink, subIndex) => {
+                              const subActive = isLinkActive(sublink.href);
+                              return (
+                                <Link
+                                  key={subIndex}
+                                  href={sublink.href}
+                                  className={`block rounded-lg px-3 py-2.5 text-[14px] font-medium transition-colors ${subActive
+                                      ? "bg-white text-blue-600 shadow-sm"
+                                      : "text-slate-600 hover:bg-white hover:text-blue-600"
+                                    }`}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {sublink.label}
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {header.button && (
+              <Link
+                href={header.button.href || "#"}
+                className="mt-6 flex items-center justify-center gap-2 rounded-full bg-[#ff7a00] px-5 py-3.5 text-[15px] font-bold text-white shadow-md shadow-[#ff7a00]/25"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>{header.button.label}</span>
+                <ArrowUpRight className="h-5 w-5" strokeWidth={2.5} />
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

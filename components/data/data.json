@@ -410,10 +410,6 @@
     "partners": {
       "components": [
         {
-          "key": "PartnersHero",
-          "component": "PackagesHero"
-        },
-        {
           "key": "Partners",
           "component": "Partners"
         }
@@ -518,6 +514,46 @@
           "component": "variant-1"
         }
       ]
+    },
+    "privacy_policy": {
+      "components": [
+        {
+          "key": "PrivacyPolicy",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "terms_conditions": {
+      "components": [
+        {
+          "key": "TermsConditions",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "refund_policy": {
+      "components": [
+        {
+          "key": "RefundPolicy",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "payment_policy": {
+      "components": [
+        {
+          "key": "PaymentPolicy",
+          "component": "variant-1"
+        }
+      ]
+    },
+    "sitemap": {
+      "components": [
+        {
+          "key": "Sitemap",
+          "component": "variant-1"
+        }
+      ]
     }
   },
   "sections": {
@@ -570,14 +606,6 @@
         }
       }
     },
-    "AboutHero": {
-      "variants": {
-        "variant-1": {
-          "title": "About Us",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
-        }
-      }
-    },
     "WhyChooseUs": {
       "variants": {
         "variant-1": {
@@ -605,15 +633,6 @@
           "buttonText": "Contact Us",
           "buttonHref": "/contact",
           "backgroundImage": "/cta/banner.jpg"
-        }
-      }
-    },
-    "GalleryHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Gallery",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
         }
       }
     },
@@ -703,15 +722,6 @@
               "title": "Dubai"
             }
           ]
-        }
-      }
-    },
-    "DestinationsHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Destinations",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
         }
       }
     },
@@ -936,15 +946,6 @@
         }
       }
     },
-    "FaqHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Frequently Asked Questions",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "FaqPage": {
       "variants": {
         "variant-1": {
@@ -999,15 +1000,6 @@
           "helpText": "Our support team is here to help you with any questions you may have.",
           "helpButton": "Contact Us",
           "helpLink": "/contact"
-        }
-      }
-    },
-    "TestimonialsHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Testimonials",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
         }
       }
     },
@@ -1214,15 +1206,6 @@
         }
       }
     },
-    "BlogHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Our Blog",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "BlogPage": {
       "variants": {
         "variant-1": {
@@ -1388,15 +1371,6 @@
         }
       }
     },
-    "BlogDetailHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Blog Detail",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "BlogDetail": {
       "variants": {
         "variant-1": {
@@ -1459,14 +1433,6 @@
         }
       }
     },
-    "MissionVisionHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Mission & Vision",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
-        }
-      }
-    },
     "MissionVision": {
       "variants": {
         "variant-1": {
@@ -1484,14 +1450,6 @@
             "description": "Our vision is to be a globally recognized travel brand known for innovation, integrity, and inspiring experiences. We aim to lead the travel industry by embracing sustainable practices and empowering people to explore the world with confidence and curiosity.",
             "image": "/mission-vision/vision.png"
           }
-        }
-      }
-    },
-    "AwardsHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Awards & Recognition",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
         }
       }
     },
@@ -1533,14 +1491,6 @@
               "icon": "Users"
             }
           ]
-        }
-      }
-    },
-    "WhyChooseUsHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Why Choose Us",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
         }
       }
     },
@@ -1612,14 +1562,6 @@
         }
       }
     },
-    "OurTeamHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Our Teams",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
-        }
-      }
-    },
     "OurTeam": {
       "variants": {
         "variant-1": {
@@ -1675,14 +1617,6 @@
               "id": "member-8"
             }
           ]
-        }
-      }
-    },
-    "TeamDetailHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Team Detail",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
         }
       }
     },
@@ -2070,15 +2004,6 @@
         }
       }
     },
-    "PackagesHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Tour Packages",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "PackagesList": {
       "variants": {
         "variant-1": {
@@ -2209,15 +2134,6 @@
         }
       }
     },
-    "PackageDetailHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Package Detail",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "PackageDetail": {
       "variants": {
         "variant-1": {
@@ -2255,7 +2171,7 @@
             "emiPrefix": "No Cost EMI Starts from",
             "seeOption": "See option",
             "enquireNow": "Enquire Now",
-            "enquireLink": "/contact",
+            "enquireLink": "/enquiry",
             "durationLabel": "Duration : ",
             "placesLabel": "Places to Visit : ",
             "packageIncludes": "Package Includes"
@@ -2979,14 +2895,6 @@
         }
       }
     },
-    "ServicesHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Our Services",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
-        }
-      }
-    },
     "ServicesList": {
       "variants": {
         "variant-1": {
@@ -3041,10 +2949,6 @@
     "ServiceDetail": {
       "variants": {
         "variant-1": {
-          "hero": {
-            "title": "Service Detail",
-            "backgroundImage": "/breadcrumb/inner-banner.jpg"
-          },
           "tagline": "Our Services",
           "title": "Best Hotels",
           "subtitle": "Comfortable Stays, Memorable Experiences",
@@ -3136,15 +3040,6 @@
         }
       }
     },
-    "ContactHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Contact Us",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "ContactInfo": {
       "variants": {
         "variant-1": {
@@ -3219,14 +3114,6 @@
           "cardRating": "4.5",
           "cardReviews": "1,246",
           "cardLink": "View larger map"
-        }
-      }
-    },
-    "PartnersHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Partners",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg"
         }
       }
     },
@@ -3305,15 +3192,6 @@
         }
       }
     },
-    "EnquiryHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Enquiry Now",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": true
-        }
-      }
-    },
     "EnquiryPage": {
       "variants": {
         "variant-1": {
@@ -3366,10 +3244,22 @@
                 "placeholder": "Select travel type",
                 "required": true,
                 "options": [
-                  { "label": "Solo Travel", "value": "solo" },
-                  { "label": "Couple", "value": "couple" },
-                  { "label": "Family", "value": "family" },
-                  { "label": "Group", "value": "group" }
+                  {
+                    "label": "Solo Travel",
+                    "value": "solo"
+                  },
+                  {
+                    "label": "Couple",
+                    "value": "couple"
+                  },
+                  {
+                    "label": "Family",
+                    "value": "family"
+                  },
+                  {
+                    "label": "Group",
+                    "value": "group"
+                  }
                 ]
               },
               {
@@ -3379,11 +3269,26 @@
                 "placeholder": "Select number of travellers",
                 "required": true,
                 "options": [
-                  { "label": "1", "value": "1" },
-                  { "label": "2", "value": "2" },
-                  { "label": "3 - 5", "value": "3-5" },
-                  { "label": "6 - 10", "value": "6-10" },
-                  { "label": "More than 10", "value": "10+" }
+                  {
+                    "label": "1",
+                    "value": "1"
+                  },
+                  {
+                    "label": "2",
+                    "value": "2"
+                  },
+                  {
+                    "label": "3 - 5",
+                    "value": "3-5"
+                  },
+                  {
+                    "label": "6 - 10",
+                    "value": "6-10"
+                  },
+                  {
+                    "label": "More than 10",
+                    "value": "10+"
+                  }
                 ]
               },
               {
@@ -3399,10 +3304,22 @@
                 "type": "select",
                 "placeholder": "Select budget range",
                 "options": [
-                  { "label": "Economy", "value": "economy" },
-                  { "label": "Standard", "value": "standard" },
-                  { "label": "Premium", "value": "premium" },
-                  { "label": "Luxury", "value": "luxury" }
+                  {
+                    "label": "Economy",
+                    "value": "economy"
+                  },
+                  {
+                    "label": "Standard",
+                    "value": "standard"
+                  },
+                  {
+                    "label": "Premium",
+                    "value": "premium"
+                  },
+                  {
+                    "label": "Luxury",
+                    "value": "luxury"
+                  }
                 ]
               },
               {
@@ -3481,15 +3398,6 @@
         }
       }
     },
-    "PrivacyPolicyHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Privacy Policy",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "PrivacyPolicy": {
       "variants": {
         "variant-1": {
@@ -3536,15 +3444,6 @@
           "noteIcon": "CalendarDays",
           "noteTitle": "Last Updated: May 20, 2025",
           "noteText": "If you have any questions about this Privacy Policy, please contact us through our Contact Us page."
-        }
-      }
-    },
-    "TermsConditionsHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Terms & Conditions",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
         }
       }
     },
@@ -3597,15 +3496,6 @@
         }
       }
     },
-    "RefundPolicyHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Refund Policy",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "RefundPolicy": {
       "variants": {
         "variant-1": {
@@ -3652,15 +3542,6 @@
           "noteIcon": "CalendarDays",
           "noteTitle": "Last Updated: May 20, 2025",
           "noteText": "If you have any questions about this Refund Policy, please contact us through our Contact Us page."
-        }
-      }
-    },
-    "PaymentPolicyHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Payment Policy",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
         }
       }
     },
@@ -3713,15 +3594,6 @@
         }
       }
     },
-    "SitemapHero": {
-      "variants": {
-        "variant-1": {
-          "title": "Sitemap",
-          "backgroundImage": "/breadcrumb/inner-banner.jpg",
-          "showBreadcrumb": false
-        }
-      }
-    },
     "Sitemap": {
       "variants": {
         "variant-1": {
@@ -3737,12 +3609,30 @@
               "icon": "Users",
               "tone": "blue",
               "links": [
-                { "label": "About Us", "href": "/about" },
-                { "label": "Mission & Vision", "href": "/mission-vision" },
-                { "label": "Awards & Recognition", "href": "/awards" },
-                { "label": "Why Choose Us", "href": "/why-choose-us" },
-                { "label": "Our Team", "href": "/our-team" },
-                { "label": "Team Detail", "href": "/team-detail/member-1" }
+                {
+                  "label": "About Us",
+                  "href": "/about"
+                },
+                {
+                  "label": "Mission & Vision",
+                  "href": "/mission-vision"
+                },
+                {
+                  "label": "Awards & Recognition",
+                  "href": "/awards"
+                },
+                {
+                  "label": "Why Choose Us",
+                  "href": "/why-choose-us"
+                },
+                {
+                  "label": "Our Team",
+                  "href": "/our-team"
+                },
+                {
+                  "label": "Team Detail",
+                  "href": "/team-detail/member-1"
+                }
               ]
             },
             {
@@ -3750,8 +3640,14 @@
               "icon": "Briefcase",
               "tone": "blue",
               "links": [
-                { "label": "Our Services", "href": "/services" },
-                { "label": "Service Detail", "href": "/service-detail/hotel" }
+                {
+                  "label": "Our Services",
+                  "href": "/services"
+                },
+                {
+                  "label": "Service Detail",
+                  "href": "/service-detail/hotel"
+                }
               ]
             },
             {
@@ -3759,8 +3655,14 @@
               "icon": "Package",
               "tone": "blue",
               "links": [
-                { "label": "Tour Packages", "href": "/packages" },
-                { "label": "Package Detail", "href": "/package-detail/1" }
+                {
+                  "label": "Tour Packages",
+                  "href": "/packages"
+                },
+                {
+                  "label": "Package Detail",
+                  "href": "/package-detail/1"
+                }
               ]
             },
             {
@@ -3768,7 +3670,10 @@
               "icon": "MapPin",
               "tone": "orange",
               "links": [
-                { "label": "Destinations", "href": "/destinations" }
+                {
+                  "label": "Destinations",
+                  "href": "/destinations"
+                }
               ]
             },
             {
@@ -3776,7 +3681,10 @@
               "icon": "Images",
               "tone": "blue",
               "links": [
-                { "label": "Gallery", "href": "/gallery" }
+                {
+                  "label": "Gallery",
+                  "href": "/gallery"
+                }
               ]
             },
             {
@@ -3784,8 +3692,14 @@
               "icon": "FileText",
               "tone": "orange",
               "links": [
-                { "label": "Blog", "href": "/blog" },
-                { "label": "Blog Detail", "href": "/blog-detail/1" }
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Blog Detail",
+                  "href": "/blog-detail/1"
+                }
               ]
             }
           ],
@@ -3795,7 +3709,10 @@
               "icon": "CalendarCheck",
               "tone": "orange",
               "links": [
-                { "label": "Enquiry Now", "href": "/enquiry" }
+                {
+                  "label": "Enquiry Now",
+                  "href": "/enquiry"
+                }
               ]
             },
             {
@@ -3803,7 +3720,10 @@
               "icon": "Headphones",
               "tone": "orange",
               "links": [
-                { "label": "Testimonials", "href": "/testimonials" }
+                {
+                  "label": "Testimonials",
+                  "href": "/testimonials"
+                }
               ]
             },
             {
@@ -3811,12 +3731,30 @@
               "icon": "FileText",
               "tone": "orange",
               "links": [
-                { "label": "FAQ's", "href": "/faqs" },
-                { "label": "Privacy Policy", "href": "/privacy-policy" },
-                { "label": "Terms & Conditions", "href": "/terms-conditions" },
-                { "label": "Refund Policy", "href": "/refund-policy" },
-                { "label": "Payment Policy", "href": "/payment-policy" },
-                { "label": "Sitemap", "href": "/sitemap" }
+                {
+                  "label": "FAQ's",
+                  "href": "/faqs"
+                },
+                {
+                  "label": "Privacy Policy",
+                  "href": "/privacy-policy"
+                },
+                {
+                  "label": "Terms & Conditions",
+                  "href": "/terms-conditions"
+                },
+                {
+                  "label": "Refund Policy",
+                  "href": "/refund-policy"
+                },
+                {
+                  "label": "Payment Policy",
+                  "href": "/payment-policy"
+                },
+                {
+                  "label": "Sitemap",
+                  "href": "/sitemap"
+                }
               ]
             },
             {
@@ -3824,7 +3762,10 @@
               "icon": "Handshake",
               "tone": "orange",
               "links": [
-                { "label": "Our Partners", "href": "/partners" }
+                {
+                  "label": "Our Partners",
+                  "href": "/partners"
+                }
               ]
             },
             {
@@ -3832,14 +3773,20 @@
               "icon": "Phone",
               "tone": "orange",
               "links": [
-                { "label": "Contact Us", "href": "/contact" }
+                {
+                  "label": "Contact Us",
+                  "href": "/contact"
+                }
               ]
             }
           ],
           "otherTitle": "OTHER PAGES",
           "otherIcon": "Globe",
           "otherLinks": [
-            { "label": "Sitemap", "href": "/sitemap" }
+            {
+              "label": "Sitemap",
+              "href": "/sitemap"
+            }
           ]
         }
       }

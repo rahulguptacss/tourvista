@@ -15,6 +15,7 @@ import {
   Briefcase,
   Globe,
   RotateCcw,
+  ChevronDown,
 } from "lucide-react";
 import { Poppins } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
@@ -46,6 +47,7 @@ export default function PackagesList({
   hideFilters?: boolean;
 }) {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const filteredPackages = useMemo(() => {
     if (hideFilters || activeFilter === "all") return data.items;
@@ -88,8 +90,9 @@ export default function PackagesList({
 
         {!hideFilters && (
         <div className="max-w-7xl mx-auto mb-8">
-          <div className="flex items-center gap-3 rounded-[16px] border border-[#e5e7eb] bg-white px-4 md:px-5 py-3.5 md:py-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)] overflow-x-auto">
-            <span className="text-[#0f172a] text-[14px] md:text-[15px] font-bold whitespace-nowrap shrink-0">
+          {/* Desktop Filter */}
+          <div className="hidden md:flex items-center gap-3 rounded-[16px] border border-[#e5e7eb] bg-white px-5 py-4 shadow-[0_8px_24px_rgba(15,23,42,0.04)] overflow-x-auto hide-scrollbar">
+            <span className="text-[#0f172a] text-[15px] font-bold whitespace-nowrap shrink-0">
               Filter by Type:
             </span>
 
@@ -104,7 +107,7 @@ export default function PackagesList({
                     key={filter.id}
                     type="button"
                     onClick={() => setActiveFilter(filter.id)}
-                    className={`cursor-pointer inline-flex items-center gap-1.5 rounded-[10px] px-4 md:px-5 py-2.5 text-[13px] md:text-[14px] font-semibold whitespace-nowrap transition-all border ${
+                    className={`cursor-pointer inline-flex items-center gap-1.5 rounded-[10px] px-5 py-2.5 text-[14px] font-semibold whitespace-nowrap transition-all border ${
                       isActive
                         ? "bg-[#2563eb] text-white border-[#2563eb] shadow-sm"
                         : "bg-white text-[#1e293b] border-[#e5e7eb] hover:border-[#2563eb]/40"
@@ -125,11 +128,76 @@ export default function PackagesList({
             <button
               type="button"
               onClick={() => setActiveFilter("all")}
-              className="cursor-pointer ml-auto inline-flex items-center gap-1.5 pr-1 text-[14px] md:text-[15px] font-semibold text-[#ff7a00] whitespace-nowrap hover:opacity-80 transition-opacity shrink-0"
+              className="cursor-pointer ml-auto inline-flex items-center gap-1.5 pr-1 text-[15px] font-semibold text-[#ff7a00] whitespace-nowrap hover:opacity-80 transition-opacity shrink-0 ml-2"
             >
               <RotateCcw className="w-[15px] h-[15px]" strokeWidth={2.4} />
               Clear Filter
             </button>
+          </div>
+
+          {/* Mobile Dropdown Filter */}
+          <div className="md:hidden block relative z-20">
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full flex items-center justify-between gap-2 rounded-xl border border-[#e5e7eb] bg-white px-4 py-3.5 shadow-sm text-left focus:outline-none"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-[#0f172a] text-[14px] font-bold shrink-0">
+                  Filter:
+                </span>
+                <span className="text-[14px] font-semibold text-[#2563eb]">
+                  {activeFilter === "all" ? "All Packages" : data.filters?.find(f => f.id === activeFilter)?.label || "Selected"}
+                </span>
+              </div>
+              <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute left-0 right-0 top-full mt-2 bg-white border border-[#e5e7eb] rounded-xl shadow-lg overflow-hidden flex flex-col z-30"
+                >
+                  {data.filters?.map((filter) => {
+                    const Icon = filterIconMap[filter.icon] || LayoutGrid;
+                    const isActive = activeFilter === filter.id;
+                    return (
+                      <button
+                        key={filter.id}
+                        type="button"
+                        onClick={() => {
+                          setActiveFilter(filter.id);
+                          setIsDropdownOpen(false);
+                        }}
+                        className={`flex items-center gap-2 px-4 py-3 text-[14px] font-semibold transition-colors border-b border-gray-100 last:border-0 ${
+                          isActive ? "bg-blue-50 text-blue-600" : "text-slate-700 hover:bg-gray-50"
+                        }`}
+                      >
+                        <Icon className="w-[16px] h-[16px]" strokeWidth={2.2} />
+                        {filter.label}
+                      </button>
+                    );
+                  })}
+                  
+                  <div className="border-t border-gray-100 p-2 bg-slate-50/50">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setActiveFilter("all");
+                        setIsDropdownOpen(false);
+                      }}
+                      className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-[14px] font-semibold text-[#ff7a00] hover:bg-orange-50 rounded-lg transition-colors"
+                    >
+                      <RotateCcw className="w-[15px] h-[15px]" strokeWidth={2.4} />
+                      Reset Filter
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
         )}
@@ -184,21 +252,20 @@ export default function PackagesList({
                     </div>
 
                     <div>
-                      <div className="w-full border-t border-dotted border-gray-300 mb-2.5 mt-3"></div>
-                      <div className="flex items-center gap-3 mb-2.5">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-[18px] h-[18px] text-[#3474d4]" />
-                          <span className="text-[#4b5563] text-[0.95rem] font-[500]">{pkg.days}</span>
+                      <div className="w-full border-t border-dotted border-gray-300 mb-3 mt-3"></div>
+                      <div className="flex flex-wrap items-start gap-x-5 gap-y-2.5 mb-2.5">
+                        <div className="flex items-start gap-2 max-w-full">
+                          <Calendar className="w-[16px] h-[16px] text-[#3474d4] shrink-0 mt-[3px]" />
+                          <span className="text-[#4b5563] text-[0.9rem] font-[500] leading-tight">{pkg.days}</span>
                         </div>
-                        <div className="w-[1px] h-4 bg-gray-300 mx-1"></div>
-                        <div className="flex items-center gap-2">
-                          <Users className="w-[18px] h-[18px] text-[#3474d4]" />
-                          <span className="text-[#4b5563] text-[0.95rem] font-[500]">{pkg.people}</span>
+                        <div className="flex items-start gap-2 max-w-full">
+                          <Users className="w-[16px] h-[16px] text-[#3474d4] shrink-0 mt-[3px]" />
+                          <span className="text-[#4b5563] text-[0.9rem] font-[500] leading-tight">{pkg.people}</span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-[18px] h-[18px] text-[#3474d4]" />
-                        <span className="text-[#4b5563] text-[0.95rem] font-[500]">{pkg.location}</span>
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-[16px] h-[16px] text-[#3474d4] shrink-0 mt-[3px]" />
+                        <span className="text-[#4b5563] text-[0.9rem] font-[500] leading-tight">{pkg.location}</span>
                       </div>
                     </div>
                   </div>
